@@ -1,2 +1,2 @@
 # Snapchat
-this is my life
+Mobile Systems Programming Project
