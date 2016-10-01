@@ -40,7 +40,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Stories"/>
                                 <connections>
-                                    <segue destination="3Az-Pm-nuZ" kind="presentation" identifier="Show Stories" modalTransitionStyle="crossDissolve" id="lBW-FM-dff"/>
+                                    <segue destination="rMz-du-CpQ" kind="presentation" identifier="Show Stories" modalTransitionStyle="crossDissolve" id="lBW-FM-dff"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfB-zZ-YF4">
@@ -111,7 +111,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Stories"/>
                                 <connections>
-                                    <segue destination="3Az-Pm-nuZ" kind="presentation" identifier="Show Stories" modalTransitionStyle="crossDissolve" id="t6x-vd-yA7"/>
+                                    <segue destination="rMz-du-CpQ" kind="presentation" identifier="Show Stories" modalTransitionStyle="crossDissolve" id="t6x-vd-yA7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsf-XK-SMX">
@@ -149,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="269.60000000000002" y="238.83058470764618"/>
         </scene>
-        <!--Stories View Controller-->
+        <!--Stories-->
         <scene sceneID="1PP-oE-QD7">
             <objects>
                 <viewController storyboardIdentifier="storiesID" id="3Az-Pm-nuZ" customClass="StoriesViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
@@ -168,8 +168,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="629-bx-mKg">
-                                <frame key="frameInset" minX="22" minY="37" width="97" height="62"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stories" id="M0H-e5-lQh">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="cdr-BE-app">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="629-bx-mKg">
+                                <rect key="frame" x="16" y="-9" width="97" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Camara"/>
@@ -177,28 +182,28 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="Show Camara" modalTransitionStyle="crossDissolve" id="dcu-8V-zHh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lt-IV-ztS">
-                                <frame key="frameInset" minX="262" minY="37" width="97" height="62"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Keu-8l-SLd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1lt-IV-ztS">
+                                <rect key="frame" x="262" y="-9" width="97" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Discovery"/>
                                 <connections>
-                                    <segue destination="zyv-29-bzF" kind="presentation" identifier="Show Discovery" modalTransitionStyle="crossDissolve" id="dlw-iD-xXk"/>
+                                    <segue destination="zyv-29-bzF" kind="show" identifier="Show Discovery" id="dlw-iD-xXk"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="M0H-e5-lQh"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOv-zb-wJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.60000000000002" y="242.42878560719643"/>
+            <point key="canvasLocation" x="2588" y="238.83058470764618"/>
         </scene>
-        <!--Discovery View Controller-->
+        <!--Discover-->
         <scene sceneID="Bv6-vw-oSR">
             <objects>
-                <viewController storyboardIdentifier="discoveryID" id="zyv-29-bzF" customClass="DiscoveryViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="discoveryID" title="Discover" id="zyv-29-bzF" customClass="DiscoveryViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v9N-ho-UVe"/>
                         <viewControllerLayoutGuide type="bottom" id="2Ui-yG-yjP"/>
@@ -214,22 +219,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfH-c3-6Pk">
-                                <frame key="frameInset" minX="16" minY="38" width="97" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Stories"/>
-                                <connections>
-                                    <segue destination="3Az-Pm-nuZ" kind="presentation" identifier="Show Stories" modalTransitionStyle="crossDissolve" id="AGy-LJ-dFO"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7B-Gu-DW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1693.5999999999999" y="241.52923538230885"/>
+            <point key="canvasLocation" x="3785" y="239"/>
         </scene>
         <!--Memories View Controller-->
         <scene sceneID="sAe-Az-v7g">
@@ -267,9 +265,27 @@
             </objects>
             <point key="canvasLocation" x="269.60000000000002" y="939.58020989505258"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g5X-YW-BA3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rMz-du-CpQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nBY-R8-Whc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3Az-Pm-nuZ" kind="relationship" relationship="rootViewController" id="97R-9A-jZi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gy2-lm-lCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1746" y="239"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mr2-AJ-JCt"/>
-        <segue reference="lBW-FM-dff"/>
+        <segue reference="dcu-8V-zHh"/>
+        <segue reference="t6x-vd-yA7"/>
     </inferredMetricsTieBreakers>
 </document>

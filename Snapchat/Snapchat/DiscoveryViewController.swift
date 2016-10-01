@@ -8,27 +8,33 @@
 
 import UIKit
 
-class DiscoveryViewController: UIViewController {
+class DiscoveryViewController: UIViewController, UIGestureRecognizerDelegate{
 
-    private struct Storyboard
-    {
-        static var ShowStories = "Show Stories"
-    }
-    
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
-        let changePageRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(DiscoveryViewController.goToStories))
-        changePageRightSwipe.direction = .Right
-        self.view.addGestureRecognizer(changePageRightSwipe)
-        // Do any additional setup after loading the view.
+        let target = self.navigationController?.interactivePopGestureRecognizer!.delegate
+        let pan = UIPanGestureRecognizer(target:target,
+                                         action: Selector("handleNavigationTransition:"))
+        pan.delegate = self
+        self.view.addGestureRecognizer(pan)
+        //同时禁用系统原先的侧滑返回功能
+        //self.navigationController?.interactivePopGestureRecognizer!.isEnabled = false
     }
     
-    func goToStories()
-    {
-        performSegueWithIdentifier(Storyboard.ShowStories, sender: nil)
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer,
+                             shouldRecognizeSimultaneouslyWith otherGestureRecognizer:
+        UIGestureRecognizer) -> Bool {
+        if self.childViewControllers.count == 1 {
+            return false
+        }
+        return true
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
