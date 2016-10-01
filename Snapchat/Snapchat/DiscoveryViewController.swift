@@ -10,26 +10,29 @@ import UIKit
 
 class DiscoveryViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private struct Storyboard
+    {
+        static var ShowStories = "Show Stories"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        let changePageRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(DiscoveryViewController.goToStories))
+        changePageRightSwipe.direction = .Right
+        self.view.addGestureRecognizer(changePageRightSwipe)
+        // Do any additional setup after loading the view.
     }
-    */
+    
+    func goToStories()
+    {
+        performSegueWithIdentifier(Storyboard.ShowStories, sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        
+    }
 
 }

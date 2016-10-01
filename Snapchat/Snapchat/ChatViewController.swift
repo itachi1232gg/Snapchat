@@ -10,26 +10,29 @@ import UIKit
 
 class ChatViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private struct Storyboard
+    {
+        static var ShowCamara = "Show Camara"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        let changePageLeftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(ChatViewController.goToCamara))
+        changePageLeftSwipe.direction = .Left
+        self.view.addGestureRecognizer(changePageLeftSwipe)
+        // Do any additional setup after loading the view.
     }
-    */
+    
+    func goToCamara()
+    {
+        performSegueWithIdentifier(Storyboard.ShowCamara, sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        
+    }
 
 }

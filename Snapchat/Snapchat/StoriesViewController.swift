@@ -10,26 +10,39 @@ import UIKit
 
 class StoriesViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private struct Storyboard
+    {
+        static var ShowCamara = "Show Camara"
+        static var ShowDiscovery = "Show Discovery"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        let changePageRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(StoriesViewController.goToCamara))
+        changePageRightSwipe.direction = .Right
+        self.view.addGestureRecognizer(changePageRightSwipe)
+        
+        let changePageLeftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(StoriesViewController.goToDiscovery))
+        changePageLeftSwipe.direction = .Left
+        self.view.addGestureRecognizer(changePageLeftSwipe)
+        // Do any additional setup after loading the view.
     }
-    */
+    
+    func goToCamara()
+    {
+        performSegueWithIdentifier(Storyboard.ShowCamara, sender: nil)
+    }
+    
+    func goToDiscovery()
+    {
+        performSegueWithIdentifier(Storyboard.ShowDiscovery, sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        
+    }
 
 }
