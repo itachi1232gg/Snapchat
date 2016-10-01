@@ -29,9 +29,9 @@
                                 <frame key="frameInset" minX="139" minY="585" width="97" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Camara"/>
+                                <state key="normal" title="Camera"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="Show Camara" modalTransitionStyle="crossDissolve" id="mr2-AJ-JCt"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="Show Camera" modalTransitionStyle="crossDissolve" id="mr2-AJ-JCt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX3-lk-zhZ">
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwW-Aw-mag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-522" y="239"/>
+            <point key="canvasLocation" x="-775" y="239"/>
         </scene>
         <!--Personal View Controller-->
         <scene sceneID="Kc0-U3-fIJ">
@@ -80,9 +80,9 @@
                                 <frame key="frameInset" minX="139" minY="597" width="97" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Camara"/>
+                                <state key="normal" title="Camera"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="Show Camara" modalTransitionStyle="crossDissolve" id="Ukk-bZ-m9j"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="Show Camera" modalTransitionStyle="crossDissolve" id="Ukk-bZ-m9j"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,12 +91,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdk-00-39A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="269.60000000000002" y="-413.3433283358321"/>
+            <point key="canvasLocation" x="270" y="-610"/>
         </scene>
-        <!--Camara View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="camaraID" id="BYZ-38-t0r" customClass="CamaraViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cameraID" id="BYZ-38-t0r" customClass="CameraViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -177,9 +177,9 @@
                                 <rect key="frame" x="16" y="-9" width="97" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Camara"/>
+                                <state key="normal" title="Camera"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="Show Camara" modalTransitionStyle="crossDissolve" id="dcu-8V-zHh"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="Show Camera" modalTransitionStyle="crossDissolve" id="dcu-8V-zHh"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -252,9 +252,9 @@
                                 <frame key="frameInset" minX="139" minY="13" width="97" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Camara"/>
+                                <state key="normal" title="Camera"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="Show Camara" modalTransitionStyle="crossDissolve" id="aCC-UL-XJA"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="Show Camera" modalTransitionStyle="crossDissolve" id="aCC-UL-XJA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -285,7 +285,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dcu-8V-zHh"/>
+        <segue reference="aCC-UL-XJA"/>
         <segue reference="t6x-vd-yA7"/>
     </inferredMetricsTieBreakers>
 </document>

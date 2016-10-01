@@ -12,22 +12,22 @@ class PersonalViewController: UIViewController {
 
     private struct Storyboard
     {
-        static var ShowCamara = "Show Camara"
+        static var ShowCamera = "Show Camera"
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        let changePageUpSwipe = UISwipeGestureRecognizer(target: self, action: #selector(PersonalViewController.goToCamara))
+        let changePageUpSwipe = UISwipeGestureRecognizer(target: self, action: #selector(PersonalViewController.goToCamera))
         changePageUpSwipe.direction = .Up
         self.view.addGestureRecognizer(changePageUpSwipe)
         // Do any additional setup after loading the view.
     }
 
-    func goToCamara()
+    func goToCamera()
     {
-        performSegueWithIdentifier(Storyboard.ShowCamara, sender: nil)
+        performSegueWithIdentifier(Storyboard.ShowCamera, sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)

@@ -56,6 +56,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6693BB3A1DA07F5000E9A4C3 /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				88497A8C1D9E5D4200546EF5 /* StoriesViewController.swift */,
+				88497A901D9E5DB500546EF5 /* DiscoveryViewController.swift */,
+			);
+			name = Stories;
+			sourceTree = "<group>";
+		};
 		66B82B801D89A015008FBE82 = {
 			isa = PBXGroup;
 			children = (
@@ -80,8 +89,7 @@
 				88497A861D9E5CF400546EF5 /* ChatViewController.swift */,
 				88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */,
 				88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */,
-				88497A8C1D9E5D4200546EF5 /* StoriesViewController.swift */,
-				88497A901D9E5DB500546EF5 /* DiscoveryViewController.swift */,
+				6693BB3A1DA07F5000E9A4C3 /* Stories */,
 				6693BAF71DA0513E00E9A4C3 /* Supporting Files */,
 			);
 			path = Snapchat;

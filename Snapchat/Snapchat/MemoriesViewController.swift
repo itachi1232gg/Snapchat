@@ -12,22 +12,22 @@ class MemoriesViewController: UIViewController {
 
     private struct Storyboard
     {
-        static var ShowCamara = "Show Camara"
+        static var ShowCamera = "Show Camera"
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        let changePageDownSwipe = UISwipeGestureRecognizer(target: self, action: #selector(MemoriesViewController.goToCamara))
+        let changePageDownSwipe = UISwipeGestureRecognizer(target: self, action: #selector(MemoriesViewController.goToCamera))
         changePageDownSwipe.direction = .Down
         self.view.addGestureRecognizer(changePageDownSwipe)
         // Do any additional setup after loading the view.
     }
     
-    func goToCamara()
+    func goToCamera()
     {
-        performSegueWithIdentifier(Storyboard.ShowCamara, sender: nil)
+        performSegueWithIdentifier(Storyboard.ShowCamera, sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)

@@ -1,5 +1,5 @@
 //
-//  CamaraViewController.swift
+//  CameraViewController.swift
 //  Snapchat
 //
 //  Created by ailina on 16/10/1.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CamaraViewController: UIViewController {
+class CameraViewController: UIViewController {
 
     private struct Storyboard
     {
@@ -24,19 +24,19 @@ class CamaraViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let changePageLeftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CamaraViewController.goToStories))
+        let changePageLeftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CameraViewController.goToStories))
         changePageLeftSwipe.direction = .Left
         self.view.addGestureRecognizer(changePageLeftSwipe)
         
-        let changePageRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CamaraViewController.goToChat))
+        let changePageRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CameraViewController.goToChat))
         changePageRightSwipe.direction = .Right
         self.view.addGestureRecognizer(changePageRightSwipe)
         
-        let changePageUpSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CamaraViewController.goToMemories))
+        let changePageUpSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CameraViewController.goToMemories))
         changePageUpSwipe.direction = .Up
         self.view.addGestureRecognizer(changePageUpSwipe)
         
-        let changePageDownSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CamaraViewController.goToPersonal))
+        let changePageDownSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CameraViewController.goToPersonal))
         changePageDownSwipe.direction = .Down
         self.view.addGestureRecognizer(changePageDownSwipe)
     }
