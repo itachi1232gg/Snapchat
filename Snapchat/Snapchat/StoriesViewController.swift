@@ -12,7 +12,7 @@ class StoriesViewController: UIViewController {
 
     private struct Storyboard
     {
-        static var ShowCamara = "Show Camara"
+        static var ShowCamera = "Show Camera"
         static var ShowDiscovery = "Show Discovery"
     }
     
@@ -20,7 +20,7 @@ class StoriesViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        let changePageRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(StoriesViewController.goToCamara))
+        let changePageRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(StoriesViewController.goToCamera))
         changePageRightSwipe.direction = .Right
         self.view.addGestureRecognizer(changePageRightSwipe)
         
@@ -30,9 +30,9 @@ class StoriesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func goToCamara()
+    func goToCamera()
     {
-        performSegueWithIdentifier(Storyboard.ShowCamara, sender: nil)
+        performSegueWithIdentifier(Storyboard.ShowCamera, sender: nil)
     }
     
     func goToDiscovery()
