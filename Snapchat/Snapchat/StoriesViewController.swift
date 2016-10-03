@@ -24,14 +24,17 @@ class StoriesViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        //Swipe gesture Recognizer -right and left
         let changePageRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(StoriesViewController.goToCamera))
         changePageRightSwipe.direction = .Right
         self.view.addGestureRecognizer(changePageRightSwipe)
-        
         let changePageLeftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(StoriesViewController.goToDiscovery))
         changePageLeftSwipe.direction = .Left
         self.view.addGestureRecognizer(changePageLeftSwipe)
+        
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -50,6 +53,7 @@ class StoriesViewController: UIViewController {
         
     }
 }
+
 
 extension StoriesViewController : UITableViewDelegate { }
 
@@ -71,6 +75,8 @@ extension StoriesViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! CategoryRow
         return cell
     }
+    
+
     
 }
 
