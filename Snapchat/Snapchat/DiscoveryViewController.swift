@@ -18,8 +18,7 @@ class DiscoveryViewController: UIViewController, UIGestureRecognizerDelegate{
                                          action: Selector("handleNavigationTransition:"))
         pan.delegate = self
         self.view.addGestureRecognizer(pan)
-        //同时禁用系统原先的侧滑返回功能
-        //self.navigationController?.interactivePopGestureRecognizer!.isEnabled = false
+        self.navigationController?.interactivePopGestureRecognizer!.enabled = false
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer,

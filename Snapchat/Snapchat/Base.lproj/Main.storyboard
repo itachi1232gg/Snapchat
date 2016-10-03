@@ -161,15 +161,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StoriesView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ga6-af-hzm">
-                                <frame key="frameInset" minX="77" minY="249" width="221" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="hHb-hy-bRt">
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="M0H-e5-lQh" id="o56-NT-DZ7"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="172" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ND8-ZE-w7S">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="145" id="hF2-ZB-eHQ" customClass="CategoryRow" customModule="Snapchat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="145"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hF2-ZB-eHQ" id="KyY-Tw-UDC">
+                                            <frame key="frameInset" width="375" height="144"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GBB-gR-e1L">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="iCQ-Fa-rWJ">
+                                                        <size key="itemSize" width="109" height="134.5"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videoCell" id="A3m-7u-UtT" customClass="VideoCell" customModule="Snapchat" customModuleProvider="target">
+                                                            <rect key="frame" x="5" y="5" width="109" height="134.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="7ry-h9-zlb"/>
+                                                                </subviews>
+                                                            </view>
+                                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="7ry-h9-zlb" firstAttribute="leading" secondItem="A3m-7u-UtT" secondAttribute="leading" id="F5x-CW-jog"/>
+                                                                <constraint firstAttribute="bottom" secondItem="7ry-h9-zlb" secondAttribute="bottom" id="Fra-Xb-t11"/>
+                                                                <constraint firstItem="7ry-h9-zlb" firstAttribute="top" secondItem="A3m-7u-UtT" secondAttribute="top" id="beL-4K-PXn"/>
+                                                                <constraint firstAttribute="trailing" secondItem="7ry-h9-zlb" secondAttribute="trailing" id="lUL-3q-BKs"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="7ry-h9-zlb" id="DJR-YX-kqX"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="hF2-ZB-eHQ" id="Roa-uj-oVf"/>
+                                                        <outlet property="delegate" destination="hF2-ZB-eHQ" id="NoH-DI-zVY"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="GBB-gR-e1L" secondAttribute="bottom" id="1lZ-NK-FU4"/>
+                                                <constraint firstItem="GBB-gR-e1L" firstAttribute="top" secondItem="KyY-Tw-UDC" secondAttribute="top" id="Bo4-Qq-wNL"/>
+                                                <constraint firstAttribute="trailing" secondItem="GBB-gR-e1L" secondAttribute="trailing" id="GKB-dd-hdu"/>
+                                                <constraint firstItem="GBB-gR-e1L" firstAttribute="leading" secondItem="KyY-Tw-UDC" secondAttribute="leading" id="N3U-Qy-5gZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionView" destination="GBB-gR-e1L" id="ccm-4o-b8H"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" rowHeight="145" id="YZD-ns-NsA" userLabel="cell2" customClass="CategoryRow" customModule="Snapchat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="173" width="375" height="145"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YZD-ns-NsA" id="Xdz-35-bsZ">
+                                            <frame key="frameInset" width="375" height="144"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell3" rowHeight="145" id="EcS-ld-ObO" userLabel="cell3" customClass="CategoryRow" customModule="Snapchat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="318" width="375" height="145"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EcS-ld-ObO" id="BSg-lV-HEg">
+                                            <frame key="frameInset" width="375" height="144"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3Az-Pm-nuZ" id="SxL-bC-0u8"/>
+                                    <outlet property="delegate" destination="3Az-Pm-nuZ" id="G7b-Bh-tab"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ND8-ZE-w7S" firstAttribute="top" secondItem="hHb-hy-bRt" secondAttribute="bottom" id="3nR-93-McU"/>
+                            <constraint firstItem="ND8-ZE-w7S" firstAttribute="bottom" secondItem="Jmi-I9-2EH" secondAttribute="top" id="MSe-6y-9mi"/>
+                            <constraint firstItem="hHb-hy-bRt" firstAttribute="leading" secondItem="8C5-xu-Q5N" secondAttribute="leading" id="Wjs-W5-cV5"/>
+                            <constraint firstItem="ND8-ZE-w7S" firstAttribute="trailing" secondItem="hHb-hy-bRt" secondAttribute="trailing" id="Wl8-6x-Kib"/>
+                            <constraint firstItem="hHb-hy-bRt" firstAttribute="top" secondItem="mLj-w9-i0Z" secondAttribute="bottom" id="r9g-SI-q3F"/>
+                            <constraint firstItem="ND8-ZE-w7S" firstAttribute="leading" secondItem="hHb-hy-bRt" secondAttribute="leading" id="z5z-X3-2Gy"/>
+                            <constraint firstAttribute="trailing" secondItem="hHb-hy-bRt" secondAttribute="trailing" id="zpP-6I-zrm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Stories" id="M0H-e5-lQh">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="cdr-BE-app">
@@ -195,8 +287,20 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="hHb-hy-bRt" id="pXg-6l-gpc"/>
+                        <outlet property="searchDisplayController" destination="59G-zV-s1b" id="qks-YX-13A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOv-zb-wJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="59G-zV-s1b">
+                    <connections>
+                        <outlet property="delegate" destination="3Az-Pm-nuZ" id="NsC-IQ-aEO"/>
+                        <outlet property="searchContentsController" destination="3Az-Pm-nuZ" id="t7p-s8-GF0"/>
+                        <outlet property="searchResultsDataSource" destination="3Az-Pm-nuZ" id="NnN-jQ-oPU"/>
+                        <outlet property="searchResultsDelegate" destination="3Az-Pm-nuZ" id="MGk-iS-4cY"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2588" y="238.83058470764618"/>
         </scene>
@@ -284,8 +388,11 @@
             <point key="canvasLocation" x="1746" y="239"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image1" width="848" height="1072"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aCC-UL-XJA"/>
         <segue reference="t6x-vd-yA7"/>
+        <segue reference="dcu-8V-zHh"/>
     </inferredMetricsTieBreakers>
 </document>

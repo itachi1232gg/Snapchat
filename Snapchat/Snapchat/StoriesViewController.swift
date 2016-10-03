@@ -16,6 +16,11 @@ class StoriesViewController: UIViewController {
         static var ShowDiscovery = "Show Discovery"
     }
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    var categories = [""]
+
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -44,5 +49,28 @@ class StoriesViewController: UIViewController {
     {
         
     }
-
 }
+
+extension StoriesViewController : UITableViewDelegate { }
+
+extension StoriesViewController : UITableViewDataSource {
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return categories[section]
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return categories.count
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! CategoryRow
+        return cell
+    }
+    
+}
+
