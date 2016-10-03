@@ -7,40 +7,237 @@
 //
 
 import UIKit
+import AVFoundation
 
+//class CamaraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 class CamaraViewController: UIViewController {
-
+    
+    var pictureTimer: NSTimeInterval = 3.0
+    
     private struct Storyboard
     {
         static var ShowStories = "Show Stories"
         static var ShowMemories = "Show Memories"
         static var ShowChat = "Show Chat"
         static var ShowPersonal = "Show Personal"
+        static var ShowPicture = "Show Picture"
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         let changePageLeftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CamaraViewController.goToStories))
         changePageLeftSwipe.direction = .Left
-        self.view.addGestureRecognizer(changePageLeftSwipe)
+        cameraContainer.addGestureRecognizer(changePageLeftSwipe)
         
         let changePageRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CamaraViewController.goToChat))
         changePageRightSwipe.direction = .Right
-        self.view.addGestureRecognizer(changePageRightSwipe)
+        cameraContainer.addGestureRecognizer(changePageRightSwipe)
         
         let changePageUpSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CamaraViewController.goToMemories))
         changePageUpSwipe.direction = .Up
-        self.view.addGestureRecognizer(changePageUpSwipe)
+        cameraContainer.addGestureRecognizer(changePageUpSwipe)
         
         let changePageDownSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CamaraViewController.goToPersonal))
         changePageDownSwipe.direction = .Down
-        self.view.addGestureRecognizer(changePageDownSwipe)
+        cameraContainer.addGestureRecognizer(changePageDownSwipe)
+        
+        showPictureView.hidden = true
+        initiateCamera()
+        
     }
     
+   
+    
+    //MARK: Picture View
+    @IBOutlet weak var showPictureView: UIView!{
+        didSet{
+            initiateAlert()
+        }
+    }
+    
+    @IBOutlet weak var pictureTakenImageView: UIImageView!
+
+    @IBAction func backToCamera(sender: UIButton) {
+        pictureTakenImageView.hidden = true
+        showPictureView.hidden = true
+    }
+    
+    @IBAction func savePicture(sender: UIButton) {
+        //let image = pictureTakenImageView.image
+        let image = pictureTaken                                                                //如果要编辑功能需要改这个变量
+        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+    }
+    
+    @IBAction func setTimerButton(sender: UIButton) {
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    var alert = UIAlertController(
+        title: "Set Timer",
+        message: "Please set your preferable timer for you lovely story😘, default: 3s",
+        preferredStyle: UIAlertControllerStyle.Alert
+    )
+    
+    var pictureTaken: UIImage?{
+        willSet{
+            showPictureView.hidden = false
+            pictureTakenImageView.hidden = false
+            pictureTakenImageView.image = newValue!
+        }
+    }
+    
+    private func initiateAlert(){
+        alert.addAction(UIAlertAction(
+            title: "Cancel",
+            style: .Cancel,
+            handler: nil)
+        )
+        alert.addAction(UIAlertAction(
+            title: "Set",
+            style: .Default)
+            { (action:UIAlertAction) -> Void in
+                if let tf = self.alert.textFields?.first{
+                    if tf.text != nil{
+                        let tfDouble = Double(tf.text!) ?? self.pictureTimer
+                        self.pictureTimer = tfDouble
+                        print("Timer: \(self.pictureTimer)")
+                    }else{
+                        self.pictureTimer = 3.0
+                        print("Alert timer set nil")
+                        print("Timer: \(self.pictureTimer)")
+                    }
+                }
+            }
+        )
+        alert.addTextFieldWithConfigurationHandler{(textField) in
+            textField.placeholder = "seconds"
+        }
+    }
+    
+    //MARK: Camera
+    var cameraDirection = AVCaptureDevicePosition.Back
+    var flashOption = AVCaptureFlashMode.Off
+    
+    var previewLayer: AVCaptureVideoPreviewLayer? = nil
+    let captureSession = AVCaptureSession()
+    let stillImageOutput = AVCaptureStillImageOutput()
+    //var previewLayer: AVCaptureVideoPreviewLayer?
+    var error: NSError?
+    var captureDevice: AVCaptureDevice?
+    
+    func cameraWithPosition(position: AVCaptureDevicePosition) -> AVCaptureDevice {
+        let devices = AVCaptureDevice.devices()
+        for device in devices {
+            if(device.position == position){
+                return device as! AVCaptureDevice
+            }
+        }
+        return AVCaptureDevice()
+    }
+    
+    @IBAction func cameraFlashOptionButton(sender: UIButton) {
+        
+        if sender.currentTitle == "FlashClosed"{
+            sender.setTitle("FlashOpened", forState: UIControlState.Normal)
+            flashOption = AVCaptureFlashMode.On
+        }else{
+            sender.setTitle("FlashClosed", forState: UIControlState.Normal)
+            flashOption = AVCaptureFlashMode.Off
+        }
+
+        let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        
+        if (device.hasTorch) {
+            do {
+                try device.lockForConfiguration()
+                device.flashMode = flashOption
+                device.unlockForConfiguration()
+            } catch {
+                print(error)
+            }
+        }
+        
+    }
+    
+    @IBAction func cameraDirectionButton(sender: UIButton) {
+        if sender.currentTitle == "Back"{
+            sender.setTitle("Front", forState: UIControlState.Normal)
+            cameraDirection = AVCaptureDevicePosition.Front
+        }else{
+            sender.setTitle("Back", forState: UIControlState.Normal)
+            cameraDirection = AVCaptureDevicePosition.Back
+        }
+        
+        let currentCameraInput: AVCaptureInput = captureSession.inputs[0] as! AVCaptureInput
+        captureSession.removeInput(currentCameraInput)
+        
+        let newCamera: AVCaptureDevice?
+        newCamera = self.cameraWithPosition(cameraDirection)
+        var newVideoInput: AVCaptureDeviceInput?
+        do {
+            try newVideoInput = AVCaptureDeviceInput(device: newCamera!)
+        } catch let error {
+            print("\(error)")
+        }
+        if(newVideoInput != nil) {
+            captureSession.addInput(newVideoInput)
+        } else {
+            print("Error creating capture device input")
+        }
+        
+        captureSession.commitConfiguration()
+        captureDevice! = newCamera!
+        
+    }
+    
+    @IBOutlet weak var cameraContainer: UIView!
+    
+    private func initiateCamera(){
+        
+        let devices = AVCaptureDevice.devices().filter{ $0.hasMediaType(AVMediaTypeVideo) && $0.position == cameraDirection }
+        captureDevice = devices.first as? AVCaptureDevice
+        do {
+            try captureSession.addInput(AVCaptureDeviceInput(device: captureDevice))
+        } catch {
+            print("WTF????")
+        }
+        captureSession.sessionPreset = AVCaptureSessionPresetPhoto
+        captureSession.startRunning()
+        stillImageOutput.outputSettings = [AVVideoCodecKey:AVVideoCodecJPEG]
+        if captureSession.canAddOutput(stillImageOutput) {
+            captureSession.addOutput(stillImageOutput)
+        }
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer?.bounds = view.bounds
+        previewLayer?.position = CGPointMake(view.bounds.midX, view.bounds.midY)
+        previewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+        let cameraPreview = UIView(frame: CGRectMake(0.0, 0.0, view.bounds.size.width, view.bounds.size.height))
+        cameraPreview.layer.addSublayer(previewLayer!) 
+        previewLayer!.position = CGPointMake(view.bounds.midX, view.bounds.midY)
+        view.insertSubview(cameraPreview, belowSubview: cameraContainer)
+        
+    }
+    
+    @IBAction func takePhotoButton(sender: UIButton) {
+        saveToCamera()
+    }
+    
+    func saveToCamera() {
+        if let videoConnection = stillImageOutput.connectionWithMediaType(AVMediaTypeVideo) {
+            stillImageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection) {
+                (imageDataSampleBuffer, error) -> Void in
+                let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
+                self.pictureTaken = UIImage(data: imageData)
+                //print()
+            }
+        }
+    }
+    
+    //MARK: Segue
     func goToStories()
     {
         performSegueWithIdentifier(Storyboard.ShowStories, sender: nil)
@@ -60,9 +257,65 @@ class CamaraViewController: UIViewController {
     {
         performSegueWithIdentifier(Storyboard.ShowPersonal, sender: nil)
     }
-
+    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        
+        self.saveToCamera()
+        if segue.identifier == Storyboard.ShowPicture {
+            if let pvc = segue.destinationViewController.contentViewController as? PictureViewController {
+                pvc.pictureToShow = self.pictureTaken
+            }
+        }
+    }
+     */
+}
+
+
+
+/*
+extension UIImage {
+    /**
+     *  重设图片大小
+     */
+    func reSizeImage(reSize:CGSize)->UIImage {
+        //UIGraphicsBeginImageContext(reSize);
+        UIGraphicsBeginImageContextWithOptions(reSize,false,UIScreen.mainScreen().scale);
+        self.drawInRect(CGRectMake(0, 0, reSize.width, reSize.height));
+        let reSizeImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!;
+        UIGraphicsEndImageContext();
+        return reSizeImage;
+    }
+    
+    /**
+     *  等比率缩放
+     */
+    func scaleImage(scaleSize:CGFloat)->UIImage {
+        let reSize = CGSizeMake(self.size.width * scaleSize, self.size.height * scaleSize)
+        return reSizeImage(reSize)
     }
 }
+ */
+
+/*
+extension UIViewController {
+    var contentViewController: UIViewController {
+        if let navcon = self as? UINavigationController {
+            return navcon.visibleViewController ?? self
+        } else {
+            return self
+        }
+    }
+}
+ */
+
+/*
+extension UIImage {
+    convenience init(view: UIView) {
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.init(CGImage: image!.CGImage!)
+    }
+}
+ */
