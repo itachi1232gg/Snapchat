@@ -17,7 +17,7 @@ class StoriesViewController: UIViewController {
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
-    var categories = [""]
+    var categories = ["","Subscription List","live","friends stories"]
 
     
     
@@ -72,7 +72,7 @@ extension StoriesViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! CategoryRow
+        let cell = tableView.dequeueReusableCellWithIdentifier("storiescell") as! CategoryRow
         return cell
     }
     
