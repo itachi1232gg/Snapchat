@@ -9,7 +9,7 @@
 import UIKit
 
 class StoriesViewController: UIViewController {
-
+    
     private struct Storyboard
     {
         static var ShowCamera = "Show Camera"
@@ -18,7 +18,7 @@ class StoriesViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     var categories = ["","Subscription List","live","friends stories"]
-
+    
     
     
     override func viewDidLoad()
@@ -72,11 +72,15 @@ extension StoriesViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("storiescell") as! CategoryRow
         return cell
     }
     
-
-    
 }
+
+
+
+
+
 

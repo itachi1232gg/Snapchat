@@ -13,5 +13,6 @@ class VideoCell : UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     
+    
    
 }

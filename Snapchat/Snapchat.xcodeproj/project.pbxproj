@@ -10,7 +10,8 @@
 		661F52EB1DA20D1D004E3D4C /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F52EA1DA20D1D004E3D4C /* CategoryRow.swift */; };
 		661F52ED1DA20D34004E3D4C /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F52EC1DA20D34004E3D4C /* VideoCell.swift */; };
 		662216AF1DA275B8002E467C /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662216AE1DA275B8002E467C /* DiscoverCell.swift */; };
-		662216B71DA31990002E467C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662216B61DA31990002E467C /* Data.swift */; };
+		662216B71DA31990002E467C /* DiscoverData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662216B61DA31990002E467C /* DiscoverData.swift */; };
+		662216B91DA33AC5002E467C /* SubscruptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662216B81DA33AC5002E467C /* SubscruptionsTableViewCell.swift */; };
 		66B82B8D1D89A015008FBE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B82B8C1D89A015008FBE82 /* AppDelegate.swift */; };
 		66B82B921D89A015008FBE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B82B901D89A015008FBE82 /* Main.storyboard */; };
 		66B82B941D89A015008FBE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B82B931D89A015008FBE82 /* Assets.xcassets */; };
@@ -27,7 +28,8 @@
 		661F52EA1DA20D1D004E3D4C /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		661F52EC1DA20D34004E3D4C /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		662216AE1DA275B8002E467C /* DiscoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
-		662216B61DA31990002E467C /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = ../../Data.swift; sourceTree = "<group>"; };
+		662216B61DA31990002E467C /* DiscoverData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverData.swift; path = ../../DiscoverData.swift; sourceTree = "<group>"; };
+		662216B81DA33AC5002E467C /* SubscruptionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscruptionsTableViewCell.swift; sourceTree = "<group>"; };
 		66B82B891D89A015008FBE82 /* Snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B82B8C1D89A015008FBE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66B82B911D89A015008FBE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,11 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				88497A8C1D9E5D4200546EF5 /* StoriesViewController.swift */,
-				662216B61DA31990002E467C /* Data.swift */,
+				662216B61DA31990002E467C /* DiscoverData.swift */,
 				661F52EA1DA20D1D004E3D4C /* CategoryRow.swift */,
 				661F52EC1DA20D34004E3D4C /* VideoCell.swift */,
 				662216AE1DA275B8002E467C /* DiscoverCell.swift */,
 				88497A901D9E5DB500546EF5 /* DiscoveryViewController.swift */,
+				662216B81DA33AC5002E467C /* SubscruptionsTableViewCell.swift */,
 			);
 			name = Stories;
 			sourceTree = "<group>";
@@ -184,7 +187,8 @@
 				66B82B8D1D89A015008FBE82 /* AppDelegate.swift in Sources */,
 				661F52ED1DA20D34004E3D4C /* VideoCell.swift in Sources */,
 				661F52EB1DA20D1D004E3D4C /* CategoryRow.swift in Sources */,
-				662216B71DA31990002E467C /* Data.swift in Sources */,
+				662216B91DA33AC5002E467C /* SubscruptionsTableViewCell.swift in Sources */,
+				662216B71DA31990002E467C /* DiscoverData.swift in Sources */,
 				88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */,
 				88497A9B1D9EB63400546EF5 /* CamaraViewController.swift in Sources */,
 				662216AF1DA275B8002E467C /* DiscoverCell.swift in Sources */,

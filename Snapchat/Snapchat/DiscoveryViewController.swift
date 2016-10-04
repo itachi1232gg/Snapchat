@@ -18,8 +18,8 @@ class DiscoveryViewController: UITableViewController, UIGestureRecognizerDelegat
         let pan = UIPanGestureRecognizer(target:target,
                                          action: Selector("handleNavigationTransition:"))
         pan.delegate = self
-        self.tableView.addGestureRecognizer(pan)
-        self.navigationController?.interactivePopGestureRecognizer!.enabled = false
+      //  self.tableView.addGestureRecognizer(pan)
+        //self.navigationController?.interactivePopGestureRecognizer!.enabled = false
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -48,7 +48,7 @@ class DiscoveryViewController: UITableViewController, UIGestureRecognizerDelegat
         super.didReceiveMemoryWarning()
     }
     
-    let data = Data()
+    let data = DiscoverData()
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

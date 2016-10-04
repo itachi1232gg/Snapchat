@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Data {
+class DiscoverData {
     class Entry {
         let filename : String
         let heading : String

@@ -191,21 +191,29 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videoCell" id="A3m-7u-UtT" customClass="VideoCell" customModule="Snapchat" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="5" width="109" height="134.5"/>
+                                                            <rect key="frame" x="5" y="5" width="109" height="135"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="135"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="7ry-h9-zlb"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="bTl-wJ-SaS">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
                                                                 </subviews>
                                                             </view>
                                                             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstItem="7ry-h9-zlb" firstAttribute="leading" secondItem="A3m-7u-UtT" secondAttribute="leading" id="F5x-CW-jog"/>
-                                                                <constraint firstAttribute="bottom" secondItem="7ry-h9-zlb" secondAttribute="bottom" id="Fra-Xb-t11"/>
-                                                                <constraint firstItem="7ry-h9-zlb" firstAttribute="top" secondItem="A3m-7u-UtT" secondAttribute="top" id="beL-4K-PXn"/>
-                                                                <constraint firstAttribute="trailing" secondItem="7ry-h9-zlb" secondAttribute="trailing" id="lUL-3q-BKs"/>
+                                                                <constraint firstItem="bTl-wJ-SaS" firstAttribute="bottom" secondItem="A3m-7u-UtT" secondAttribute="bottomMargin" id="107-95-ej1"/>
+                                                                <constraint firstItem="7ry-h9-zlb" firstAttribute="centerX" secondItem="bTl-wJ-SaS" secondAttribute="centerX" id="Dso-nr-0L5"/>
+                                                                <constraint firstAttribute="trailing" secondItem="7ry-h9-zlb" secondAttribute="trailing" id="XUT-rZ-jJ6"/>
+                                                                <constraint firstItem="7ry-h9-zlb" firstAttribute="leading" secondItem="A3m-7u-UtT" secondAttribute="leading" id="Z5x-gQ-dCf"/>
+                                                                <constraint firstItem="7ry-h9-zlb" firstAttribute="top" secondItem="A3m-7u-UtT" secondAttribute="top" id="Zfa-Qr-JnT"/>
+                                                                <constraint firstItem="bTl-wJ-SaS" firstAttribute="leading" secondItem="A3m-7u-UtT" secondAttribute="leadingMargin" id="blh-1H-K8g"/>
+                                                                <constraint firstAttribute="bottom" secondItem="7ry-h9-zlb" secondAttribute="bottom" id="t5G-w4-j9V"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="imageView" destination="7ry-h9-zlb" id="DJR-YX-kqX"/>
@@ -293,16 +301,16 @@
         <scene sceneID="yXC-ND-fzh">
             <objects>
                 <tableViewController title="Discover" id="cX0-ES-CPj" customClass="DiscoveryViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" id="huj-fD-KXT">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="300" sectionHeaderHeight="1" sectionFooterHeight="1" id="huj-fD-KXT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="discovercell" rowHeight="300" id="umb-Iy-9ly" customClass="DiscoverCell" customModule="Snapchat" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="umb-Iy-9ly" id="xmD-Kb-fnp">
-                                    <frame key="frameInset" width="375" height="299"/>
+                                    <frame key="frameInset" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-tb-25p"/>
@@ -315,7 +323,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="aaI-tb-25p" firstAttribute="top" secondItem="xmD-Kb-fnp" secondAttribute="topMargin" id="NkD-TL-7lh"/>
+                                        <constraint firstItem="aaI-tb-25p" firstAttribute="top" secondItem="xmD-Kb-fnp" secondAttribute="topMargin" constant="-7" id="NkD-TL-7lh"/>
                                         <constraint firstAttribute="bottom" secondItem="aaI-tb-25p" secondAttribute="bottom" id="Tcu-bx-ZVq"/>
                                         <constraint firstAttribute="trailing" secondItem="aaI-tb-25p" secondAttribute="trailing" id="orx-ht-mL2"/>
                                         <constraint firstItem="aaI-tb-25p" firstAttribute="leading" secondItem="xmD-Kb-fnp" secondAttribute="leading" id="wzQ-cS-Kn0"/>
