@@ -72,12 +72,21 @@ extension StoriesViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        //        print("row = " + String(indexPath.row))
+        //        print("section  = " + String(indexPath.section))
         
         let cell = tableView.dequeueReusableCellWithIdentifier("storiescell") as! CategoryRow
+        //send indexPath.section to collection view controller
+        cell.tableIndexSection = indexPath.section
         return cell
+        
+        
     }
     
+    
 }
+
+
 
 
 

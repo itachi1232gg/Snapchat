@@ -70,12 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				88497A8C1D9E5D4200546EF5 /* StoriesViewController.swift */,
-				662216B61DA31990002E467C /* DiscoverData.swift */,
 				661F52EA1DA20D1D004E3D4C /* CategoryRow.swift */,
-				661F52EC1DA20D34004E3D4C /* VideoCell.swift */,
-				662216AE1DA275B8002E467C /* DiscoverCell.swift */,
-				88497A901D9E5DB500546EF5 /* DiscoveryViewController.swift */,
 				662216B81DA33AC5002E467C /* SubscruptionsTableViewCell.swift */,
+				661F52EC1DA20D34004E3D4C /* VideoCell.swift */,
+				88497A901D9E5DB500546EF5 /* DiscoveryViewController.swift */,
+				662216AE1DA275B8002E467C /* DiscoverCell.swift */,
+				662216B61DA31990002E467C /* DiscoverData.swift */,
 			);
 			name = Stories;
 			sourceTree = "<group>";

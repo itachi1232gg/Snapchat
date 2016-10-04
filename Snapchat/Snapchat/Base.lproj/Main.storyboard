@@ -191,10 +191,10 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videoCell" id="A3m-7u-UtT" customClass="VideoCell" customModule="Snapchat" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="5" width="109" height="135"/>
+                                                            <rect key="frame" x="5" y="5" width="109" height="134.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="135"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="7ry-h9-zlb"/>
@@ -217,6 +217,7 @@
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="imageView" destination="7ry-h9-zlb" id="DJR-YX-kqX"/>
+                                                                <outlet property="label" destination="bTl-wJ-SaS" id="PcX-UB-bRD"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>

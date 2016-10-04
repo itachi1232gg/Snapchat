@@ -9,7 +9,9 @@
 import UIKit
 
 class CategoryRow : UITableViewCell {
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    var tableIndexSection:Int?
 }
 
 extension CategoryRow : UICollectionViewDataSource {
@@ -19,7 +21,24 @@ extension CategoryRow : UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+//        print ("index-section = " + String(indexPath.section))
+//        print ("index-row = " + String(indexPath.row))
+          print ("tableViewsection = " + String(tableIndexSection))
+//        print ("==========================")
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("videoCell", forIndexPath: indexPath) as! VideoCell
+
+        if tableIndexSection == 0 {
+            if indexPath.row == 0 {
+                cell.imageView.image = UIImage(named: "snow")
+            } else {
+                cell.imageView.image = UIImage(named: "mountain")
+            }
+        }else {
+            cell.imageView.image = UIImage(named: "sunset")
+        }
+        
         return cell
     }
     
