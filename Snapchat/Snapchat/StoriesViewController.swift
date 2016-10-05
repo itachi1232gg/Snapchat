@@ -12,7 +12,7 @@ class StoriesViewController: UIViewController {
 
     private struct Storyboard
     {
-        static var ShowCamara = "Show Camara"
+        static var ShowCamara = "Show Camera"
         static var ShowDiscovery = "Show Discovery"
     }
     

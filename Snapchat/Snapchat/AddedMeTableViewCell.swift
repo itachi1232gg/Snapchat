@@ -14,6 +14,11 @@ class AddedMeTableViewCell: UITableViewCell {
     
     @IBAction func addFriend(sender: UIButton) {
         
+        // +++++++++++++++++++++++++
+        if UsableData.addUser(nameLabel.text){
+            sender.setTitle("Added", forState: UIControlState.Normal)
+        }
+        // +++++++++++++++++++++++++
     }
     
     //MARK: 当cell获取到自定义内容（记得更改user类型）

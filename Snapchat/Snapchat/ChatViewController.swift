@@ -12,7 +12,7 @@ class ChatViewController: UIViewController {
 
     private struct Storyboard
     {
-        static var ShowCamara = "Show Camara"
+        static var ShowCamara = "Show Camera"
     }
     
     override func viewDidLoad()

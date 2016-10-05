@@ -13,7 +13,9 @@ import AVFoundation
 class CamaraViewController: UIViewController {
     
     var pictureTimer: NSTimeInterval = 3.0
+    var selfSegueIdentifier = "Show Camera"
     
+    @IBOutlet weak var segueToShowPictureButton: UIButton!
     private struct Storyboard
     {
         static var ShowStories = "Show Stories"
@@ -46,11 +48,17 @@ class CamaraViewController: UIViewController {
         cameraContainer.addGestureRecognizer(changePageDownSwipe)
         
         showPictureView.hidden = true
+        segueToShowPictureButton.hidden = true
         initiateCamera()
         
     }
     
-   
+    
+    var pictureTaken: UIImage?{
+        didSet{
+            performSegueWithIdentifier(Storyboard.ShowPicture, sender: nil)
+        }
+    }
     
     //MARK: Picture View
     @IBOutlet weak var showPictureView: UIView!{
@@ -60,7 +68,7 @@ class CamaraViewController: UIViewController {
     }
     
     @IBOutlet weak var pictureTakenImageView: UIImageView!
-
+    
     @IBAction func backToCamera(sender: UIButton) {
         pictureTakenImageView.hidden = true
         showPictureView.hidden = true
@@ -82,13 +90,14 @@ class CamaraViewController: UIViewController {
         preferredStyle: UIAlertControllerStyle.Alert
     )
     
-    var pictureTaken: UIImage?{
-        willSet{
-            showPictureView.hidden = false
-            pictureTakenImageView.hidden = false
-            pictureTakenImageView.image = newValue!
-        }
-    }
+    //    var pictureTaken: UIImage?{
+    //        willSet{
+    //            showPictureView.hidden = false
+    //            pictureTakenImageView.hidden = false
+    //            pictureTakenImageView.image = newValue!
+    //            pictureTakenImageView.contentMode = .ScaleAspectFit
+    //        }
+    //    }
     
     private func initiateAlert(){
         alert.addAction(UIAlertAction(
@@ -99,18 +108,18 @@ class CamaraViewController: UIViewController {
         alert.addAction(UIAlertAction(
             title: "Set",
             style: .Default)
-            { (action:UIAlertAction) -> Void in
-                if let tf = self.alert.textFields?.first{
-                    if tf.text != nil{
-                        let tfDouble = Double(tf.text!) ?? self.pictureTimer
-                        self.pictureTimer = tfDouble
-                        print("Timer: \(self.pictureTimer)")
-                    }else{
-                        self.pictureTimer = 3.0
-                        print("Alert timer set nil")
-                        print("Timer: \(self.pictureTimer)")
-                    }
+        { (action:UIAlertAction) -> Void in
+            if let tf = self.alert.textFields?.first{
+                if tf.text != nil{
+                    let tfDouble = Double(tf.text!) ?? self.pictureTimer
+                    self.pictureTimer = tfDouble
+                    print("Timer: \(self.pictureTimer)")
+                }else{
+                    self.pictureTimer = 3.0
+                    print("Alert timer set nil")
+                    print("Timer: \(self.pictureTimer)")
                 }
+            }
             }
         )
         alert.addTextFieldWithConfigurationHandler{(textField) in
@@ -148,7 +157,7 @@ class CamaraViewController: UIViewController {
             sender.setTitle("FlashClosed", forState: UIControlState.Normal)
             flashOption = AVCaptureFlashMode.Off
         }
-
+        
         let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         
         if (device.hasTorch) {
@@ -216,23 +225,18 @@ class CamaraViewController: UIViewController {
         previewLayer?.position = CGPointMake(view.bounds.midX, view.bounds.midY)
         previewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
         let cameraPreview = UIView(frame: CGRectMake(0.0, 0.0, view.bounds.size.width, view.bounds.size.height))
-        cameraPreview.layer.addSublayer(previewLayer!) 
+        cameraPreview.layer.addSublayer(previewLayer!)
         previewLayer!.position = CGPointMake(view.bounds.midX, view.bounds.midY)
         view.insertSubview(cameraPreview, belowSubview: cameraContainer)
         
     }
     
     @IBAction func takePhotoButton(sender: UIButton) {
-        saveToCamera()
-    }
-    
-    func saveToCamera() {
-        if let videoConnection = stillImageOutput.connectionWithMediaType(AVMediaTypeVideo) {
-            stillImageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection) {
+        if let videoConnection = self.stillImageOutput.connectionWithMediaType(AVMediaTypeVideo) {
+            self.stillImageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection) {
                 (imageDataSampleBuffer, error) -> Void in
                 let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
                 self.pictureTaken = UIImage(data: imageData)
-                //print()
             }
         }
     }
@@ -257,46 +261,46 @@ class CamaraViewController: UIViewController {
     {
         performSegueWithIdentifier(Storyboard.ShowPersonal, sender: nil)
     }
-    /*
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        self.saveToCamera()
+        //self.saveToCamera()
         if segue.identifier == Storyboard.ShowPicture {
-            if let pvc = segue.destinationViewController.contentViewController as? PictureViewController {
-                pvc.pictureToShow = self.pictureTaken
+            if let pvc = segue.destinationViewController.contentViewController as? ImageViewController {
+                pvc.backTo = selfSegueIdentifier
+                pvc.image = self.pictureTaken
             }
         }
     }
-     */
+    
 }
 
 
 
 /*
-extension UIImage {
-    /**
-     *  重设图片大小
-     */
-    func reSizeImage(reSize:CGSize)->UIImage {
-        //UIGraphicsBeginImageContext(reSize);
-        UIGraphicsBeginImageContextWithOptions(reSize,false,UIScreen.mainScreen().scale);
-        self.drawInRect(CGRectMake(0, 0, reSize.width, reSize.height));
-        let reSizeImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!;
-        UIGraphicsEndImageContext();
-        return reSizeImage;
-    }
-    
-    /**
-     *  等比率缩放
-     */
-    func scaleImage(scaleSize:CGFloat)->UIImage {
-        let reSize = CGSizeMake(self.size.width * scaleSize, self.size.height * scaleSize)
-        return reSizeImage(reSize)
-    }
-}
+ extension UIImage {
+ /**
+ *  重设图片大小
+ */
+ func reSizeImage(reSize:CGSize)->UIImage {
+ //UIGraphicsBeginImageContext(reSize);
+ UIGraphicsBeginImageContextWithOptions(reSize,false,UIScreen.mainScreen().scale);
+ self.drawInRect(CGRectMake(0, 0, reSize.width, reSize.height));
+ let reSizeImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!;
+ UIGraphicsEndImageContext();
+ return reSizeImage;
+ }
+ 
+ /**
+ *  等比率缩放
+ */
+ func scaleImage(scaleSize:CGFloat)->UIImage {
+ let reSize = CGSizeMake(self.size.width * scaleSize, self.size.height * scaleSize)
+ return reSizeImage(reSize)
+ }
+ }
  */
 
-/*
 extension UIViewController {
     var contentViewController: UIViewController {
         if let navcon = self as? UINavigationController {
@@ -306,16 +310,15 @@ extension UIViewController {
         }
     }
 }
- */
 
 /*
-extension UIImage {
-    convenience init(view: UIView) {
-        UIGraphicsBeginImageContext(view.frame.size)
-        view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        self.init(CGImage: image!.CGImage!)
-    }
-}
+ extension UIImage {
+ convenience init(view: UIView) {
+ UIGraphicsBeginImageContext(view.frame.size)
+ view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+ let image = UIGraphicsGetImageFromCurrentImageContext()
+ UIGraphicsEndImageContext()
+ self.init(CGImage: image!.CGImage!)
+ }
+ }
  */
