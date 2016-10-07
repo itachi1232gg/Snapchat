@@ -20,6 +20,8 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        content.editable = false
+        
         let tapGuesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
         tapGuesture.cancelsTouchesInView = false
         content.addGestureRecognizer(tapGuesture)

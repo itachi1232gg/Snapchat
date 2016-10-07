@@ -859,6 +859,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aYu-jH-1wR">
                                                     <frame key="frameInset" minX="15" width="293" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -866,9 +867,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="bZH-OU-Svp" kind="show" identifier="ChatList to Chat" id="FN7-ga-vuP">
-                                                <nil key="action"/>
-                                            </segue>
+                                            <segue destination="bZH-OU-Svp" kind="show" identifier="ChatList to Chat" id="joW-6d-VtB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -881,7 +880,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
-                                    <action selector="toCameraButton:" destination="Txl-f6-p8n" eventType="touchUpInside" id="7ns-oM-kV9"/>
+                                    <action selector="cameraButton:" destination="Txl-f6-p8n" eventType="touchUpInside" id="wRC-I1-e6G"/>
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="ChatList To Camera" id="25S-kK-JEm"/>
                                 </connections>
                             </button>
@@ -889,6 +888,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Stories"/>
                                 <connections>
+                                    <action selector="storiesButton:" destination="Txl-f6-p8n" eventType="touchUpInside" id="jGZ-EK-CNZ"/>
                                     <segue destination="3Az-Pm-nuZ" kind="presentation" identifier="ChatList To Stories" id="8jy-aD-Tz6"/>
                                 </connections>
                             </button>
@@ -916,7 +916,6 @@
                     <connections>
                         <outlet property="chatingList" destination="xDV-9X-1f0" id="ncq-NY-gDB"/>
                         <outlet property="searchBar" destination="rxM-k0-obZ" id="OPa-kr-5Un"/>
-                        <outlet property="tableView" destination="xDV-9X-1f0" id="l6P-rl-Vlb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZoY-2S-9fO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -971,8 +970,6 @@
                         <outlet property="bottom" destination="Gvi-14-H3n" id="R8O-pd-ilq"/>
                         <outlet property="content" destination="H4L-FR-5gH" id="d0M-uv-7z3"/>
                         <outlet property="messageField" destination="egO-wl-LdJ" id="sap-Js-i7V"/>
-                        <outlet property="pickPicture" destination="g9D-kX-tnq" id="LT5-Bk-hPR"/>
-                        <outlet property="sendText" destination="egO-wl-LdJ" id="EQ9-tH-96x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WA4-6l-ka4" userLabel="First Responder" sceneMemberID="firstResponder"/>

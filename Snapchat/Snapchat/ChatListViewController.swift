@@ -8,8 +8,15 @@
 
 import UIKit
 
-class ChatListViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource,UITableViewDelegate {
+class ChatListViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
+    @IBAction func cameraButton(sender: UIButton) {
+        performSegueWithIdentifier("ChatList To Camera", sender: nil)
+    }
+
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBAction func storiesButton(sender: UIButton) {
+        performSegueWithIdentifier("ChatList To Stories", sender: nil)
+    }
     @IBOutlet weak var chatingList: UITableView!
     
     private struct internalData{
@@ -35,7 +42,14 @@ class ChatListViewController: UIViewController, UISearchBarDelegate, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = chatingList.dequeueReusableCellWithIdentifier(internalData.cells, forIndexPath: indexPath) as UITableViewCell
         cell.textLabel?.text = internalData.searchUsers[indexPath.row]
+        
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.chatingList.deselectRowAtIndexPath(indexPath, animated: true)
+        let theOne = internalData.searchUsers[indexPath.row]
+        self.performSegueWithIdentifier("ChatList To Chat", sender: theOne)
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
@@ -63,11 +77,10 @@ class ChatListViewController: UIViewController, UISearchBarDelegate, UITableView
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let theOne = sender as! UITableViewCell?{
-            let desitination = segue.destinationViewController
-            desitination.navigationController?.title = theOne.textLabel?.text
+        if segue.identifier == "ChatList To Chat"{
+            let destination = segue.destinationViewController as! ChatViewController
+            destination.navigationItem.title = sender as? String
         }
-        
     }
     // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
