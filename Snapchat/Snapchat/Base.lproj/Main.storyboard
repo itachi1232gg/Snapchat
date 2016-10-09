@@ -174,11 +174,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="172" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ND8-ZE-w7S">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="145" id="hF2-ZB-eHQ" customClass="CategoryRow" customModule="Snapchat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="145"/>
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="145" id="hF2-ZB-eHQ" customClass="CategoryRow" customModule="Snapchat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hF2-ZB-eHQ" id="KyY-Tw-UDC">
-                                            <frame key="frameInset" width="375" height="144"/>
+                                            <frame key="frameInset" width="1000" height="145"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GBB-gR-e1L">
@@ -228,11 +228,11 @@
                                             <outlet property="collectionView" destination="GBB-gR-e1L" id="ccm-4o-b8H"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="145" id="v2X-Nj-k1O" customClass="CategoryRow" customModule="Snapchat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="173" width="375" height="145"/>
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="145" id="v2X-Nj-k1O" customClass="CategoryRow" customModule="Snapchat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="173" width="1000" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v2X-Nj-k1O" id="OBn-Xd-u11">
-                                            <frame key="frameInset" width="375" height="144"/>
+                                            <frame key="frameInset" width="1000" height="145"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FQV-87-3jd">
