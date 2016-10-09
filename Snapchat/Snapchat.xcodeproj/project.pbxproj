@@ -100,9 +100,10 @@
 		66B82B8B1D89A015008FBE82 /* Snapchat */ = {
 			isa = PBXGroup;
 			children = (
+				8886C9BA1DA9C8EB008B5A98 /* Stories */,
 				88497A9A1D9EB63400546EF5 /* CamaraViewController.swift */,
 				88497A901D9E5DB500546EF5 /* DiscoveryViewController.swift */,
-				66B82B8C1D89A015008FBE82 /* AppDelegate.swift */,
+				8886C9B91DA9C8D1008B5A98 /* Supporting Files */,
 				66B82B901D89A015008FBE82 /* Main.storyboard */,
 				88EBD4571DA3AE9400DCB05D /* AddFriendsTableViewController.swift */,
 				88E408261DA36A6D00ECD643 /* ImageViewController.swift */,
@@ -119,9 +120,6 @@
 				88E492271DA31F4500A4A15F /* Setting.swift */,
 				88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */,
 				88497A8C1D9E5D4200546EF5 /* StoriesViewController.swift */,
-				66B82B931D89A015008FBE82 /* Assets.xcassets */,
-				66B82B951D89A015008FBE82 /* LaunchScreen.storyboard */,
-				66B82B981D89A015008FBE82 /* Info.plist */,
 				88CC0EE01D9FD0730064ABBA /* AddedMeViewController.swift */,
 				88CC0EE21D9FD0980064ABBA /* AddFriendsViewController.swift */,
 				88E105961DA0C74200C23DD6 /* GoogleService-Info.plist */,
@@ -131,6 +129,24 @@
 				88EBD4551DA3A68B00DCB05D /* ShareProtocol.swift */,
 			);
 			path = Snapchat;
+			sourceTree = "<group>";
+		};
+		8886C9B91DA9C8D1008B5A98 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66B82B8C1D89A015008FBE82 /* AppDelegate.swift */,
+				66B82B931D89A015008FBE82 /* Assets.xcassets */,
+				66B82B951D89A015008FBE82 /* LaunchScreen.storyboard */,
+				66B82B981D89A015008FBE82 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8886C9BA1DA9C8EB008B5A98 /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Stories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
