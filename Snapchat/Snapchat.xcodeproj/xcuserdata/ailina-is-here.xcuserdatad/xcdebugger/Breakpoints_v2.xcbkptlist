@@ -159,7 +159,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "268"
             endingLineNumber = "268"
-            landmarkName = "prepareForSegue(segue:sender:)"
+            landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -175,7 +175,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "269"
             endingLineNumber = "269"
-            landmarkName = "prepareForSegue(segue:sender:)"
+            landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -191,7 +191,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "265"
             endingLineNumber = "265"
-            landmarkName = "prepareForSegue(segue:sender:)"
+            landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -207,7 +207,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "267"
             endingLineNumber = "267"
-            landmarkName = "prepareForSegue(segue:sender:)"
+            landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -223,7 +223,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "266"
             endingLineNumber = "266"
-            landmarkName = "prepareForSegue(segue:sender:)"
+            landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -239,7 +239,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
             endingLineNumber = "79"
-            landmarkName = "savePicture(sender:)"
+            landmarkName = "savePicture(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -255,7 +255,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
-            landmarkName = "savePicture(sender:)"
+            landmarkName = "savePicture(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -271,7 +271,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
             endingLineNumber = "80"
-            landmarkName = "savePicture(sender:)"
+            landmarkName = "savePicture(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -543,7 +543,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "271"
             endingLineNumber = "271"
-            landmarkName = "prepareForSegue(segue:sender:)"
+            landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -559,7 +559,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "236"
             endingLineNumber = "236"
-            landmarkName = "takePhotoButton(sender:)"
+            landmarkName = "takePhotoButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

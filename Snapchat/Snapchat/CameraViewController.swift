@@ -1,5 +1,5 @@
 //
-//  CamaraViewController.swift
+//  CameraViewController.swift
 //  Snapchat
 //
 //  Created by ailina on 16/10/1.
@@ -9,8 +9,8 @@
 import UIKit
 import AVFoundation
 
-//class CamaraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-class CamaraViewController: UIViewController {
+//class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CameraViewController: UIViewController {
     
     var pictureTimer: NSTimeInterval = 3.0
     var selfSegueIdentifier = "Show Camera"
@@ -31,23 +31,22 @@ class CamaraViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        let changePageLeftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CamaraViewController.goToStories))
+        let changePageLeftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CameraViewController.goToStories))
         changePageLeftSwipe.direction = .Left
         cameraContainer.addGestureRecognizer(changePageLeftSwipe)
         
-        let changePageRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CamaraViewController.goToChat))
+        let changePageRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CameraViewController.goToChat))
         changePageRightSwipe.direction = .Right
         cameraContainer.addGestureRecognizer(changePageRightSwipe)
         
-        let changePageUpSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CamaraViewController.goToMemories))
+        let changePageUpSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CameraViewController.goToMemories))
         changePageUpSwipe.direction = .Up
         cameraContainer.addGestureRecognizer(changePageUpSwipe)
         
-        let changePageDownSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CamaraViewController.goToPersonal))
+        let changePageDownSwipe = UISwipeGestureRecognizer(target: self, action: #selector(CameraViewController.goToPersonal))
         changePageDownSwipe.direction = .Down
         cameraContainer.addGestureRecognizer(changePageDownSwipe)
         
-        showPictureView.hidden = true
         segueToShowPictureButton.hidden = true
         initiateCamera()
         
@@ -57,73 +56,6 @@ class CamaraViewController: UIViewController {
     var pictureTaken: UIImage?{
         didSet{
             performSegueWithIdentifier(Storyboard.ShowPicture, sender: nil)
-        }
-    }
-    
-    //MARK: Picture View
-    @IBOutlet weak var showPictureView: UIView!{
-        didSet{
-            initiateAlert()
-        }
-    }
-    
-    @IBOutlet weak var pictureTakenImageView: UIImageView!
-    
-    @IBAction func backToCamera(sender: UIButton) {
-        pictureTakenImageView.hidden = true
-        showPictureView.hidden = true
-    }
-    
-    @IBAction func savePicture(sender: UIButton) {
-        //let image = pictureTakenImageView.image
-        let image = pictureTaken                                                                //如果要编辑功能需要改这个变量
-        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
-    }
-    
-    @IBAction func setTimerButton(sender: UIButton) {
-        presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    var alert = UIAlertController(
-        title: "Set Timer",
-        message: "Please set your preferable timer for you lovely story😘, default: 3s",
-        preferredStyle: UIAlertControllerStyle.Alert
-    )
-    
-    //    var pictureTaken: UIImage?{
-    //        willSet{
-    //            showPictureView.hidden = false
-    //            pictureTakenImageView.hidden = false
-    //            pictureTakenImageView.image = newValue!
-    //            pictureTakenImageView.contentMode = .ScaleAspectFit
-    //        }
-    //    }
-    
-    private func initiateAlert(){
-        alert.addAction(UIAlertAction(
-            title: "Cancel",
-            style: .Cancel,
-            handler: nil)
-        )
-        alert.addAction(UIAlertAction(
-            title: "Set",
-            style: .Default)
-        { (action:UIAlertAction) -> Void in
-            if let tf = self.alert.textFields?.first{
-                if tf.text != nil{
-                    let tfDouble = Double(tf.text!) ?? self.pictureTimer
-                    self.pictureTimer = tfDouble
-                    print("Timer: \(self.pictureTimer)")
-                }else{
-                    self.pictureTimer = 3.0
-                    print("Alert timer set nil")
-                    print("Timer: \(self.pictureTimer)")
-                }
-            }
-            }
-        )
-        alert.addTextFieldWithConfigurationHandler{(textField) in
-            textField.placeholder = "seconds"
         }
     }
     

@@ -16,17 +16,15 @@
 		88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */; };
 		88497A8D1D9E5D4200546EF5 /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A8C1D9E5D4200546EF5 /* StoriesViewController.swift */; };
 		88497A911D9E5DB500546EF5 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A901D9E5DB500546EF5 /* DiscoveryViewController.swift */; };
-		88497A9B1D9EB63400546EF5 /* CamaraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A9A1D9EB63400546EF5 /* CamaraViewController.swift */; };
+		88497A9B1D9EB63400546EF5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A9A1D9EB63400546EF5 /* CameraViewController.swift */; };
 		886CE85A1DA2294600CA59EB /* AddedMeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CE8591DA2294600CA59EB /* AddedMeTableViewCell.swift */; };
 		88BF23C71DA23F9A00221EF4 /* AddByUsernameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF23C61DA23F9A00221EF4 /* AddByUsernameTableViewController.swift */; };
 		88BF23C91DA23FC600221EF4 /* AddByUsernameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF23C81DA23FC600221EF4 /* AddByUsernameTableViewCell.swift */; };
-		88CC0EE11D9FD0730064ABBA /* AddedMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC0EE01D9FD0730064ABBA /* AddedMeViewController.swift */; };
 		88CC0EE31D9FD0980064ABBA /* AddFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC0EE21D9FD0980064ABBA /* AddFriendsViewController.swift */; };
-		88CC0EE51D9FD0A40064ABBA /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC0EE41D9FD0A40064ABBA /* MyFriendsViewController.swift */; };
 		88E105971DA0C74200C23DD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88E105961DA0C74200C23DD6 /* GoogleService-Info.plist */; };
 		88E408271DA36A6D00ECD643 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E408261DA36A6D00ECD643 /* ImageViewController.swift */; };
 		88E492261DA31CB500A4A15F /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E492251DA31CB500A4A15F /* ImageCollectionCell.swift */; };
-		88E492281DA31F4500A4A15F /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E492271DA31F4500A4A15F /* Setting.swift */; };
+		88E492281DA31F4500A4A15F /* SettingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E492271DA31F4500A4A15F /* SettingImage.swift */; };
 		88E4922A1DA3242000A4A15F /* ImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E492291DA3242000A4A15F /* ImageObject.swift */; };
 		88EBD4561DA3A68B00DCB05D /* ShareProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD4551DA3A68B00DCB05D /* ShareProtocol.swift */; };
 		88EBD4581DA3AE9400DCB05D /* AddFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD4571DA3AE9400DCB05D /* AddFriendsTableViewController.swift */; };
@@ -49,17 +47,15 @@
 		88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		88497A8C1D9E5D4200546EF5 /* StoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
 		88497A901D9E5DB500546EF5 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
-		88497A9A1D9EB63400546EF5 /* CamaraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamaraViewController.swift; sourceTree = "<group>"; };
+		88497A9A1D9EB63400546EF5 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		886CE8591DA2294600CA59EB /* AddedMeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddedMeTableViewCell.swift; sourceTree = "<group>"; };
 		88BF23C61DA23F9A00221EF4 /* AddByUsernameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddByUsernameTableViewController.swift; sourceTree = "<group>"; };
 		88BF23C81DA23FC600221EF4 /* AddByUsernameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddByUsernameTableViewCell.swift; sourceTree = "<group>"; };
-		88CC0EE01D9FD0730064ABBA /* AddedMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddedMeViewController.swift; sourceTree = "<group>"; };
 		88CC0EE21D9FD0980064ABBA /* AddFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsViewController.swift; sourceTree = "<group>"; };
-		88CC0EE41D9FD0A40064ABBA /* MyFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
 		88E105961DA0C74200C23DD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88E408261DA36A6D00ECD643 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		88E492251DA31CB500A4A15F /* ImageCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
-		88E492271DA31F4500A4A15F /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		88E492271DA31F4500A4A15F /* SettingImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingImage.swift; sourceTree = "<group>"; };
 		88E492291DA3242000A4A15F /* ImageObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageObject.swift; sourceTree = "<group>"; };
 		88EBD4551DA3A68B00DCB05D /* ShareProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareProtocol.swift; sourceTree = "<group>"; };
 		88EBD4571DA3AE9400DCB05D /* AddFriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsTableViewController.swift; sourceTree = "<group>"; };
@@ -100,30 +96,18 @@
 		66B82B8B1D89A015008FBE82 /* Snapchat */ = {
 			isa = PBXGroup;
 			children = (
+				8886C9C11DA9DDD2008B5A98 /* TemporaryUseless */,
+				8886C9C01DA9DCDD008B5A98 /* Camera */,
+				8886C9BF1DA9DC99008B5A98 /* Discovery */,
+				8886C9BE1DA9DC8B008B5A98 /* Memories */,
+				8886C9BD1DA9DC7D008B5A98 /* Chat */,
+				8886C9BC1DA9DC4C008B5A98 /* DatabaseEntry */,
 				8886C9BA1DA9C8EB008B5A98 /* Stories */,
-				88497A9A1D9EB63400546EF5 /* CamaraViewController.swift */,
-				88497A901D9E5DB500546EF5 /* DiscoveryViewController.swift */,
 				8886C9B91DA9C8D1008B5A98 /* Supporting Files */,
 				66B82B901D89A015008FBE82 /* Main.storyboard */,
-				88EBD4571DA3AE9400DCB05D /* AddFriendsTableViewController.swift */,
 				88E408261DA36A6D00ECD643 /* ImageViewController.swift */,
-				88BF23C61DA23F9A00221EF4 /* AddByUsernameTableViewController.swift */,
-				88BF23C81DA23FC600221EF4 /* AddByUsernameTableViewCell.swift */,
-				88F2C41D1DA214F000E8CACB /* MyFriendsTableViewController.swift */,
-				88F2C4271DA218F700E8CACB /* MyFriendsTableViewCell.swift */,
-				88F2C41F1DA2150200E8CACB /* AddedMeTableViewController.swift */,
-				886CE8591DA2294600CA59EB /* AddedMeTableViewCell.swift */,
-				88497A861D9E5CF400546EF5 /* ChatViewController.swift */,
-				88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */,
-				88E492251DA31CB500A4A15F /* ImageCollectionCell.swift */,
-				88E492291DA3242000A4A15F /* ImageObject.swift */,
-				88E492271DA31F4500A4A15F /* Setting.swift */,
-				88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */,
-				88497A8C1D9E5D4200546EF5 /* StoriesViewController.swift */,
-				88CC0EE01D9FD0730064ABBA /* AddedMeViewController.swift */,
-				88CC0EE21D9FD0980064ABBA /* AddFriendsViewController.swift */,
+				8886C9BB1DA9D905008B5A98 /* Personal */,
 				88E105961DA0C74200C23DD6 /* GoogleService-Info.plist */,
-				88CC0EE41D9FD0A40064ABBA /* MyFriendsViewController.swift */,
 				88F2C4231DA2166200E8CACB /* UsableData.swift */,
 				88F2C4241DA2166200E8CACB /* User.swift */,
 				88EBD4551DA3A68B00DCB05D /* ShareProtocol.swift */,
@@ -145,8 +129,114 @@
 		8886C9BA1DA9C8EB008B5A98 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				88497A8C1D9E5D4200546EF5 /* StoriesViewController.swift */,
 			);
 			name = Stories;
+			sourceTree = "<group>";
+		};
+		8886C9BB1DA9D905008B5A98 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */,
+				8886C9C51DA9DEFB008B5A98 /* MyFriends */,
+				8886C9C41DA9DEF0008B5A98 /* AddFriends */,
+				8886C9C31DA9DEE2008B5A98 /* AddedMe */,
+			);
+			name = Personal;
+			sourceTree = "<group>";
+		};
+		8886C9BC1DA9DC4C008B5A98 /* DatabaseEntry */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DatabaseEntry;
+			sourceTree = "<group>";
+		};
+		8886C9BD1DA9DC7D008B5A98 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				88497A861D9E5CF400546EF5 /* ChatViewController.swift */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		8886C9BE1DA9DC8B008B5A98 /* Memories */ = {
+			isa = PBXGroup;
+			children = (
+				88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */,
+			);
+			name = Memories;
+			sourceTree = "<group>";
+		};
+		8886C9BF1DA9DC99008B5A98 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				88497A901D9E5DB500546EF5 /* DiscoveryViewController.swift */,
+			);
+			name = Discovery;
+			sourceTree = "<group>";
+		};
+		8886C9C01DA9DCDD008B5A98 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				88497A9A1D9EB63400546EF5 /* CameraViewController.swift */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		8886C9C11DA9DDD2008B5A98 /* TemporaryUseless */ = {
+			isa = PBXGroup;
+			children = (
+				88E492251DA31CB500A4A15F /* ImageCollectionCell.swift */,
+				88E492291DA3242000A4A15F /* ImageObject.swift */,
+				88E492271DA31F4500A4A15F /* SettingImage.swift */,
+			);
+			name = TemporaryUseless;
+			sourceTree = "<group>";
+		};
+		8886C9C31DA9DEE2008B5A98 /* AddedMe */ = {
+			isa = PBXGroup;
+			children = (
+				88F2C41F1DA2150200E8CACB /* AddedMeTableViewController.swift */,
+				886CE8591DA2294600CA59EB /* AddedMeTableViewCell.swift */,
+			);
+			name = AddedMe;
+			sourceTree = "<group>";
+		};
+		8886C9C41DA9DEF0008B5A98 /* AddFriends */ = {
+			isa = PBXGroup;
+			children = (
+				8886C9C71DA9DFD2008B5A98 /* AddFromAddressBook */,
+				8886C9C61DA9DF6C008B5A98 /* AddByUsername */,
+				88CC0EE21D9FD0980064ABBA /* AddFriendsViewController.swift */,
+				88EBD4571DA3AE9400DCB05D /* AddFriendsTableViewController.swift */,
+			);
+			name = AddFriends;
+			sourceTree = "<group>";
+		};
+		8886C9C51DA9DEFB008B5A98 /* MyFriends */ = {
+			isa = PBXGroup;
+			children = (
+				88F2C41D1DA214F000E8CACB /* MyFriendsTableViewController.swift */,
+				88F2C4271DA218F700E8CACB /* MyFriendsTableViewCell.swift */,
+			);
+			name = MyFriends;
+			sourceTree = "<group>";
+		};
+		8886C9C61DA9DF6C008B5A98 /* AddByUsername */ = {
+			isa = PBXGroup;
+			children = (
+				88BF23C61DA23F9A00221EF4 /* AddByUsernameTableViewController.swift */,
+				88BF23C81DA23FC600221EF4 /* AddByUsernameTableViewCell.swift */,
+			);
+			name = AddByUsername;
+			sourceTree = "<group>";
+		};
+		8886C9C71DA9DFD2008B5A98 /* AddFromAddressBook */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AddFromAddressBook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,19 +314,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				88E492261DA31CB500A4A15F /* ImageCollectionCell.swift in Sources */,
-				88CC0EE51D9FD0A40064ABBA /* MyFriendsViewController.swift in Sources */,
 				88497A8D1D9E5D4200546EF5 /* StoriesViewController.swift in Sources */,
 				88E4922A1DA3242000A4A15F /* ImageObject.swift in Sources */,
 				88F2C41E1DA214F000E8CACB /* MyFriendsTableViewController.swift in Sources */,
-				88CC0EE11D9FD0730064ABBA /* AddedMeViewController.swift in Sources */,
 				88EBD4561DA3A68B00DCB05D /* ShareProtocol.swift in Sources */,
 				88BF23C91DA23FC600221EF4 /* AddByUsernameTableViewCell.swift in Sources */,
 				88F2C4251DA2166200E8CACB /* UsableData.swift in Sources */,
 				66B82B8D1D89A015008FBE82 /* AppDelegate.swift in Sources */,
 				88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */,
 				88F2C4261DA2166200E8CACB /* User.swift in Sources */,
-				88E492281DA31F4500A4A15F /* Setting.swift in Sources */,
-				88497A9B1D9EB63400546EF5 /* CamaraViewController.swift in Sources */,
+				88E492281DA31F4500A4A15F /* SettingImage.swift in Sources */,
+				88497A9B1D9EB63400546EF5 /* CameraViewController.swift in Sources */,
 				88497A911D9E5DB500546EF5 /* DiscoveryViewController.swift in Sources */,
 				88BF23C71DA23F9A00221EF4 /* AddByUsernameTableViewController.swift in Sources */,
 				88F2C4281DA218F700E8CACB /* MyFriendsTableViewCell.swift in Sources */,
