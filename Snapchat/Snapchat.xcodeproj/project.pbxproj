@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		66B82B8D1D89A015008FBE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B82B8C1D89A015008FBE82 /* AppDelegate.swift */; };
 		66B82B921D89A015008FBE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B82B901D89A015008FBE82 /* Main.storyboard */; };
-		66B82B941D89A015008FBE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B82B931D89A015008FBE82 /* Assets.xcassets */; };
 		66B82B971D89A015008FBE82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B82B951D89A015008FBE82 /* LaunchScreen.storyboard */; };
+		66BFB2FF1DA9EF6B00F0EA7A /* DiscoverData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB2FE1DA9EF6B00F0EA7A /* DiscoverData.swift */; };
+		66BFB3011DA9EF8200F0EA7A /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB3001DA9EF8200F0EA7A /* CategoryRow.swift */; };
+		66BFB3031DA9EF8A00F0EA7A /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB3021DA9EF8A00F0EA7A /* DiscoverCell.swift */; };
+		66BFB3051DA9EF9600F0EA7A /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB3041DA9EF9600F0EA7A /* DiscoveryViewController.swift */; };
+		66BFB3071DA9EFBA00F0EA7A /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB3061DA9EFBA00F0EA7A /* StoriesViewController.swift */; };
+		66BFB3091DA9EFCD00F0EA7A /* SubscruptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB3081DA9EFCD00F0EA7A /* SubscruptionsTableViewCell.swift */; };
+		66BFB30B1DA9EFD500F0EA7A /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB30A1DA9EFD500F0EA7A /* VideoCell.swift */; };
+		66BFB30D1DA9F28C00F0EA7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66BFB30C1DA9F28C00F0EA7A /* Assets.xcassets */; };
 		88497A871D9E5CF400546EF5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A861D9E5CF400546EF5 /* ChatViewController.swift */; };
 		88497A891D9E5D0F00546EF5 /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */; };
 		88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */; };
-		88497A8D1D9E5D4200546EF5 /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A8C1D9E5D4200546EF5 /* StoriesViewController.swift */; };
-		88497A911D9E5DB500546EF5 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A901D9E5DB500546EF5 /* DiscoveryViewController.swift */; };
 		88497A9B1D9EB63400546EF5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A9A1D9EB63400546EF5 /* CameraViewController.swift */; };
 		886CE85A1DA2294600CA59EB /* AddedMeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CE8591DA2294600CA59EB /* AddedMeTableViewCell.swift */; };
 		88BF23C71DA23F9A00221EF4 /* AddByUsernameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF23C61DA23F9A00221EF4 /* AddByUsernameTableViewController.swift */; };
@@ -39,14 +44,19 @@
 		66B82B891D89A015008FBE82 /* Snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B82B8C1D89A015008FBE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66B82B911D89A015008FBE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		66B82B931D89A015008FBE82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66B82B961D89A015008FBE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66B82B981D89A015008FBE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66BFB2FE1DA9EF6B00F0EA7A /* DiscoverData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverData.swift; path = "../../../../Downloads/Snapchat-discover/DiscoverData.swift"; sourceTree = "<group>"; };
+		66BFB3001DA9EF8200F0EA7A /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryRow.swift; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/CategoryRow.swift"; sourceTree = "<group>"; };
+		66BFB3021DA9EF8A00F0EA7A /* DiscoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverCell.swift; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/DiscoverCell.swift"; sourceTree = "<group>"; };
+		66BFB3041DA9EF9600F0EA7A /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoveryViewController.swift; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/DiscoveryViewController.swift"; sourceTree = "<group>"; };
+		66BFB3061DA9EFBA00F0EA7A /* StoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoriesViewController.swift; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/StoriesViewController.swift"; sourceTree = "<group>"; };
+		66BFB3081DA9EFCD00F0EA7A /* SubscruptionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscruptionsTableViewCell.swift; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/SubscruptionsTableViewCell.swift"; sourceTree = "<group>"; };
+		66BFB30A1DA9EFD500F0EA7A /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/VideoCell.swift"; sourceTree = "<group>"; };
+		66BFB30C1DA9F28C00F0EA7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/Assets.xcassets"; sourceTree = "<group>"; };
 		88497A861D9E5CF400546EF5 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewController.swift; sourceTree = "<group>"; };
 		88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
-		88497A8C1D9E5D4200546EF5 /* StoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
-		88497A901D9E5DB500546EF5 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
 		88497A9A1D9EB63400546EF5 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		886CE8591DA2294600CA59EB /* AddedMeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddedMeTableViewCell.swift; sourceTree = "<group>"; };
 		88BF23C61DA23F9A00221EF4 /* AddByUsernameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddByUsernameTableViewController.swift; sourceTree = "<group>"; };
@@ -98,11 +108,11 @@
 			children = (
 				8886C9C11DA9DDD2008B5A98 /* TemporaryUseless */,
 				8886C9C01DA9DCDD008B5A98 /* Camera */,
-				8886C9BF1DA9DC99008B5A98 /* Discovery */,
 				8886C9BE1DA9DC8B008B5A98 /* Memories */,
 				8886C9BD1DA9DC7D008B5A98 /* Chat */,
 				8886C9BC1DA9DC4C008B5A98 /* DatabaseEntry */,
 				8886C9BA1DA9C8EB008B5A98 /* Stories */,
+				8886C9BF1DA9DC99008B5A98 /* Discovery */,
 				8886C9B91DA9C8D1008B5A98 /* Supporting Files */,
 				66B82B901D89A015008FBE82 /* Main.storyboard */,
 				88E408261DA36A6D00ECD643 /* ImageViewController.swift */,
@@ -118,8 +128,8 @@
 		8886C9B91DA9C8D1008B5A98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				66BFB30C1DA9F28C00F0EA7A /* Assets.xcassets */,
 				66B82B8C1D89A015008FBE82 /* AppDelegate.swift */,
-				66B82B931D89A015008FBE82 /* Assets.xcassets */,
 				66B82B951D89A015008FBE82 /* LaunchScreen.storyboard */,
 				66B82B981D89A015008FBE82 /* Info.plist */,
 			);
@@ -129,7 +139,10 @@
 		8886C9BA1DA9C8EB008B5A98 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
-				88497A8C1D9E5D4200546EF5 /* StoriesViewController.swift */,
+				66BFB3061DA9EFBA00F0EA7A /* StoriesViewController.swift */,
+				66BFB3081DA9EFCD00F0EA7A /* SubscruptionsTableViewCell.swift */,
+				66BFB3001DA9EF8200F0EA7A /* CategoryRow.swift */,
+				66BFB30A1DA9EFD500F0EA7A /* VideoCell.swift */,
 			);
 			name = Stories;
 			sourceTree = "<group>";
@@ -171,7 +184,9 @@
 		8886C9BF1DA9DC99008B5A98 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
-				88497A901D9E5DB500546EF5 /* DiscoveryViewController.swift */,
+				66BFB3041DA9EF9600F0EA7A /* DiscoveryViewController.swift */,
+				66BFB3021DA9EF8A00F0EA7A /* DiscoverCell.swift */,
+				66BFB2FE1DA9EF6B00F0EA7A /* DiscoverData.swift */,
 			);
 			name = Discovery;
 			sourceTree = "<group>";
@@ -271,7 +286,7 @@
 				TargetAttributes = {
 					66B82B881D89A015008FBE82 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = PUB3KR929G;
+						DevelopmentTeam = 3A974QQH78;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -301,7 +316,7 @@
 			files = (
 				66B82B971D89A015008FBE82 /* LaunchScreen.storyboard in Resources */,
 				88E105971DA0C74200C23DD6 /* GoogleService-Info.plist in Resources */,
-				66B82B941D89A015008FBE82 /* Assets.xcassets in Resources */,
+				66BFB30D1DA9F28C00F0EA7A /* Assets.xcassets in Resources */,
 				66B82B921D89A015008FBE82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,18 +329,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				88E492261DA31CB500A4A15F /* ImageCollectionCell.swift in Sources */,
-				88497A8D1D9E5D4200546EF5 /* StoriesViewController.swift in Sources */,
 				88E4922A1DA3242000A4A15F /* ImageObject.swift in Sources */,
+				66BFB30B1DA9EFD500F0EA7A /* VideoCell.swift in Sources */,
 				88F2C41E1DA214F000E8CACB /* MyFriendsTableViewController.swift in Sources */,
 				88EBD4561DA3A68B00DCB05D /* ShareProtocol.swift in Sources */,
 				88BF23C91DA23FC600221EF4 /* AddByUsernameTableViewCell.swift in Sources */,
+				66BFB3031DA9EF8A00F0EA7A /* DiscoverCell.swift in Sources */,
+				66BFB3091DA9EFCD00F0EA7A /* SubscruptionsTableViewCell.swift in Sources */,
 				88F2C4251DA2166200E8CACB /* UsableData.swift in Sources */,
 				66B82B8D1D89A015008FBE82 /* AppDelegate.swift in Sources */,
 				88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */,
+				66BFB3071DA9EFBA00F0EA7A /* StoriesViewController.swift in Sources */,
 				88F2C4261DA2166200E8CACB /* User.swift in Sources */,
+				66BFB3011DA9EF8200F0EA7A /* CategoryRow.swift in Sources */,
 				88E492281DA31F4500A4A15F /* SettingImage.swift in Sources */,
+				66BFB2FF1DA9EF6B00F0EA7A /* DiscoverData.swift in Sources */,
 				88497A9B1D9EB63400546EF5 /* CameraViewController.swift in Sources */,
-				88497A911D9E5DB500546EF5 /* DiscoveryViewController.swift in Sources */,
 				88BF23C71DA23F9A00221EF4 /* AddByUsernameTableViewController.swift in Sources */,
 				88F2C4281DA218F700E8CACB /* MyFriendsTableViewCell.swift in Sources */,
 				88EBD4581DA3AE9400DCB05D /* AddFriendsTableViewController.swift in Sources */,
@@ -333,6 +352,7 @@
 				886CE85A1DA2294600CA59EB /* AddedMeTableViewCell.swift in Sources */,
 				88CC0EE31D9FD0980064ABBA /* AddFriendsViewController.swift in Sources */,
 				88497A871D9E5CF400546EF5 /* ChatViewController.swift in Sources */,
+				66BFB3051DA9EF9600F0EA7A /* DiscoveryViewController.swift in Sources */,
 				88E408271DA36A6D00ECD643 /* ImageViewController.swift in Sources */,
 				88497A891D9E5D0F00546EF5 /* MemoriesViewController.swift in Sources */,
 			);
@@ -452,9 +472,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3A974QQH78;
 				INFOPLIST_FILE = Snapchat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Can.Snapchat;
+				PRODUCT_BUNDLE_IDENTIFIER = Can.Snapchat1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 			};
@@ -465,9 +486,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3A974QQH78;
 				INFOPLIST_FILE = Snapchat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Can.Snapchat;
+				PRODUCT_BUNDLE_IDENTIFIER = Can.Snapchat1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 			};
