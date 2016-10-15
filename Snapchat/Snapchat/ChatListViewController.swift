@@ -9,15 +9,9 @@
 import UIKit
 
 class ChatListViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
-    @IBAction func cameraButton(sender: UIButton) {
-        performSegueWithIdentifier("ChatList To Camera", sender: nil)
-    }
 
     @IBOutlet weak var searchBar: UISearchBar!
     
-    @IBAction func storiesButton(sender: UIButton) {
-        performSegueWithIdentifier("ChatList To Stories", sender: nil)
-    }
     @IBOutlet weak var chatingList: UITableView!
     
     private struct internalData{

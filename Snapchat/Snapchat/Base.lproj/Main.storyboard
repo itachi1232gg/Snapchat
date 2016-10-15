@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KeG-zk-Fpk">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KeG-zk-Fpk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -346,7 +346,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="KeG-zk-Fpk" kind="presentation" id="4iY-w6-LW1"/>
+                                                            <segue destination="KeG-zk-Fpk" kind="presentation" identifier="Show Chat" modalTransitionStyle="crossDissolve" id="4iY-w6-LW1"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsf-XK-SMX">
@@ -720,7 +720,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcU-vm-C0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3063.1999999999998" y="350.37481259370315"/>
+            <point key="canvasLocation" x="2255" y="296"/>
         </scene>
         <!--Stories-->
         <scene sceneID="TCd-fc-sIm">
@@ -748,10 +748,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="storiescell" rowHeight="145" id="Iga-NA-csf" customClass="CategoryRow" customModule="Snapchat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="145"/>
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Iga-NA-csf" id="g9E-q9-hDd">
-                                            <frame key="frameInset" width="375" height="144"/>
+                                            <frame key="frameInset" width="1000" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2y4-rd-9jX">
@@ -763,10 +763,10 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videoCell" id="RDc-kL-xtj" customClass="VideoCell" customModule="Snapchat" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="5" width="109" height="134.5"/>
+                                                            <rect key="frame" x="5" y="5" width="109" height="135"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="135"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="zIn-Ww-FLw"/>
@@ -872,7 +872,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLk-XD-s9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4116" y="349.47526236881561"/>
+            <point key="canvasLocation" x="2942" y="278"/>
         </scene>
         <!--Discover-->
         <scene sceneID="HpW-m2-hAQ">
@@ -884,7 +884,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="discovercell" rowHeight="300" id="whl-Hx-gps" customClass="DiscoverCell" customModule="Snapchat" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="whl-Hx-gps" id="pBC-Dk-SQM">
                                     <frame key="frameInset" width="375" height="300"/>
@@ -928,7 +928,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUg-qS-a8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4999.1999999999998" y="348.57571214392806"/>
+            <point key="canvasLocation" x="3758" y="311"/>
         </scene>
         <!--ChatList-->
         <scene sceneID="GZR-6O-5G7">
@@ -981,16 +981,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
-                                    <action selector="cameraButton:" destination="SoC-vZ-kL3" eventType="touchUpInside" id="fHK-vm-A1Q"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="McS-cx-Tkm"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="Show Camera" modalTransitionStyle="crossDissolve" id="JHG-PB-y0h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IR-kz-0VD">
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Stories"/>
                                 <connections>
-                                    <action selector="storiesButton:" destination="SoC-vZ-kL3" eventType="touchUpInside" id="g8u-79-TyX"/>
-                                    <segue destination="s9D-aS-NaC" kind="presentation" id="WbT-Yv-evh"/>
+                                    <segue destination="j3f-YH-tjr" kind="presentation" identifier="Show Stories" modalTransitionStyle="crossDissolve" id="96b-kq-agU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1100,10 +1098,10 @@
         <image name="image1" width="848" height="1072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="McS-cx-Tkm"/>
-        <segue reference="WbT-Yv-evh"/>
-        <segue reference="Sg9-NA-Ino"/>
         <segue reference="h1j-Uc-Zyp"/>
+        <segue reference="JHG-PB-y0h"/>
+        <segue reference="Sg9-NA-Ino"/>
+        <segue reference="t6x-vd-yA7"/>
         <segue reference="DME-cz-g6j"/>
     </inferredMetricsTieBreakers>
 </document>
