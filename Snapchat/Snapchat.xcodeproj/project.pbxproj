@@ -19,7 +19,6 @@
 		66B82B8D1D89A015008FBE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B82B8C1D89A015008FBE82 /* AppDelegate.swift */; };
 		66B82B921D89A015008FBE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B82B901D89A015008FBE82 /* Main.storyboard */; };
 		66B82B971D89A015008FBE82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B82B951D89A015008FBE82 /* LaunchScreen.storyboard */; };
-		88497A871D9E5CF400546EF5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A861D9E5CF400546EF5 /* ChatViewController.swift */; };
 		88497A891D9E5D0F00546EF5 /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */; };
 		88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */; };
 		88497A9B1D9EB63400546EF5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A9A1D9EB63400546EF5 /* CameraViewController.swift */; };
@@ -40,6 +39,8 @@
 		88F2C4251DA2166200E8CACB /* UsableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F2C4231DA2166200E8CACB /* UsableData.swift */; };
 		88F2C4261DA2166200E8CACB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F2C4241DA2166200E8CACB /* User.swift */; };
 		88F2C4281DA218F700E8CACB /* MyFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F2C4271DA218F700E8CACB /* MyFriendsTableViewCell.swift */; };
+		E79A5F891DB22C7400B65C9E /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79A5F881DB22C7400B65C9E /* ChatListViewController.swift */; };
+		E79A5F8B1DB22CB300B65C9E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79A5F8A1DB22CB300B65C9E /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +57,6 @@
 		66B82B911D89A015008FBE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66B82B961D89A015008FBE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66B82B981D89A015008FBE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88497A861D9E5CF400546EF5 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewController.swift; sourceTree = "<group>"; };
 		88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		88497A9A1D9EB63400546EF5 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +80,8 @@
 		B5079D241D2A55A824DB64A3 /* Pods_Snapchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E453FB759031953EEFC43D3B /* Pods-Snapchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat.release.xcconfig"; sourceTree = "<group>"; };
 		E4ECCD52F19B36FD7FE22A3C /* Pods-Snapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat.debug.xcconfig"; sourceTree = "<group>"; };
+		E79A5F881DB22C7400B65C9E /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		E79A5F8A1DB22CB300B65C9E /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +179,8 @@
 		8886C9BD1DA9DC7D008B5A98 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				88497A861D9E5CF400546EF5 /* ChatViewController.swift */,
+				E79A5F881DB22C7400B65C9E /* ChatListViewController.swift */,
+				E79A5F8A1DB22CB300B65C9E /* ChatViewController.swift */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				661EF7F81DB1FFF70075FE3D /* SubscruptionsTableViewCell.swift in Sources */,
 				88BF23C91DA23FC600221EF4 /* AddByUsernameTableViewCell.swift in Sources */,
 				88F2C4251DA2166200E8CACB /* UsableData.swift in Sources */,
+				E79A5F891DB22C7400B65C9E /* ChatListViewController.swift in Sources */,
 				888929AA1DB20CEB00CB8BBA /* AddFromAddressBookViewController.swift in Sources */,
 				66B82B8D1D89A015008FBE82 /* AppDelegate.swift in Sources */,
 				88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */,
@@ -431,8 +435,8 @@
 				886CE85A1DA2294600CA59EB /* AddedMeTableViewCell.swift in Sources */,
 				661EF7F71DB1FFF70075FE3D /* StoriesViewController.swift in Sources */,
 				88CC0EE31D9FD0980064ABBA /* AddFriendsViewController.swift in Sources */,
-				88497A871D9E5CF400546EF5 /* ChatViewController.swift in Sources */,
 				88E408271DA36A6D00ECD643 /* ImageViewController.swift in Sources */,
+				E79A5F8B1DB22CB300B65C9E /* ChatViewController.swift in Sources */,
 				88497A891D9E5D0F00546EF5 /* MemoriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

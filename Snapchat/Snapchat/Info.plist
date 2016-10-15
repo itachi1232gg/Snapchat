@@ -26,6 +26,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>just use</string>
+	<key>NSContactsUsageDescription</key>
+	<string>just use</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>just use</string>
 	<key>UILaunchStoryboardName</key>
