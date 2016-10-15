@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0DE8292E588922BDBBF83C1F /* Pods_Snapchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5079D241D2A55A824DB64A3 /* Pods_Snapchat.framework */; };
+		661EF7EF1DB1FFE90075FE3D /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7EC1DB1FFE90075FE3D /* DiscoverCell.swift */; };
+		661EF7F01DB1FFE90075FE3D /* DiscoverData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7ED1DB1FFE90075FE3D /* DiscoverData.swift */; };
+		661EF7F11DB1FFE90075FE3D /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7EE1DB1FFE90075FE3D /* DiscoveryViewController.swift */; };
+		661EF7F61DB1FFF70075FE3D /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7F21DB1FFF70075FE3D /* CategoryRow.swift */; };
+		661EF7F71DB1FFF70075FE3D /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7F31DB1FFF70075FE3D /* StoriesViewController.swift */; };
+		661EF7F81DB1FFF70075FE3D /* SubscruptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7F41DB1FFF70075FE3D /* SubscruptionsTableViewCell.swift */; };
+		661EF7F91DB1FFF70075FE3D /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7F51DB1FFF70075FE3D /* VideoCell.swift */; };
+		661EF7FB1DB200280075FE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661EF7FA1DB200280075FE3D /* Assets.xcassets */; };
 		66B82B8D1D89A015008FBE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B82B8C1D89A015008FBE82 /* AppDelegate.swift */; };
 		66B82B921D89A015008FBE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B82B901D89A015008FBE82 /* Main.storyboard */; };
 		66B82B971D89A015008FBE82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B82B951D89A015008FBE82 /* LaunchScreen.storyboard */; };
-		66BFB2FF1DA9EF6B00F0EA7A /* DiscoverData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB2FE1DA9EF6B00F0EA7A /* DiscoverData.swift */; };
-		66BFB3011DA9EF8200F0EA7A /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB3001DA9EF8200F0EA7A /* CategoryRow.swift */; };
-		66BFB3031DA9EF8A00F0EA7A /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB3021DA9EF8A00F0EA7A /* DiscoverCell.swift */; };
-		66BFB3051DA9EF9600F0EA7A /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB3041DA9EF9600F0EA7A /* DiscoveryViewController.swift */; };
-		66BFB3071DA9EFBA00F0EA7A /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB3061DA9EFBA00F0EA7A /* StoriesViewController.swift */; };
-		66BFB3091DA9EFCD00F0EA7A /* SubscruptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB3081DA9EFCD00F0EA7A /* SubscruptionsTableViewCell.swift */; };
-		66BFB30B1DA9EFD500F0EA7A /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFB30A1DA9EFD500F0EA7A /* VideoCell.swift */; };
-		66BFB30D1DA9F28C00F0EA7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66BFB30C1DA9F28C00F0EA7A /* Assets.xcassets */; };
 		88497A871D9E5CF400546EF5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A861D9E5CF400546EF5 /* ChatViewController.swift */; };
 		88497A891D9E5D0F00546EF5 /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */; };
 		88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */; };
@@ -42,19 +42,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		661EF7EC1DB1FFE90075FE3D /* DiscoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
+		661EF7ED1DB1FFE90075FE3D /* DiscoverData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverData.swift; sourceTree = "<group>"; };
+		661EF7EE1DB1FFE90075FE3D /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		661EF7F21DB1FFF70075FE3D /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
+		661EF7F31DB1FFF70075FE3D /* StoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
+		661EF7F41DB1FFF70075FE3D /* SubscruptionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscruptionsTableViewCell.swift; sourceTree = "<group>"; };
+		661EF7F51DB1FFF70075FE3D /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		661EF7FA1DB200280075FE3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66B82B891D89A015008FBE82 /* Snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B82B8C1D89A015008FBE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66B82B911D89A015008FBE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66B82B961D89A015008FBE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66B82B981D89A015008FBE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66BFB2FE1DA9EF6B00F0EA7A /* DiscoverData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverData.swift; path = "../../../../Downloads/Snapchat-discover/DiscoverData.swift"; sourceTree = "<group>"; };
-		66BFB3001DA9EF8200F0EA7A /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryRow.swift; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/CategoryRow.swift"; sourceTree = "<group>"; };
-		66BFB3021DA9EF8A00F0EA7A /* DiscoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverCell.swift; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/DiscoverCell.swift"; sourceTree = "<group>"; };
-		66BFB3041DA9EF9600F0EA7A /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoveryViewController.swift; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/DiscoveryViewController.swift"; sourceTree = "<group>"; };
-		66BFB3061DA9EFBA00F0EA7A /* StoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoriesViewController.swift; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/StoriesViewController.swift"; sourceTree = "<group>"; };
-		66BFB3081DA9EFCD00F0EA7A /* SubscruptionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscruptionsTableViewCell.swift; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/SubscruptionsTableViewCell.swift"; sourceTree = "<group>"; };
-		66BFB30A1DA9EFD500F0EA7A /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/VideoCell.swift"; sourceTree = "<group>"; };
-		66BFB30C1DA9F28C00F0EA7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/Snapchat-discover/Snapchat/Snapchat/Assets.xcassets"; sourceTree = "<group>"; };
 		88497A861D9E5CF400546EF5 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewController.swift; sourceTree = "<group>"; };
 		88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 		8886C9B91DA9C8D1008B5A98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				66BFB30C1DA9F28C00F0EA7A /* Assets.xcassets */,
+				661EF7FA1DB200280075FE3D /* Assets.xcassets */,
 				66B82B8C1D89A015008FBE82 /* AppDelegate.swift */,
 				66B82B951D89A015008FBE82 /* LaunchScreen.storyboard */,
 				66B82B981D89A015008FBE82 /* Info.plist */,
@@ -146,10 +146,10 @@
 		8886C9BA1DA9C8EB008B5A98 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
-				66BFB3061DA9EFBA00F0EA7A /* StoriesViewController.swift */,
-				66BFB3081DA9EFCD00F0EA7A /* SubscruptionsTableViewCell.swift */,
-				66BFB3001DA9EF8200F0EA7A /* CategoryRow.swift */,
-				66BFB30A1DA9EFD500F0EA7A /* VideoCell.swift */,
+				661EF7F21DB1FFF70075FE3D /* CategoryRow.swift */,
+				661EF7F31DB1FFF70075FE3D /* StoriesViewController.swift */,
+				661EF7F41DB1FFF70075FE3D /* SubscruptionsTableViewCell.swift */,
+				661EF7F51DB1FFF70075FE3D /* VideoCell.swift */,
 			);
 			name = Stories;
 			sourceTree = "<group>";
@@ -191,9 +191,9 @@
 		8886C9BF1DA9DC99008B5A98 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
-				66BFB3041DA9EF9600F0EA7A /* DiscoveryViewController.swift */,
-				66BFB3021DA9EF8A00F0EA7A /* DiscoverCell.swift */,
-				66BFB2FE1DA9EF6B00F0EA7A /* DiscoverData.swift */,
+				661EF7EC1DB1FFE90075FE3D /* DiscoverCell.swift */,
+				661EF7ED1DB1FFE90075FE3D /* DiscoverData.swift */,
+				661EF7EE1DB1FFE90075FE3D /* DiscoveryViewController.swift */,
 			);
 			name = Discovery;
 			sourceTree = "<group>";
@@ -343,7 +343,7 @@
 			files = (
 				66B82B971D89A015008FBE82 /* LaunchScreen.storyboard in Resources */,
 				88E105971DA0C74200C23DD6 /* GoogleService-Info.plist in Resources */,
-				66BFB30D1DA9F28C00F0EA7A /* Assets.xcassets in Resources */,
+				661EF7FB1DB200280075FE3D /* Assets.xcassets in Resources */,
 				66B82B921D89A015008FBE82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,31 +403,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				661EF7F01DB1FFE90075FE3D /* DiscoverData.swift in Sources */,
 				88E492261DA31CB500A4A15F /* ImageCollectionCell.swift in Sources */,
+				661EF7F91DB1FFF70075FE3D /* VideoCell.swift in Sources */,
 				88E4922A1DA3242000A4A15F /* ImageObject.swift in Sources */,
-				66BFB30B1DA9EFD500F0EA7A /* VideoCell.swift in Sources */,
 				88F2C41E1DA214F000E8CACB /* MyFriendsTableViewController.swift in Sources */,
 				88EBD4561DA3A68B00DCB05D /* ShareProtocol.swift in Sources */,
+				661EF7EF1DB1FFE90075FE3D /* DiscoverCell.swift in Sources */,
+				661EF7F81DB1FFF70075FE3D /* SubscruptionsTableViewCell.swift in Sources */,
 				88BF23C91DA23FC600221EF4 /* AddByUsernameTableViewCell.swift in Sources */,
-				66BFB3031DA9EF8A00F0EA7A /* DiscoverCell.swift in Sources */,
-				66BFB3091DA9EFCD00F0EA7A /* SubscruptionsTableViewCell.swift in Sources */,
 				88F2C4251DA2166200E8CACB /* UsableData.swift in Sources */,
 				66B82B8D1D89A015008FBE82 /* AppDelegate.swift in Sources */,
 				88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */,
-				66BFB3071DA9EFBA00F0EA7A /* StoriesViewController.swift in Sources */,
+				661EF7F61DB1FFF70075FE3D /* CategoryRow.swift in Sources */,
 				88F2C4261DA2166200E8CACB /* User.swift in Sources */,
-				66BFB3011DA9EF8200F0EA7A /* CategoryRow.swift in Sources */,
 				88E492281DA31F4500A4A15F /* SettingImage.swift in Sources */,
-				66BFB2FF1DA9EF6B00F0EA7A /* DiscoverData.swift in Sources */,
 				88497A9B1D9EB63400546EF5 /* CameraViewController.swift in Sources */,
 				88BF23C71DA23F9A00221EF4 /* AddByUsernameTableViewController.swift in Sources */,
 				88F2C4281DA218F700E8CACB /* MyFriendsTableViewCell.swift in Sources */,
 				88EBD4581DA3AE9400DCB05D /* AddFriendsTableViewController.swift in Sources */,
+				661EF7F11DB1FFE90075FE3D /* DiscoveryViewController.swift in Sources */,
 				88F2C4201DA2150200E8CACB /* AddedMeTableViewController.swift in Sources */,
 				886CE85A1DA2294600CA59EB /* AddedMeTableViewCell.swift in Sources */,
+				661EF7F71DB1FFF70075FE3D /* StoriesViewController.swift in Sources */,
 				88CC0EE31D9FD0980064ABBA /* AddFriendsViewController.swift in Sources */,
 				88497A871D9E5CF400546EF5 /* ChatViewController.swift in Sources */,
-				66BFB3051DA9EF9600F0EA7A /* DiscoveryViewController.swift in Sources */,
 				88E408271DA36A6D00ECD643 /* ImageViewController.swift in Sources */,
 				88497A891D9E5D0F00546EF5 /* MemoriesViewController.swift in Sources */,
 			);
