@@ -29,6 +29,9 @@ class ChatListViewController: UIViewController, UISearchBarDelegate, UITableView
 //    @IBAction func DoneCloseKeyBoard(sender: AnyObject) {
 //        searchBar.resignFirstResponder();
 //    }
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
