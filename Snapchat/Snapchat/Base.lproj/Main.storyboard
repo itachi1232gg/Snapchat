@@ -346,7 +346,9 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="KeG-zk-Fpk" kind="presentation" identifier="Show Chat" modalTransitionStyle="crossDissolve" id="4iY-w6-LW1"/>
+
+                                                            <segue destination="KeG-zk-Fpk" kind="presentation" identifier="Show Chat" id="4iY-w6-LW1"/>
+
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsf-XK-SMX">
@@ -981,14 +983,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="Show Camera" modalTransitionStyle="crossDissolve" id="JHG-PB-y0h"/>
+
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="McS-cx-Tkm"/>
+
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IR-kz-0VD">
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Stories"/>
                                 <connections>
-                                    <segue destination="j3f-YH-tjr" kind="presentation" identifier="Show Stories" modalTransitionStyle="crossDissolve" id="96b-kq-agU"/>
+
+                                    <segue destination="s9D-aS-NaC" kind="presentation" id="WbT-Yv-evh"/>
+
                                 </connections>
                             </button>
                         </subviews>
@@ -1098,10 +1104,15 @@
         <image name="image1" width="848" height="1072"/>
     </resources>
     <inferredMetricsTieBreakers>
+
+        <segue reference="McS-cx-Tkm"/>
+        <segue reference="Sg9-NA-Ino"/>
+
         <segue reference="h1j-Uc-Zyp"/>
         <segue reference="JHG-PB-y0h"/>
         <segue reference="Sg9-NA-Ino"/>
         <segue reference="t6x-vd-yA7"/>
         <segue reference="DME-cz-g6j"/>
+        <segue reference="WbT-Yv-evh"/>
     </inferredMetricsTieBreakers>
 </document>
