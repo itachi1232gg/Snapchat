@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w64-rg-mzq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -164,18 +164,22 @@
                                             <frame key="frameInset" width="342" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add from Address Book" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjg-r6-8H2">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJV-he-ryt">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="Add from Address Book">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="addressBookButton:" destination="ovT-hZ-gfL" eventType="touchUpInside" id="Ocl-eA-LC1"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <constraints>
-                                            <constraint firstItem="Jjg-r6-8H2" firstAttribute="top" secondItem="RFe-ai-iwJ" secondAttribute="top" id="BcE-It-jZi"/>
-                                            <constraint firstAttribute="trailing" secondItem="Jjg-r6-8H2" secondAttribute="trailing" id="Y0w-il-0OF"/>
-                                            <constraint firstAttribute="bottom" secondItem="Jjg-r6-8H2" secondAttribute="bottom" id="a2E-46-mha"/>
-                                            <constraint firstItem="Jjg-r6-8H2" firstAttribute="leading" secondItem="RFe-ai-iwJ" secondAttribute="leading" id="so9-G6-5Aj"/>
+                                            <constraint firstItem="fJV-he-ryt" firstAttribute="leading" secondItem="RFe-ai-iwJ" secondAttribute="leading" id="5u8-bb-ytS"/>
+                                            <constraint firstItem="fJV-he-ryt" firstAttribute="top" secondItem="RFe-ai-iwJ" secondAttribute="top" id="AYd-A8-4yq"/>
+                                            <constraint firstAttribute="trailing" secondItem="fJV-he-ryt" secondAttribute="trailing" id="FwV-aZ-iDV"/>
+                                            <constraint firstAttribute="bottom" secondItem="fJV-he-ryt" secondAttribute="bottom" id="ieA-rz-n72"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -982,10 +986,10 @@
         <image name="image1" width="848" height="1072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Cpp-gY-A4E"/>
+        <segue reference="ZYc-34-B6w"/>
         <segue reference="lBW-FM-dff"/>
+        <segue reference="Cpp-gY-A4E"/>
         <segue reference="Sg9-NA-Ino"/>
-        <segue reference="h1j-Uc-Zyp"/>
         <segue reference="DME-cz-g6j"/>
     </inferredMetricsTieBreakers>
 </document>

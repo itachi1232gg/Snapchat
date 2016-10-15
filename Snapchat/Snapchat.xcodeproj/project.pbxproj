@@ -24,6 +24,7 @@
 		88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */; };
 		88497A9B1D9EB63400546EF5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A9A1D9EB63400546EF5 /* CameraViewController.swift */; };
 		886CE85A1DA2294600CA59EB /* AddedMeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CE8591DA2294600CA59EB /* AddedMeTableViewCell.swift */; };
+		888929AA1DB20CEB00CB8BBA /* AddFromAddressBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888929A91DB20CEB00CB8BBA /* AddFromAddressBookViewController.swift */; };
 		88BF23C71DA23F9A00221EF4 /* AddByUsernameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF23C61DA23F9A00221EF4 /* AddByUsernameTableViewController.swift */; };
 		88BF23C91DA23FC600221EF4 /* AddByUsernameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF23C81DA23FC600221EF4 /* AddByUsernameTableViewCell.swift */; };
 		88CC0EE31D9FD0980064ABBA /* AddFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC0EE21D9FD0980064ABBA /* AddFriendsViewController.swift */; };
@@ -60,6 +61,7 @@
 		88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		88497A9A1D9EB63400546EF5 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		886CE8591DA2294600CA59EB /* AddedMeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddedMeTableViewCell.swift; sourceTree = "<group>"; };
+		888929A91DB20CEB00CB8BBA /* AddFromAddressBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFromAddressBookViewController.swift; sourceTree = "<group>"; };
 		88BF23C61DA23F9A00221EF4 /* AddByUsernameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddByUsernameTableViewController.swift; sourceTree = "<group>"; };
 		88BF23C81DA23FC600221EF4 /* AddByUsernameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddByUsernameTableViewCell.swift; sourceTree = "<group>"; };
 		88CC0EE21D9FD0980064ABBA /* AddFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 		8886C9C71DA9DFD2008B5A98 /* AddFromAddressBook */ = {
 			isa = PBXGroup;
 			children = (
+				888929A91DB20CEB00CB8BBA /* AddFromAddressBookViewController.swift */,
 			);
 			name = AddFromAddressBook;
 			sourceTree = "<group>";
@@ -313,7 +316,7 @@
 				TargetAttributes = {
 					66B82B881D89A015008FBE82 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 3A974QQH78;
+						DevelopmentTeam = PUB3KR929G;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -413,6 +416,7 @@
 				661EF7F81DB1FFF70075FE3D /* SubscruptionsTableViewCell.swift in Sources */,
 				88BF23C91DA23FC600221EF4 /* AddByUsernameTableViewCell.swift in Sources */,
 				88F2C4251DA2166200E8CACB /* UsableData.swift in Sources */,
+				888929AA1DB20CEB00CB8BBA /* AddFromAddressBookViewController.swift in Sources */,
 				66B82B8D1D89A015008FBE82 /* AppDelegate.swift in Sources */,
 				88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */,
 				661EF7F61DB1FFF70075FE3D /* CategoryRow.swift in Sources */,
@@ -548,10 +552,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3A974QQH78;
+				DEVELOPMENT_TEAM = PUB3KR929G;
 				INFOPLIST_FILE = Snapchat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Can.Snapchat1;
+				PRODUCT_BUNDLE_IDENTIFIER = Can.Snapchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 			};
@@ -563,10 +567,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3A974QQH78;
+				DEVELOPMENT_TEAM = PUB3KR929G;
 				INFOPLIST_FILE = Snapchat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Can.Snapchat1;
+				PRODUCT_BUNDLE_IDENTIFIER = Can.Snapchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 			};

@@ -48,6 +48,8 @@ class CameraViewController: UIViewController {
         cameraContainer.addGestureRecognizer(changePageDownSwipe)
         
         segueToShowPictureButton.hidden = true
+        
+        flashOption = AVCaptureFlashMode.Off
         initiateCamera()
         
     }
@@ -61,7 +63,12 @@ class CameraViewController: UIViewController {
     
     //MARK: Camera
     var cameraDirection = AVCaptureDevicePosition.Back
-    var flashOption = AVCaptureFlashMode.Off
+    
+    var flashOption: AVCaptureFlashMode?{
+        didSet{
+            cameraFlashModeChanged(flashOption!)
+        }
+    }
     
     var previewLayer: AVCaptureVideoPreviewLayer? = nil
     let captureSession = AVCaptureSession()
@@ -90,18 +97,20 @@ class CameraViewController: UIViewController {
             flashOption = AVCaptureFlashMode.Off
         }
         
-        let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
-        
-        if (device.hasTorch) {
+    }
+    
+    func cameraFlashModeChanged(flashOption: AVCaptureFlashMode){
+        let devices = AVCaptureDevice.devices().filter{ $0.hasMediaType(AVMediaTypeVideo) && $0.position == cameraDirection }
+        let device = devices.first as? AVCaptureDevice
+        if (device!.hasTorch) {
             do {
-                try device.lockForConfiguration()
-                device.flashMode = flashOption
-                device.unlockForConfiguration()
+                try device!.lockForConfiguration()
+                device!.flashMode = flashOption
+                device!.unlockForConfiguration()
             } catch {
                 print(error)
             }
         }
-        
     }
     
     @IBAction func cameraDirectionButton(sender: UIButton) {
