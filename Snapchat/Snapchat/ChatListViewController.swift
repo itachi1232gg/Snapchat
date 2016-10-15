@@ -9,15 +9,15 @@
 import UIKit
 
 class ChatListViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
-    @IBAction func cameraButton(sender: UIButton) {
-        performSegueWithIdentifier("ChatList To Camera", sender: nil)
-    }
+//    @IBAction func cameraButton(sender: UIButton) {
+//        performSegueWithIdentifier("ChatList To Camera", sender: nil)
+//    }
 
     @IBOutlet weak var searchBar: UISearchBar!
     
-    @IBAction func storiesButton(sender: UIButton) {
-        performSegueWithIdentifier("ChatList To Stories", sender: nil)
-    }
+//    @IBAction func storiesButton(sender: UIButton) {
+//        performSegueWithIdentifier("ChatList To Stories", sender: nil)
+//    }
     @IBOutlet weak var chatingList: UITableView!
     
     private struct internalData{
@@ -25,6 +25,10 @@ class ChatListViewController: UIViewController, UISearchBarDelegate, UITableView
         static var searchUsers: [String] = []
         static var cells: String = "Chating One"
     }
+    
+//    @IBAction func DoneCloseKeyBoard(sender: AnyObject) {
+//        searchBar.resignFirstResponder();
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

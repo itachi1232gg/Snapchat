@@ -981,7 +981,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
-                                    <action selector="cameraButton:" destination="SoC-vZ-kL3" eventType="touchUpInside" id="fHK-vm-A1Q"/>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="McS-cx-Tkm"/>
                                 </connections>
                             </button>
@@ -989,7 +988,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Stories"/>
                                 <connections>
-                                    <action selector="storiesButton:" destination="SoC-vZ-kL3" eventType="touchUpInside" id="g8u-79-TyX"/>
                                     <segue destination="s9D-aS-NaC" kind="presentation" id="WbT-Yv-evh"/>
                                 </connections>
                             </button>
@@ -1101,9 +1099,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="McS-cx-Tkm"/>
-        <segue reference="WbT-Yv-evh"/>
         <segue reference="Sg9-NA-Ino"/>
         <segue reference="h1j-Uc-Zyp"/>
         <segue reference="DME-cz-g6j"/>
+        <segue reference="WbT-Yv-evh"/>
     </inferredMetricsTieBreakers>
 </document>
