@@ -346,7 +346,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="KeG-zk-Fpk" kind="presentation" id="4iY-w6-LW1"/>
+                                                            <segue destination="KeG-zk-Fpk" kind="presentation" identifier="Show Chat" id="4iY-w6-LW1"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsf-XK-SMX">
