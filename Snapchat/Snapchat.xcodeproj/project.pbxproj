@@ -22,12 +22,14 @@
 		88497A891D9E5D0F00546EF5 /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */; };
 		88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */; };
 		88497A9B1D9EB63400546EF5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A9A1D9EB63400546EF5 /* CameraViewController.swift */; };
+		885691D41DB392D30082D8FA /* ShowEnforcedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885691D31DB392D30082D8FA /* ShowEnforcedViewController.swift */; };
 		886CE85A1DA2294600CA59EB /* AddedMeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CE8591DA2294600CA59EB /* AddedMeTableViewCell.swift */; };
 		888929AA1DB20CEB00CB8BBA /* AddFromAddressBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888929A91DB20CEB00CB8BBA /* AddFromAddressBookViewController.swift */; };
 		88BF23C71DA23F9A00221EF4 /* AddByUsernameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF23C61DA23F9A00221EF4 /* AddByUsernameTableViewController.swift */; };
 		88BF23C91DA23FC600221EF4 /* AddByUsernameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF23C81DA23FC600221EF4 /* AddByUsernameTableViewCell.swift */; };
 		88CC0EE31D9FD0980064ABBA /* AddFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC0EE21D9FD0980064ABBA /* AddFriendsViewController.swift */; };
 		88E105971DA0C74200C23DD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88E105961DA0C74200C23DD6 /* GoogleService-Info.plist */; };
+		88E324131DB2FB7600517709 /* MemoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E324121DB2FB7600517709 /* MemoriesCollectionViewCell.swift */; };
 		88E408271DA36A6D00ECD643 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E408261DA36A6D00ECD643 /* ImageViewController.swift */; };
 		88E492261DA31CB500A4A15F /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E492251DA31CB500A4A15F /* ImageCollectionCell.swift */; };
 		88E492281DA31F4500A4A15F /* SettingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E492271DA31F4500A4A15F /* SettingImage.swift */; };
@@ -60,12 +62,14 @@
 		88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewController.swift; sourceTree = "<group>"; };
 		88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		88497A9A1D9EB63400546EF5 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		885691D31DB392D30082D8FA /* ShowEnforcedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEnforcedViewController.swift; sourceTree = "<group>"; };
 		886CE8591DA2294600CA59EB /* AddedMeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddedMeTableViewCell.swift; sourceTree = "<group>"; };
 		888929A91DB20CEB00CB8BBA /* AddFromAddressBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFromAddressBookViewController.swift; sourceTree = "<group>"; };
 		88BF23C61DA23F9A00221EF4 /* AddByUsernameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddByUsernameTableViewController.swift; sourceTree = "<group>"; };
 		88BF23C81DA23FC600221EF4 /* AddByUsernameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddByUsernameTableViewCell.swift; sourceTree = "<group>"; };
 		88CC0EE21D9FD0980064ABBA /* AddFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsViewController.swift; sourceTree = "<group>"; };
 		88E105961DA0C74200C23DD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88E324121DB2FB7600517709 /* MemoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		88E408261DA36A6D00ECD643 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		88E492251DA31CB500A4A15F /* ImageCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
 		88E492271DA31F4500A4A15F /* SettingImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingImage.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 				8886C9BF1DA9DC99008B5A98 /* Discovery */,
 				8886C9B91DA9C8D1008B5A98 /* Supporting Files */,
 				66B82B901D89A015008FBE82 /* Main.storyboard */,
+				885691D31DB392D30082D8FA /* ShowEnforcedViewController.swift */,
 				88E408261DA36A6D00ECD643 /* ImageViewController.swift */,
 				8886C9BB1DA9D905008B5A98 /* Personal */,
 				88E105961DA0C74200C23DD6 /* GoogleService-Info.plist */,
@@ -188,7 +193,10 @@
 		8886C9BE1DA9DC8B008B5A98 /* Memories */ = {
 			isa = PBXGroup;
 			children = (
+				88E492291DA3242000A4A15F /* ImageObject.swift */,
+				88E492271DA31F4500A4A15F /* SettingImage.swift */,
 				88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */,
+				88E324121DB2FB7600517709 /* MemoriesCollectionViewCell.swift */,
 			);
 			name = Memories;
 			sourceTree = "<group>";
@@ -215,8 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				88E492251DA31CB500A4A15F /* ImageCollectionCell.swift */,
-				88E492291DA3242000A4A15F /* ImageObject.swift */,
-				88E492271DA31F4500A4A15F /* SettingImage.swift */,
 			);
 			name = TemporaryUseless;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 			files = (
 				661EF7F01DB1FFE90075FE3D /* DiscoverData.swift in Sources */,
 				88E492261DA31CB500A4A15F /* ImageCollectionCell.swift in Sources */,
+				885691D41DB392D30082D8FA /* ShowEnforcedViewController.swift in Sources */,
 				661EF7F91DB1FFF70075FE3D /* VideoCell.swift in Sources */,
 				88E4922A1DA3242000A4A15F /* ImageObject.swift in Sources */,
 				88F2C41E1DA214F000E8CACB /* MyFriendsTableViewController.swift in Sources */,
@@ -425,6 +432,7 @@
 				88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */,
 				661EF7F61DB1FFF70075FE3D /* CategoryRow.swift in Sources */,
 				88F2C4261DA2166200E8CACB /* User.swift in Sources */,
+				88E324131DB2FB7600517709 /* MemoriesCollectionViewCell.swift in Sources */,
 				88E492281DA31F4500A4A15F /* SettingImage.swift in Sources */,
 				88497A9B1D9EB63400546EF5 /* CameraViewController.swift in Sources */,
 				88BF23C71DA23F9A00221EF4 /* AddByUsernameTableViewController.swift in Sources */,

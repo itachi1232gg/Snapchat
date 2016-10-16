@@ -10,15 +10,28 @@ import UIKit
 
 class AddByUsernameTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addFriendButton: UIButton!
+    
+    @IBAction func sendFriendRequest(sender: UIButton) {
+        if UsableData.sendFriendRequest(nameLabel.text){
+            sender.setTitle("Sended", forState: UIControlState.Normal)
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    //MARK: 当cell获取到自定义内容（记得更改user类型）
+    var cellContent: User?{
+        didSet{
+            updateUI()
+        }
     }
-
+    
+    //MARK: 内容与控件内容一一对应
+    private func updateUI(){
+        //Set nil
+        nameLabel?.text = nil
+        
+        if let cellContent = self.cellContent{
+            nameLabel?.text = "\(cellContent.name)"
+        }
+    }
 }

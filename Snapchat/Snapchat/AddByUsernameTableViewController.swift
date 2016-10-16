@@ -10,6 +10,8 @@ import UIKit
 
 class AddByUsernameTableViewController: UITableViewController, UITextFieldDelegate {
 
+    let reusableCellIdentifier = "AddByUsername" //改完这个记得还要改下面的cell类名
+    
     @IBOutlet weak var searchTextField: UITextField!{
         didSet{
             searchTextField.delegate = self
@@ -49,7 +51,7 @@ class AddByUsernameTableViewController: UITableViewController, UITextFieldDelega
     
     private func searchForUserData()
     {
-        if let request = UsableData.getDataWithUserName(searchText){
+        if let request = UsableData.getOneFriendWithMyUserName(searchText){
             userData.append([request])
         }
         
@@ -84,7 +86,7 @@ class AddByUsernameTableViewController: UITableViewController, UITextFieldDelega
         super.viewDidLoad()
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-        userData = [UsableData.getData()!]
+//        userData = [UsableData.getData()!]
         
         let tapToReset = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
         tapToReset.cancelsTouchesInView = false
@@ -110,10 +112,10 @@ class AddByUsernameTableViewController: UITableViewController, UITextFieldDelega
     
     //MARK: 设置cell的内容
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MyFriends", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(reusableCellIdentifier, forIndexPath: indexPath)
         
         let user = userData[indexPath.section][indexPath.row]
-        if let userCell = cell as? MyFriendsTableViewCell{
+        if let userCell = cell as? AddByUsernameTableViewCell{
             userCell.cellContent = user
         }
         

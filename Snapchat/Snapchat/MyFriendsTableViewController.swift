@@ -9,6 +9,9 @@
 import UIKit
 
 class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
+
+    let reusableCellIdentifier = "MyFriends" //改完这个记得还要改下面的cell类名
+    
     @IBOutlet weak var searchTextField: UITextField! {
         didSet {
             searchTextField.delegate = self
@@ -20,7 +23,13 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
         didSet{
             userData.removeAll()
             lastRequest = nil
-            searchForUserData()
+            if searchText! == ""{
+                userData = [UsableData.getFriendsWithUsername()!]
+            }else{
+                searchForUserData()
+            }
+            
+            
         }
     }
     
@@ -47,7 +56,7 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
     
     private func searchForUserData()
     {
-        if let request = UsableData.getDataWithUserName(searchText){
+        if let request = UsableData.getOneFriendWithMyUserName(searchText){
             userData.append([request])
         }
         
@@ -82,7 +91,7 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
         super.viewDidLoad()
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-        userData = [UsableData.getData()!]
+        userData = [UsableData.getFriendsWithUsername()!]
         
         let tapToReset = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
         tapToReset.cancelsTouchesInView = false
@@ -108,7 +117,7 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
     
     //MARK: 设置cell的内容
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MyFriends", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(reusableCellIdentifier, forIndexPath: indexPath)
 
         let user = userData[indexPath.section][indexPath.row]
         if let userCell = cell as? MyFriendsTableViewCell{

@@ -10,6 +10,7 @@ import UIKit
 
 class AddedMeTableViewController: UITableViewController {
 
+    let reusableCellIdentifier = "AddedMeFriends" //改完这个记得还要改下面的cell类名
     //MARK: 获取的内容
     private var userData = [Array<User>]() {
         didSet{
@@ -23,7 +24,7 @@ class AddedMeTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-        userData = [UsableData.getData()!]
+        userData = [UsableData.usersWantToAddMe()!]
     }
 
     // MARK: - Table view data source
@@ -41,7 +42,7 @@ class AddedMeTableViewController: UITableViewController {
 
     //MARK: 设置cell的内容
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AddedMeFriends", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(reusableCellIdentifier, forIndexPath: indexPath)
         
         let user = userData[indexPath.section][indexPath.row]
         if let userCell = cell as? AddedMeTableViewCell{

@@ -15,7 +15,7 @@ class AddedMeTableViewCell: UITableViewCell {
     @IBAction func addFriend(sender: UIButton) {
         
         // +++++++++++++++++++++++++
-        if UsableData.addUser(nameLabel.text){
+        if UsableData.addFriend(nameLabel.text){
             sender.setTitle("Added", forState: UIControlState.Normal)
         }
         // +++++++++++++++++++++++++

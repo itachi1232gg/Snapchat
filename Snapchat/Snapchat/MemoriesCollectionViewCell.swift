@@ -1,19 +1,21 @@
 //
-//  ImageCollectionCell.swift
+//  MemoriesCollectionViewCell.swift
 //  Snapchat
 //
-//  Created by ailina on 16/10/4.
+//  Created by ailina on 16/10/16.
 //  Copyright © 2016年 Can. All rights reserved.
 //
 
 import UIKit
 
-class ImageCollectionCell: UICollectionViewCell {
+class MemoriesCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var showSth: UILabel!
+    
     var imageView:UIImageView!
     var selectView:UIView!
     var selectImageView:UIImageView!
     var isSelect = false
-    
     var handleSelect:(()->())?
     
     override init(frame: CGRect) {
@@ -31,12 +33,10 @@ class ImageCollectionCell: UICollectionViewCell {
         self.selectImageView.layer.borderColor = UIColor.whiteColor().CGColor
         self.selectView.addSubview(self.selectImageView)
         
-        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ImageCollectionCell.tap(_:))))
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(MemoriesCollectionViewCell.tap(_:))))
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
     
     override func layoutSubviews() {
         self.imageView.frame = self.bounds
@@ -48,17 +48,13 @@ class ImageCollectionCell: UICollectionViewCell {
         self.selectImageView.layer.borderWidth = selectWidth/8
     }
     
-//    func updateLibraryPhoto(image:ImageObject){
-//        self.imageView.image = UIImage(CGImage: image.asset.aspectRatioThumbnail().takeRetainedValue())  //thumbnail().takeUnretainedValue()
-//        self.selectView.hidden = !image.isSelect
-//        isSelect = !image.isSelect
-//    }
-    
-    func updateSelfPhoto(image:ImageObject){
-        self.imageView.image = image.innerImage
+    func update(image: ImageObject){
+        self.imageView.image = image.innerImage 
         self.selectView.hidden = !image.isSelect
         isSelect = !image.isSelect
     }
+    
+    
     
     func tap(gesture:UITapGestureRecognizer){
         //handleSelect?()

@@ -11,8 +11,8 @@ import AssetsLibrary
 
 class ImageObject: NSObject {
     
-    var asset: ALAsset!
     var innerImage: UIImage!
+    var timer: Double!
     var isSelect:Bool = false
     override init() {
         super.init()
