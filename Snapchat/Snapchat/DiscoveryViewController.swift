@@ -18,7 +18,7 @@ class DiscoveryViewController: UITableViewController, UIGestureRecognizerDelegat
         let pan = UIPanGestureRecognizer(target:target,
                                          action: Selector("handleNavigationTransition:"))
         pan.delegate = self
-      //  self.tableView.addGestureRecognizer(pan)
+        //  self.tableView.addGestureRecognizer(pan)
         //self.navigationController?.interactivePopGestureRecognizer!.enabled = false
     }
     
@@ -30,17 +30,17 @@ class DiscoveryViewController: UITableViewController, UIGestureRecognizerDelegat
         
     }
     
-//    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
-//        return false
-//    }
- 
-//    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRequireFailureOfGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-//        if let pan = gestureRecognizer as? UIPanGestureRecognizer {
-//            if let scroll = gestureRecognizer as? uis
-//            return false
-//        }
-//        return false
-//    }
+    //    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+    //        return false
+    //    }
+    
+    //    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRequireFailureOfGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    //        if let pan = gestureRecognizer as? UIPanGestureRecognizer {
+    //            if let scroll = gestureRecognizer as? uis
+    //            return false
+    //        }
+    //        return false
+    //    }
     
     
     
@@ -65,7 +65,9 @@ class DiscoveryViewController: UITableViewController, UIGestureRecognizerDelegat
         cell.bkImageView.image = image
         cell.discoverTitle.text = entry.heading
         return cell
-        
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
