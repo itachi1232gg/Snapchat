@@ -11,7 +11,9 @@ import UIKit
 class PersonalViewController: UIViewController {
 
     var selfSegueIdentifier = "Show Personal"
+    var usernameLabelMsg = "Welcome, \(UsableData.myUsername)"
     
+    @IBOutlet weak var usernameLabel: UILabel!
     private struct Storyboard
     {
         static var ShowCamara = "Show Camera"
@@ -25,6 +27,7 @@ class PersonalViewController: UIViewController {
         let changePageUpSwipe = UISwipeGestureRecognizer(target: self, action: #selector(PersonalViewController.goToCamara))
         changePageUpSwipe.direction = .Up
         self.view.addGestureRecognizer(changePageUpSwipe)
+        usernameLabel.text = usernameLabelMsg
         // Do any additional setup after loading the view.
     }
 
