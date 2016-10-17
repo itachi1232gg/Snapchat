@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>545653344686-c1smfijbuaa3ofaunlipo0671t9s90iq.apps.googleusercontent.com</string>
+	<string>110851832420-j0ujoq5croc4sej9ecguvnjolag8g8hs.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.545653344686-c1smfijbuaa3ofaunlipo0671t9s90iq</string>
+	<string>com.googleusercontent.apps.110851832420-j0ujoq5croc4sej9ecguvnjolag8g8hs</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDE11FRHm7lAFIr50zEQpvMyC-kLy260Ao</string>
+	<string>AIzaSyD21zdc3lwHMJsIzLJX-I62MGjaqbTkb90</string>
 	<key>GCM_SENDER_ID</key>
-	<string>545653344686</string>
+	<string>110851832420</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>Can.Snapchat</string>
+	<string>Can.Snapchat1</string>
 	<key>PROJECT_ID</key>
-	<string>snapchat-4bb2f</string>
+	<string>snapchat-35d64</string>
 	<key>STORAGE_BUCKET</key>
-	<string>snapchat-4bb2f.appspot.com</string>
+	<string>snapchat-35d64.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:545653344686:ios:a4f170f095de812e</string>
+	<string>1:110851832420:ios:4c0372149e1f3421</string>
 	<key>DATABASE_URL</key>
-	<string>https://snapchat-4bb2f.firebaseio.com</string>
+	<string>https://snapchat-35d64.firebaseio.com</string>
 </dict>
 </plist>
