@@ -220,7 +220,7 @@ class CameraViewController: UIViewController {
 
 /*
  extension UIImage {
- /**
+ /**2
  *  重设图片大小
  */
  func reSizeImage(reSize:CGSize)->UIImage {

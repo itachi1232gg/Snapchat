@@ -67,7 +67,9 @@ class DiscoveryViewController: UITableViewController, UIGestureRecognizerDelegat
         return cell
     }
     
+
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("idt1", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)

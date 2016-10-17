@@ -7,28 +7,22 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import FirebaseAuth
 
 class ChatListViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
-//    @IBAction func cameraButton(sender: UIButton) {
-//        performSegueWithIdentifier("ChatList To Camera", sender: nil)
-//    }
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     
-//    @IBAction func storiesButton(sender: UIButton) {
-//        performSegueWithIdentifier("ChatList To Stories", sender: nil)
-//    }
     @IBOutlet weak var chatingList: UITableView!
     
     private struct internalData{
-        static var users: [String] = ["A","B","C","D"]
+        static var users: [String] = []
         static var searchUsers: [String] = []
         static var cells: String = "Chating One"
     }
     
-//    @IBAction func DoneCloseKeyBoard(sender: AnyObject) {
-//        searchBar.resignFirstResponder();
-//    }
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
@@ -41,9 +35,28 @@ class ChatListViewController: UIViewController, UISearchBarDelegate, UITableView
         chatingList.addGestureRecognizer(tapGuesture)
         
         searchBar.returnKeyType = UIReturnKeyType.Done
-        //ppp
+        
+        //        FIRAuth.auth()?.signInAnonymouslyWithCompletion({ (user, error) in
+        //            if let error = error{
+        //                print("Sign in failed:", error.localizedDescription)
+        //            }else{
+        //                print("Signed in with uid:", user?.uid)
+        //            }
+        //        })
+        let myID = FIRAuth.auth()?.currentUser?.uid
+        let friendRef = FIRDatabase.database().reference().child("users").child(myID!).child("friends").ref
+        
+        friendRef.observeEventType(FIRDataEventType.Value) { (snapShot: FIRDataSnapshot) in
+            if let friends = snapShot.value as? NSDictionary{
+                internalData.users = friends.allKeys as! [String]
+                internalData.searchUsers = internalData.users
+                //              print ("Testing: \(internalData.users)\n")
+                self.chatingList.reloadData()
+            }
+        }
         
         internalData.searchUsers = internalData.users
+        //        print("Testing: \(internalData.searchUsers)")
         self.searchBar.delegate = self
         self.chatingList.delegate = self
         self.chatingList.dataSource = self
@@ -81,27 +94,18 @@ class ChatListViewController: UIViewController, UISearchBarDelegate, UITableView
                 }
             }
         }
-                self.chatingList.reloadData()
+        self.chatingList.reloadData()
     }
-    
-//    func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
-//        searchBar.resignFirstResponder()
-//        return true
-//    }
     
     func dismissKeyboard(sender:UITapGestureRecognizer) {
         searchBar.resignFirstResponder()
     }
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        print("\(segue.identifier)")
-//        let art = segue.identifier == "ChatList To Chat"
-//        let art1 = segue.identifier! == "ChatList To Chat"
-//        print("\(art)")
-//        print("\(art1)")
+        
         if segue.identifier == "ChatList to Chat"{
             let destination = segue.destinationViewController as! ChatViewController
             //print("\(theOne)")
@@ -109,5 +113,5 @@ class ChatListViewController: UIViewController, UISearchBarDelegate, UITableView
         }
     }
     // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Pass the selected object to the new view controller.
 }

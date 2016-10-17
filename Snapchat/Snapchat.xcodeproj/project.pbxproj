@@ -24,6 +24,7 @@
 		66BB554F1DB4AB390067C8AE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB554E1DB4AB390067C8AE /* LoginViewController.swift */; };
 		66BB55511DB4AB8F0067C8AE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB55501DB4AB8F0067C8AE /* SignupViewController.swift */; };
 		66BB55541DB4F12A0067C8AE /* NewUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB55531DB4F12A0067C8AE /* NewUserInfoViewController.swift */; };
+		66BB55601DB557A10067C8AE /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB555F1DB557A10067C8AE /* DisplayViewController.swift */; };
 		88497A891D9E5D0F00546EF5 /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */; };
 		88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */; };
 		88497A9B1D9EB63400546EF5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88497A9A1D9EB63400546EF5 /* CameraViewController.swift */; };
@@ -68,6 +69,7 @@
 		66BB554E1DB4AB390067C8AE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		66BB55501DB4AB8F0067C8AE /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		66BB55531DB4F12A0067C8AE /* NewUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserInfoViewController.swift; sourceTree = "<group>"; };
+		66BB555F1DB557A10067C8AE /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		88497A881D9E5D0F00546EF5 /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewController.swift; sourceTree = "<group>"; };
 		88497A8A1D9E5D2400546EF5 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		88497A9A1D9EB63400546EF5 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				661EF7EC1DB1FFE90075FE3D /* DiscoverCell.swift */,
 				661EF7ED1DB1FFE90075FE3D /* DiscoverData.swift */,
 				661EF7EE1DB1FFE90075FE3D /* DiscoveryViewController.swift */,
+				66BB555F1DB557A10067C8AE /* DisplayViewController.swift */,
 			);
 			name = Discovery;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				661EF7F91DB1FFF70075FE3D /* VideoCell.swift in Sources */,
 				88E4922A1DA3242000A4A15F /* ImageObject.swift in Sources */,
 				88F2C41E1DA214F000E8CACB /* MyFriendsTableViewController.swift in Sources */,
+				66BB55601DB557A10067C8AE /* DisplayViewController.swift in Sources */,
 				88EBD4561DA3A68B00DCB05D /* ShareProtocol.swift in Sources */,
 				661EF7EF1DB1FFE90075FE3D /* DiscoverCell.swift in Sources */,
 				661EF7F81DB1FFF70075FE3D /* SubscruptionsTableViewCell.swift in Sources */,
