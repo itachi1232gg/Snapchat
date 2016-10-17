@@ -12,6 +12,25 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
 
     let reusableCellIdentifier = "MyFriends" //改完这个记得还要改下面的cell类名
     
+    @IBOutlet weak var segueView: UIView!
+    @IBOutlet weak var segueToMemories: UIButton!
+    @IBOutlet weak var segueToPersonal: UIButton!
+    @IBOutlet weak var segueToCamera: UIButton!
+    var backTo: String?
+    /***********************************************************/
+    //forward message到聊天室
+    //prepareSegue, 怎么才能传数据给聊天室并显示？
+    //若message为nil，则是从personal进入没有message，不为nil就是从imageview forward的
+    var message: ImageObject?{
+        didSet{
+            print("MyFriends message keke")
+        }
+    }
+    /***********************************************************/
+    @IBAction func segueTo(sender: UIBarButtonItem) {
+        print("BACKTO::\(backTo)")
+        performSegueWithIdentifier(backTo!, sender: nil)
+    }
     @IBOutlet weak var searchTextField: UITextField! {
         didSet {
             searchTextField.delegate = self
@@ -89,6 +108,12 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
     //MARK: 控制cell的的大小与内容相适应
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        segueToMemories.hidden = true
+        segueView.hidden = true
+        segueToPersonal.hidden = true
+        segueToCamera.hidden = true
+        
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
         userData = [UsableData.getFriendsWithUsername()!]

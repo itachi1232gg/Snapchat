@@ -10,9 +10,12 @@ import UIKit
 
 class PersonalViewController: UIViewController {
 
+    var selfSegueIdentifier = "Show Personal"
+    
     private struct Storyboard
     {
         static var ShowCamara = "Show Camera"
+        static var ShowMyFriends = "Show My Friends"
     }
     
     override func viewDidLoad()
@@ -32,7 +35,11 @@ class PersonalViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        
+        if segue.identifier == Storyboard.ShowMyFriends {
+            if let mvc = segue.destinationViewController.contentViewController as? MyFriendsTableViewController {
+                mvc.backTo = selfSegueIdentifier
+            }
+        }
     }
     
 }

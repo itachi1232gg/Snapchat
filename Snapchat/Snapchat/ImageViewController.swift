@@ -284,8 +284,11 @@ class ImageViewController: UIViewController, Shareable {
     {
         if segue.identifier == Storyboard.ShowMyFriends {
             if let mvc = segue.destinationViewController.contentViewController as? MyFriendsTableViewController {
-//                mvc.backTo = selfSegueIdentifier
-                //mvc.sendImage = self.pictureTakenImageView.image
+                mvc.backTo = backTo
+                let tempImageObject = ImageObject()
+                tempImageObject.innerImage = self.pictureTakenImageView.image
+                tempImageObject.timer = self.pictureTimer
+                mvc.message = tempImageObject
             }
         }
     }
