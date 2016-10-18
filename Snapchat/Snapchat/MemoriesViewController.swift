@@ -143,7 +143,7 @@ class MemoriesViewController: UIViewController, UIImagePickerControllerDelegate,
     
     func readStories(){
         //self.lastkey = nil
-        UsableData.myStoriesRef.observeEventType(.Value){ (snapShot: FIRDataSnapshot) in
+        UsableData.myStoriesRef.observeSingleEventOfType(.Value){ (snapShot: FIRDataSnapshot) in
             if let myStories = snapShot.value as? NSDictionary{
                 for key in myStories.allKeys {
                     let storiesId = key as! String
@@ -193,7 +193,7 @@ class MemoriesViewController: UIViewController, UIImagePickerControllerDelegate,
     
     func readSnaps(){
         self.lastkey = nil
-        UsableData.mySnapsRef.observeEventType(.Value){ (snapShot: FIRDataSnapshot) in
+        UsableData.mySnapsRef.observeSingleEventOfType(.Value){ (snapShot: FIRDataSnapshot) in
             if let mySnaps = snapShot.value as? NSDictionary{
                 var tempImageArray: [ImageObject] = []
                 for key in mySnaps.allKeys{

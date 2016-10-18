@@ -54,7 +54,7 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
         //        //        }
         //        //        return nil
         var userArray: [User] = []
-        UsableData.myFriendsRef.observeEventType(.Value){ (snapShot: FIRDataSnapshot) in
+        UsableData.myFriendsRef.observeSingleEventOfType(.Value){ (snapShot: FIRDataSnapshot) in
             if let myFriends = snapShot.value as? NSDictionary{
                 for key in myFriends.allKeys {
                     let friendname = key as! String
@@ -108,7 +108,7 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
     func getOneFriendWithMyUserName(name: String?) -> User?{
         if(name != nil){
             var user: User?
-            UsableData.usersRef.observeEventType(.Value){ (snapShot: FIRDataSnapshot) in
+            UsableData.usersRef.observeSingleEventOfType(.Value){ (snapShot: FIRDataSnapshot) in
                 let users = snapShot.value as! NSDictionary
                 for key in users.allKeys{
                     let uid = key as! String

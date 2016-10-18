@@ -53,7 +53,7 @@ class AddByUsernameTableViewController: UITableViewController, UITextFieldDelega
     func getOneFriendWithMyUserName(name: String?){
         if(name != nil){
             var user: User?
-            UsableData.usersRef.observeEventType(.Value){ (snapShot: FIRDataSnapshot) in
+            UsableData.usersRef.observeSingleEventOfType(.Value){ (snapShot: FIRDataSnapshot) in
                 let users = snapShot.value as! NSDictionary
                 for key in users.allKeys{
                     let uid = key as! String

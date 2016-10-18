@@ -34,7 +34,7 @@ class AddedMeTableViewController: UITableViewController {
         //通过自己的用户名获取想添加我为好友的人
         
         var userArray: [User] = []
-        UsableData.myFriendsReqReceivedRef.observeEventType(.Value){ (snapShot: FIRDataSnapshot) in
+        UsableData.myFriendsReqReceivedRef.observeSingleEventOfType(.Value){ (snapShot: FIRDataSnapshot) in
             if let myFriendsReq = snapShot.value as? NSDictionary{
                 for key in myFriendsReq.allKeys {
                     let friendname = key as! String
