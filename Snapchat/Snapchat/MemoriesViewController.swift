@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class MemoriesViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var imageArray:[ImageObject] = []       //在initImageArray里设置提取信息
-    var storiesArray:[[ImageObject]] = []
+    var imageArray:[ImageObject] = []{//在initImageArray里设置提取信息
+        didSet{
+            memoriesCollectionView.reloadData()
+        }
+    }
+    var storiesArray:[[ImageObject]] = []{
+        didSet{
+            memoriesCollectionView.reloadData()
+        }
+    }
     
     private var selfSegueIdentifier = "Show Memories"
     @IBOutlet weak var segueToShowPicture: UIButton!
@@ -39,7 +48,7 @@ class MemoriesViewController: UIViewController, UIImagePickerControllerDelegate,
                 deleteButton.enabled = false
             }
             initImageArray()
-            memoriesCollectionView.reloadData()
+            //            memoriesCollectionView.reloadData()
             //print("selectMode: \(selectMode)")
         }
     }
@@ -77,6 +86,7 @@ class MemoriesViewController: UIViewController, UIImagePickerControllerDelegate,
             }
         }
         UsableData.deleteSelectedSnaps(selectedImage)
+        
         /*************************************************************************************************/
         /*************************************************************************************************/
         /*************************************************************************************************/
@@ -108,7 +118,7 @@ class MemoriesViewController: UIViewController, UIImagePickerControllerDelegate,
         
         selectMode = false
         initCollectionView()
-        initImageArray()
+        //        initImageArray()
         //        print("Index:  \(self.memoriesSegmentedButton.selectedSegmentIndex)")
         self.memoriesSegmentedButton.selectedSegmentIndex = 0
         //        print("Index:  \(self.memoriesSegmentedButton.selectedSegmentIndex)")
@@ -123,11 +133,117 @@ class MemoriesViewController: UIViewController, UIImagePickerControllerDelegate,
         self.imageArray = []
         self.storiesArray = []
         if index == 1{//读取stories的信息
-            self.storiesArray = UsableData.readStories()
+            //            self.storiesArray = UsableData.readStories()
+            readStories()
         }else{//读取snaps的信息
-            self.imageArray = UsableData.readSnaps()
+            //            self.imageArray = UsableData.readSnaps()
+            readSnaps()
         }
     }
+    
+    func readStories(){
+        //self.lastkey = nil
+        UsableData.myStoriesRef.observeEventType(.Value){ (snapShot: FIRDataSnapshot) in
+            if let myStories = snapShot.value as? NSDictionary{
+                for key in myStories.allKeys {
+                    let storiesId = key as! String
+                    //if(self.lastkey == nil || (self.lastkey != nil && self.lastkey! == storiesId)){
+                    var tempArray: [ImageObject] = []
+                    if let snaps = myStories[storiesId]!["snaps"] as? NSDictionary{
+                        for snapKey in snaps.allKeys{
+                            let snapId = snapKey as! String
+                            var tempImageObject = ImageObject()
+                            let urlString = snaps[snapId]!["url"] as! String
+                            let url = NSURL(string: urlString)
+                            let timerString = snaps[snapId]!["timer"]! as! String
+                            let timer = Double(timerString)
+                            print("readSnapsURL:\(urlString), timer:\(timerString)")
+                            
+                            var image:UIImage?
+                            let gsReference = storage.referenceForURL(url!.absoluteString!)
+                            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+                            gsReference.dataWithMaxSize(10 * 1024 * 1024) { (data, error) -> Void in
+                                if (error != nil) {
+                                    print("ERROR: \(error)")
+                                } else {
+                                    // Data for "images/island.jpg" is returned
+                                    image = UIImage(data: data!)
+                                    tempImageObject.innerImage = image
+                                    tempImageObject.isSelect = false
+                                    tempImageObject.timer = timer
+                                    
+                                    self.memoriesCollectionView.reloadData()
+                                }
+                            }
+                            tempArray.append(tempImageObject)
+                        }
+                        
+                        //self.lastkey = storiesId
+                        self.storiesArray.append(tempArray)
+                    }
+                    
+                    //}
+                }
+            }
+        }
+        
+    }
+    
+    var lastkey: String?
+    
+    func readSnaps(){
+        self.lastkey = nil
+        UsableData.mySnapsRef.observeEventType(.Value){ (snapShot: FIRDataSnapshot) in
+            if let mySnaps = snapShot.value as? NSDictionary{
+                var tempImageArray: [ImageObject] = []
+                for key in mySnaps.allKeys{
+                    
+                    print("snapKey:\(key)")
+                    let snapId = key as! String
+                    //if(self.lastkey == nil || (self.lastkey != nil && self.lastkey! == snapId)){
+                    //                    for value in mySnaps.allValues {
+                    let urlString = mySnaps[snapId]!["url"] as! String
+                    let url = NSURL(string: urlString)
+                    let timerString = mySnaps[snapId]!["timer"]! as! String
+                    let timer = Double(timerString)
+                    print("readSnapsURL:\(urlString), timer:\(timerString)")
+                    var tempImageObject = ImageObject()
+                    
+                    var image:UIImage?
+                    let gsReference = storage.referenceForURL(url!.absoluteString!)
+                    // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+                    gsReference.dataWithMaxSize(10 * 1024 * 1024) { (data, error) -> Void in
+                        if (error != nil) {
+                            print("ERROR: \(error)")
+                        } else {
+                            // Data for "images/island.jpg" is returned
+                            image = UIImage(data: data!)
+                            print("?")
+                            tempImageObject.innerImage = image
+                            tempImageObject.timer = timer
+                            tempImageObject.isSelect = false
+                            tempImageObject.imageId = snapId
+                            tempImageObject.url = url
+                            self.imageArray.append(tempImageObject)
+                        }
+                    }
+                    //}
+                    
+                    
+                    
+                    //                    tempImageArray.append(tempImageObject)
+                    //                    }
+                }
+                //                self.imageArray = tempImageArray
+            }
+        }
+        
+    }
+    
+    //    func fetchImageFromDB(url: NSURL) -> UIImage?{
+    //
+    //        return image
+    //    }
     
     func initCollectionView(){
         let flowLayout = UICollectionViewFlowLayout()
@@ -232,13 +348,13 @@ class MemoriesViewController: UIViewController, UIImagePickerControllerDelegate,
         case 0:
             selectButton.enabled = true
             initImageArray()
-            memoriesCollectionView.reloadData()
+            //            memoriesCollectionView.reloadData()
             break
         case 1:
             selectButton.enabled = false
             selectMode = false
-            initImageArray()
-            memoriesCollectionView.reloadData()
+            //initImageArray()
+            //            memoriesCollectionView.reloadData()
             break
         case 2:
             initiatePhotoLibrary()
@@ -301,8 +417,9 @@ class MemoriesViewController: UIViewController, UIImagePickerControllerDelegate,
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
         self.memoriesSegmentedButton.selectedSegmentIndex = 0
+        self.selectButton.enabled = true
         initImageArray()
-        memoriesCollectionView.reloadData()
+        //        memoriesCollectionView.reloadData()
     }
     
     

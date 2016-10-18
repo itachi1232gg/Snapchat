@@ -9,13 +9,22 @@
 import Foundation
 
 class User{
-    var userId: Int
-    var name: String
-    var pwd: String
+    var uid: String
+    var username: String
+    var lastname: String
+    var firstname: String
+    var email: String
+    var mobilenum: String
+    var favourite: String
     
-    init(id: Int, name: String, pwd: String) {
-        userId = id
-        self.name = name
-        self.pwd = pwd
+    init(uid: String, username: String, lastname: String = "", firstname: String = "", email: String = "",
+         mobilenum: String = "", favourite: String = ""){
+        self.uid = uid
+        self.username = username
+        self.lastname = lastname
+        self.firstname = firstname
+        self.email = email
+        self.mobilenum = mobilenum
+        self.favourite = favourite
     }
 }

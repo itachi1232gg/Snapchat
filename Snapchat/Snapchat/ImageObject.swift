@@ -11,8 +11,10 @@ import AssetsLibrary
 
 class ImageObject: NSObject {
     
+    var imageId: String!
     var innerImage: UIImage!
     var timer: Double!
+    var url: NSURL!
     var isSelect:Bool = false
     override init() {
         super.init()

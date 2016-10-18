@@ -50,18 +50,18 @@ class ImageViewController: UIViewController, Shareable {
     var swiped = false
     
     @IBOutlet weak var tempImageView: UIImageView!
-
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         swiped = false
         
         if let touch = touches.first! as? UITouch {
-//            if drawMode == true{
-//                touch.gestureRecognizers?.first?.enabled = true
-//                touch.view?.userInteractionEnabled = true
-//                lastPoint = touch.locationInView(self.tempImageView)
-//            }else{
-//                touch.view?.userInteractionEnabled = false
-//            }
+            //            if drawMode == true{
+            //                touch.gestureRecognizers?.first?.enabled = true
+            //                touch.view?.userInteractionEnabled = true
+            //                lastPoint = touch.locationInView(self.tempImageView)
+            //            }else{
+            //                touch.view?.userInteractionEnabled = false
+            //            }
             lastPoint = touch.locationInView(self.tempImageView)
         }
         
@@ -124,20 +124,20 @@ class ImageViewController: UIViewController, Shareable {
         tempImageView.image = nil
     }
     
-//    @IBOutlet weak var drawButton: UIButton!
-//    
-//    var drawMode: Bool?{
-//        didSet{
-//            if drawMode == true{
-//                self.view.gestureRecognizers?.first?.enabled = true
-//            }else{
-//                self.view.gestureRecognizers?.first?.enabled = false
-//            }
-//        }
-//    }
-//    @IBAction func draw(sender: UIButton) {
-//        drawMode = !drawMode!
-//    }
+    //    @IBOutlet weak var drawButton: UIButton!
+    //
+    //    var drawMode: Bool?{
+    //        didSet{
+    //            if drawMode == true{
+    //                self.view.gestureRecognizers?.first?.enabled = true
+    //            }else{
+    //                self.view.gestureRecognizers?.first?.enabled = false
+    //            }
+    //        }
+    //    }
+    //    @IBAction func draw(sender: UIButton) {
+    //        drawMode = !drawMode!
+    //    }
     
     @IBOutlet weak var resetButton: UIButton!
     
@@ -153,9 +153,9 @@ class ImageViewController: UIViewController, Shareable {
     
     var pictureText: String?{
         didSet{
-//            if pictureText != ""{
-//                
-//            }
+            //            if pictureText != ""{
+            //
+            //            }
             pictureTakenImageView.image = pictureTakenImageView.image?.waterMarkedImage(pictureText!, corner: .TopLeft,
                                                                                         margin: CGPoint(x: 20, y: 20),
                                                                                         waterMarkTextColor: UIColor.redColor(),
@@ -185,9 +185,9 @@ class ImageViewController: UIViewController, Shareable {
                     self.pictureText = tf.text
                     print("Timer: \(self.pictureText)")
                 }else{
-//                    self.pictureTimer = 3.0
+                    //                    self.pictureTimer = 3.0
                     print("Text set nil")
-//                    print("Timer: \(self.pictureText)")
+                    //                    print("Timer: \(self.pictureText)")
                 }
             }
             }

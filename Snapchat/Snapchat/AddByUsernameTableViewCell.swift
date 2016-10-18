@@ -31,7 +31,7 @@ class AddByUsernameTableViewCell: UITableViewCell {
         nameLabel?.text = nil
         
         if let cellContent = self.cellContent{
-            nameLabel?.text = "\(cellContent.name)"
+            nameLabel?.text = "\(cellContent.username)"
         }
     }
 }

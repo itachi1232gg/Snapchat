@@ -9,7 +9,7 @@
 import UIKit
 
 class PersonalViewController: UIViewController {
-
+    
     var selfSegueIdentifier = "Show Personal"
     var usernameLabelMsg = "Welcome, \(UsableData.myUsername)"
     
@@ -20,17 +20,25 @@ class PersonalViewController: UIViewController {
         static var ShowMyFriends = "Show My Friends"
     }
     
+    //    override func viewWillAppear(animated: Bool) {
+    //
+    //    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        
         let changePageUpSwipe = UISwipeGestureRecognizer(target: self, action: #selector(PersonalViewController.goToCamara))
         changePageUpSwipe.direction = .Up
         self.view.addGestureRecognizer(changePageUpSwipe)
+        
         usernameLabel.text = usernameLabelMsg
+        //        UsableData.getMyUsername()
+        //
+        //        usernameLabel.text = usernameLabelMsg
         // Do any additional setup after loading the view.
     }
-
+    
     func goToCamara()
     {
         performSegueWithIdentifier(Storyboard.ShowCamara, sender: nil)

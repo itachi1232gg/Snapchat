@@ -36,13 +36,7 @@ class ChatListViewController: UIViewController, UISearchBarDelegate, UITableView
         
         searchBar.returnKeyType = UIReturnKeyType.Done
         
-        //        FIRAuth.auth()?.signInAnonymouslyWithCompletion({ (user, error) in
-        //            if let error = error{
-        //                print("Sign in failed:", error.localizedDescription)
-        //            }else{
-        //                print("Signed in with uid:", user?.uid)
-        //            }
-        //        })
+
         let myID = FIRAuth.auth()?.currentUser?.uid
         let friendRef = FIRDatabase.database().reference().child("users").child(myID!).child("friends").ref
         

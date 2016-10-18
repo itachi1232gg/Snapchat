@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import FirebaseAuth
 
 //class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 class CameraViewController: UIViewController {
@@ -28,6 +29,14 @@ class CameraViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        FIRAuth.auth()?.signInAnonymouslyWithCompletion({ (user, error) in
+            if let error = error{
+                print("Sign in failed:", error.localizedDescription)
+            }else{
+                print("Signed in with uid:", user?.uid)
+            }
+        })
         
         // Do any additional setup after loading the view.
         
@@ -51,6 +60,10 @@ class CameraViewController: UIViewController {
         
         flashOption = AVCaptureFlashMode.Off
         initiateCamera()
+        
+        //UsableData.myUsername = UsableData.getMyUsername()
+        
+        
         
     }
     
@@ -220,7 +233,7 @@ class CameraViewController: UIViewController {
 
 /*
  extension UIImage {
- /**2
+ /**
  *  重设图片大小
  */
  func reSizeImage(reSize:CGSize)->UIImage {

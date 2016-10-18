@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class AddByUsernameTableViewController: UITableViewController, UITextFieldDelegate {
-
+    
     let reusableCellIdentifier = "AddByUsername" //改完这个记得还要改下面的cell类名
     
     @IBOutlet weak var searchTextField: UITextField!{
         didSet{
             searchTextField.delegate = self
             searchTextField.text = searchText
-
+            
         }
     }
     
@@ -49,11 +50,32 @@ class AddByUsernameTableViewController: UITableViewController, UITextFieldDelega
     
     private var lastRequest: String?
     
+    func getOneFriendWithMyUserName(name: String?){
+        if(name != nil){
+            var user: User?
+            UsableData.usersRef.observeEventType(.Value){ (snapShot: FIRDataSnapshot) in
+                let users = snapShot.value as! NSDictionary
+                for key in users.allKeys{
+                    let uid = key as! String
+                    let friendname = users[uid]!["username"] as! String
+                    if friendname == name{
+                        user = User(uid: uid, username: friendname)
+                        self.userData.append([user!])
+                        //self.tableView.reloadData()
+                    }
+                    print("GetOneFriendUsername:\(friendname), uid:\(uid)")
+                }
+            }
+        }
+    }
+    
     private func searchForUserData()
     {
-        if let request = UsableData.getOneFriendWithMyUserName(searchText){
-            userData.append([request])
-        }
+        //        if let request = getOneFriendWithMyUserName(searchText){
+        //
+        ////            userData.append([request])
+        //        }
+        getOneFriendWithMyUserName(searchText)
         
         /*{
          lastRequest = request
@@ -86,7 +108,7 @@ class AddByUsernameTableViewController: UITableViewController, UITextFieldDelega
         super.viewDidLoad()
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-//        userData = [UsableData.getData()!]
+        //        userData = [UsableData.getData()!]
         
         let tapToReset = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
         tapToReset.cancelsTouchesInView = false

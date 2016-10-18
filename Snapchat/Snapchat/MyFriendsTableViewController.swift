@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
-
+    
     let reusableCellIdentifier = "MyFriends" //改完这个记得还要改下面的cell类名
     
     @IBOutlet weak var segueView: UIView!
@@ -38,12 +39,43 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
+    func getFriendsWithUsername(){
+        //        //        if myUsername != nil{
+        //        //通过自己的用户名获取朋友列表
+        //        let user1 = User(id: 1, name: "Cole", pwd: "keke")
+        //        let user2 = User(id: 2, name: "Super", pwd: "1")
+        //        let user3 = User(id: 3, name: "wow", pwd: "2")
+        //
+        //        var users: [User] = []
+        //        users.append(user1)
+        //        users.append(user2)
+        //        users.append(user3)
+        //        return users
+        //        //        }
+        //        //        return nil
+        var userArray: [User] = []
+        UsableData.myFriendsRef.observeEventType(.Value){ (snapShot: FIRDataSnapshot) in
+            if let myFriends = snapShot.value as? NSDictionary{
+                for key in myFriends.allKeys {
+                    let friendname = key as! String
+                    let uid = myFriends[friendname]! as! String
+                    let user = User(uid: uid, username: friendname)
+                    print("FriendsUsername:\(friendname), uid:\(uid)")
+                    userArray.append(user)
+                }
+                self.userData = [userArray]
+            }
+        }
+    }
+    
+    
     var searchText: String?{
         didSet{
             userData.removeAll()
             lastRequest = nil
             if searchText! == ""{
-                userData = [UsableData.getFriendsWithUsername()!]
+                //                userData = [UsableData.getFriendsWithUsername()!]
+                getFriendsWithUsername()
             }else{
                 searchForUserData()
             }
@@ -73,9 +105,31 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
     
     private var lastRequest: String?
     
+    func getOneFriendWithMyUserName(name: String?) -> User?{
+        if(name != nil){
+            var user: User?
+            UsableData.usersRef.observeEventType(.Value){ (snapShot: FIRDataSnapshot) in
+                let users = snapShot.value as! NSDictionary
+                for key in users.allKeys{
+                    let uid = key as! String
+                    let friendname = users[uid]!["username"] as! String
+                    if friendname == name{
+                        user = User(uid: uid, username: friendname)
+                        self.userData.append([user!])
+                        //self.tableView.reloadData()
+                    }
+                    print("GetOneFriendUsername:\(friendname), uid:\(uid)")
+                }
+            }
+            return user
+        }
+        return nil
+    }
+    
     private func searchForUserData()
     {
-        if let request = UsableData.getOneFriendWithMyUserName(searchText){
+        if let request = getOneFriendWithMyUserName(searchText){
+            
             userData.append([request])
         }
         
@@ -116,8 +170,8 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
         
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-        userData = [UsableData.getFriendsWithUsername()!]
-        
+        //        userData = [UsableData.getFriendsWithUsername()!]
+        getFriendsWithUsername()
         let tapToReset = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
         tapToReset.cancelsTouchesInView = false
         tableView.addGestureRecognizer(tapToReset)
@@ -143,7 +197,7 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
     //MARK: 设置cell的内容
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reusableCellIdentifier, forIndexPath: indexPath)
-
+        
         let user = userData[indexPath.section][indexPath.row]
         if let userCell = cell as? MyFriendsTableViewCell{
             userCell.cellContent = user
@@ -151,5 +205,5 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
         
         return cell
     }
-
+    
 }
