@@ -16,6 +16,8 @@ class VideoCell : UICollectionViewCell {
     
     @IBOutlet weak var storyContent: UILabel!
     
+    var cellID: String?
+    
     
    
 }

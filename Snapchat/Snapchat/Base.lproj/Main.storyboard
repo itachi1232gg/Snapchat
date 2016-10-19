@@ -1535,12 +1535,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="jcW-Gx-hAc" id="U2L-Uc-Fpu"/>
-                        <segue destination="cdw-k5-sZ9" kind="show" identifier="idt2" id="2SO-GF-DK0"/>
+                        <segue destination="cdw-k5-sZ9" kind="show" identifier="idt2" id="YzC-cN-FK6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLk-XD-s9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4116" y="349.47526236881561"/>
+            <point key="canvasLocation" x="4145" y="320"/>
         </scene>
         <!--Discover-->
         <scene sceneID="HpW-m2-hAQ">
@@ -1552,7 +1552,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="discovercell" rowHeight="300" id="whl-Hx-gps" customClass="DiscoverCell" customModule="Snapchat" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="whl-Hx-gps" id="pBC-Dk-SQM">
                                     <frame key="frameInset" width="375" height="300"/>
@@ -1593,6 +1593,8 @@
                             <outlet property="delegate" destination="S1X-Oc-wzr" id="jjD-CV-ror"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="cdw-k5-sZ9" kind="show" identifier="idt1" id="Lnj-TL-YHo"/>
                     </connections>
@@ -1786,13 +1788,13 @@
         <image name="image1" width="848" height="1072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CrS-36-JFP"/>
-        <segue reference="b27-dg-h9d"/>
-        <segue reference="h1j-Uc-Zyp"/>
-        <segue reference="XZT-4T-mRI"/>
         <segue reference="LjA-Uk-yQ0"/>
-        <segue reference="WbT-Yv-evh"/>
-        <segue reference="2SO-GF-DK0"/>
+        <segue reference="h1j-Uc-Zyp"/>
+        <segue reference="Cpp-gY-A4E"/>
+        <segue reference="rBu-gS-sOZ"/>
+        <segue reference="YzC-cN-FK6"/>
+        <segue reference="XZT-4T-mRI"/>
+        <segue reference="b27-dg-h9d"/>
         <segue reference="LSu-K6-1LH"/>
         <segue reference="J0Q-7D-IFQ"/>
     </inferredMetricsTieBreakers>

@@ -29,19 +29,18 @@ class DisplayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getDiscoverListData()
-        print(image)
-        
-        if storyID != nil {
+        if storyID != nil  {
             displaytitle.text = storyID!
             print(storyID!)
-//            if image != nil {
-//                let images = fetchImage(NSURL(string: image!))
-//                displayIV.image = images
-//            }
-            
-            
+            getDiscoverListData()
+            print(image)
+
         }
+
+        
+
+        
+
         // Do any additional setup after loading the view.
     }
     
@@ -75,7 +74,6 @@ class DisplayViewController: UIViewController {
             self.displayIV.image = self.fetchImage(NSURL(string: self.image!))
             
         })
-        
     }
     
     
