@@ -30,8 +30,26 @@ class StoriesViewController: UIViewController{
     
     var storiesArray:[[ImageObject]] = []
     
-    func readStories(){
-        UsableData.myStoriesRef.observeSingleEventOfType(.Value){ (snapShot: FIRDataSnapshot) in
+    func readMyFriendsId(){
+        storiesArray = []
+        UsableData.myFriendsRef.observeSingleEventOfType(.Value){ (snapShot: FIRDataSnapshot) in
+            if let myFriendsId = snapShot.value as? NSDictionary{
+                for myFriendId in myFriendsId.allValues{
+                    let fid = myFriendId as! String
+                    self.readStories(fid)
+//                    let ffid = fid.allValues as! [AnyObject]
+//                    for ffid in fid{
+//                        let fffid = ffid as! String
+//                        
+//                    }
+                    
+                }
+            }
+        }
+    }
+    
+    func readStories(myFriendId: String){
+        UsableData.usersRef.child(myFriendId).child("stories").observeSingleEventOfType(.Value){ (snapShot: FIRDataSnapshot) in
             if let myStories = snapShot.value as? NSDictionary{
                 for key in myStories.allKeys {
                     let storiesId = key as! String
@@ -97,7 +115,8 @@ class StoriesViewController: UIViewController{
     {
         super.viewDidLoad()
         segueToEnforced.hidden = true
-        readStories()
+//        readStories()
+        readMyFriendsId()
         //Swipe gesture Recognizer -right and left
         let changePageRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(StoriesViewController.goToCamera))
         changePageRightSwipe.direction = .Right
