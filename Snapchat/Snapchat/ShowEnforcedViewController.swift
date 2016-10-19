@@ -28,6 +28,8 @@ class ShowEnforcedViewController: UIViewController {
     
     @IBOutlet weak var segueToMemories: UIButton!
     
+    @IBOutlet weak var segueToStories: UIButton!
+    
     var showStory: [ImageObject]?{
         didSet{
             showEnforcedPicA()
@@ -72,6 +74,7 @@ class ShowEnforcedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         segueToMemories.hidden = true
+        segueToStories.hidden = true
         showStory = story
         // Do any additional setup after loading the view.
     }

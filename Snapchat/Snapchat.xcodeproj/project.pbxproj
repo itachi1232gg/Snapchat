@@ -12,7 +12,6 @@
 		661EF7EF1DB1FFE90075FE3D /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7EC1DB1FFE90075FE3D /* DiscoverCell.swift */; };
 		661EF7F01DB1FFE90075FE3D /* DiscoverData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7ED1DB1FFE90075FE3D /* DiscoverData.swift */; };
 		661EF7F11DB1FFE90075FE3D /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7EE1DB1FFE90075FE3D /* DiscoveryViewController.swift */; };
-		661EF7F61DB1FFF70075FE3D /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7F21DB1FFF70075FE3D /* CategoryRow.swift */; };
 		661EF7F71DB1FFF70075FE3D /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7F31DB1FFF70075FE3D /* StoriesViewController.swift */; };
 		661EF7F81DB1FFF70075FE3D /* SubscruptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7F41DB1FFF70075FE3D /* SubscruptionsTableViewCell.swift */; };
 		661EF7F91DB1FFF70075FE3D /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EF7F51DB1FFF70075FE3D /* VideoCell.swift */; };
@@ -39,6 +38,7 @@
 		88E492261DA31CB500A4A15F /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E492251DA31CB500A4A15F /* ImageCollectionCell.swift */; };
 		88E492281DA31F4500A4A15F /* SettingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E492271DA31F4500A4A15F /* SettingImage.swift */; };
 		88E4922A1DA3242000A4A15F /* ImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E492291DA3242000A4A15F /* ImageObject.swift */; };
+		88EA0A361DB7C10E00859FA7 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA0A351DB7C10E00859FA7 /* CategoryRow.swift */; };
 		88EBD4561DA3A68B00DCB05D /* ShareProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD4551DA3A68B00DCB05D /* ShareProtocol.swift */; };
 		88EBD4581DA3AE9400DCB05D /* AddFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD4571DA3AE9400DCB05D /* AddFriendsTableViewController.swift */; };
 		88F2C41E1DA214F000E8CACB /* MyFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F2C41D1DA214F000E8CACB /* MyFriendsTableViewController.swift */; };
@@ -55,7 +55,6 @@
 		661EF7EC1DB1FFE90075FE3D /* DiscoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
 		661EF7ED1DB1FFE90075FE3D /* DiscoverData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverData.swift; sourceTree = "<group>"; };
 		661EF7EE1DB1FFE90075FE3D /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
-		661EF7F21DB1FFF70075FE3D /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		661EF7F31DB1FFF70075FE3D /* StoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
 		661EF7F41DB1FFF70075FE3D /* SubscruptionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscruptionsTableViewCell.swift; sourceTree = "<group>"; };
 		661EF7F51DB1FFF70075FE3D /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
@@ -84,6 +83,7 @@
 		88E492251DA31CB500A4A15F /* ImageCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
 		88E492271DA31F4500A4A15F /* SettingImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingImage.swift; sourceTree = "<group>"; };
 		88E492291DA3242000A4A15F /* ImageObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageObject.swift; sourceTree = "<group>"; };
+		88EA0A351DB7C10E00859FA7 /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		88EBD4551DA3A68B00DCB05D /* ShareProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareProtocol.swift; sourceTree = "<group>"; };
 		88EBD4571DA3AE9400DCB05D /* AddFriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsTableViewController.swift; sourceTree = "<group>"; };
 		88F2C41D1DA214F000E8CACB /* MyFriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewController.swift; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 		8886C9BA1DA9C8EB008B5A98 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
-				661EF7F21DB1FFF70075FE3D /* CategoryRow.swift */,
+				88EA0A351DB7C10E00859FA7 /* CategoryRow.swift */,
 				661EF7F31DB1FFF70075FE3D /* StoriesViewController.swift */,
 				661EF7F41DB1FFF70075FE3D /* SubscruptionsTableViewCell.swift */,
 				661EF7F51DB1FFF70075FE3D /* VideoCell.swift */,
@@ -455,7 +455,6 @@
 				888929AA1DB20CEB00CB8BBA /* AddFromAddressBookViewController.swift in Sources */,
 				66B82B8D1D89A015008FBE82 /* AppDelegate.swift in Sources */,
 				88497A8B1D9E5D2400546EF5 /* PersonalViewController.swift in Sources */,
-				661EF7F61DB1FFF70075FE3D /* CategoryRow.swift in Sources */,
 				88F2C4261DA2166200E8CACB /* User.swift in Sources */,
 				88E324131DB2FB7600517709 /* MemoriesCollectionViewCell.swift in Sources */,
 				88E492281DA31F4500A4A15F /* SettingImage.swift in Sources */,
@@ -473,6 +472,7 @@
 				88E408271DA36A6D00ECD643 /* ImageViewController.swift in Sources */,
 				E79A5F8B1DB22CB300B65C9E /* ChatViewController.swift in Sources */,
 				88497A891D9E5D0F00546EF5 /* MemoriesViewController.swift in Sources */,
+				88EA0A361DB7C10E00859FA7 /* CategoryRow.swift in Sources */,
 				66BB554B1DB4A14D0067C8AE /* TheFirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

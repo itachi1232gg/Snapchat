@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K3C-dq-4Kg">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K3C-dq-4Kg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -677,6 +677,14 @@
                                     <segue destination="EjK-eL-J3D" kind="presentation" identifier="Show Memories" id="uwR-Fp-bP0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRD-FE-ZU5">
+                                <frame key="frameInset" minX="164" minY="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="s9D-aS-NaC" kind="presentation" identifier="Show Stories" modalTransitionStyle="partialCurl" id="0BD-r0-YeJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -688,6 +696,7 @@
                     </view>
                     <connections>
                         <outlet property="segueToMemories" destination="aEX-17-yl1" id="Edn-ht-udZ"/>
+                        <outlet property="segueToStories" destination="fRD-FE-ZU5" id="eU6-ul-2Eu"/>
                         <outlet property="showEnforcedImageView" destination="AJh-gq-kk2" id="zJ8-QV-tNa"/>
                     </connections>
                 </viewController>
@@ -1411,6 +1420,14 @@
                                     <outlet property="delegate" destination="Cfv-6y-NfI" id="JoS-Yq-UUm"/>
                                 </connections>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALb-Vm-uO8">
+                                <frame key="frameInset" minX="164" minY="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="0UV-oX-MEK" kind="presentation" identifier="Show Enforced" modalTransitionStyle="crossDissolve" id="wYL-FM-4FR"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="172" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aMB-67-cSi">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1474,7 +1491,7 @@
                                                         </collectionViewCell>
                                                     </cells>
                                                     <connections>
-                                                        <outlet property="dataSource" destination="Iga-NA-csf" id="nuA-PP-OAn"/>
+                                                        <outlet property="dataSource" destination="Iga-NA-csf" id="s0B-W8-Ik1"/>
                                                         <outlet property="delegate" destination="Iga-NA-csf" id="gua-XJ-CNv"/>
                                                     </connections>
                                                 </collectionView>
@@ -1487,7 +1504,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="collectionView" destination="2y4-rd-9jX" id="KhF-7s-2ub"/>
+                                            <outlet property="collectionView" destination="2y4-rd-9jX" id="76V-GT-NWt"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1535,6 +1552,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="jcW-Gx-hAc" id="U2L-Uc-Fpu"/>
+                        <outlet property="segueToEnforced" destination="ALb-Vm-uO8" id="H8C-K5-ybY"/>
+                        <outlet property="storiesTableView" destination="aMB-67-cSi" id="qLU-58-XyM"/>
                         <segue destination="cdw-k5-sZ9" kind="show" identifier="idt2" id="2SO-GF-DK0"/>
                     </connections>
                 </viewController>
@@ -1786,14 +1805,15 @@
         <image name="image1" width="848" height="1072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CrS-36-JFP"/>
         <segue reference="b27-dg-h9d"/>
-        <segue reference="h1j-Uc-Zyp"/>
-        <segue reference="XZT-4T-mRI"/>
-        <segue reference="LjA-Uk-yQ0"/>
-        <segue reference="WbT-Yv-evh"/>
-        <segue reference="2SO-GF-DK0"/>
-        <segue reference="LSu-K6-1LH"/>
+        <segue reference="Cpp-gY-A4E"/>
+        <segue reference="0BD-r0-YeJ"/>
+        <segue reference="wYL-FM-4FR"/>
+        <segue reference="uwR-Fp-bP0"/>
         <segue reference="J0Q-7D-IFQ"/>
+        <segue reference="2SO-GF-DK0"/>
+        <segue reference="h1j-Uc-Zyp"/>
+        <segue reference="LjA-Uk-yQ0"/>
+        <segue reference="XZT-4T-mRI"/>
     </inferredMetricsTieBreakers>
 </document>

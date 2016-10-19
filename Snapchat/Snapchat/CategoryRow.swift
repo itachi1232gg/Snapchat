@@ -8,40 +8,81 @@
 
 import UIKit
 
-class CategoryRow : UITableViewCell {
+class CategoryRow : UITableViewCell, UICollectionViewDataSource {
+    
+    var selfSegueIdentifier = "Show Stories"
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var tableIndexSection:Int?
-}
 
-extension CategoryRow : UICollectionViewDataSource {
-    
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+    private struct Storyboard
+    {
+        static var ShowCamera = "Show Camera"
+        static var ShowDiscovery = "Show Discovery"
+        static var ShowEnforced = "Show Enforced"
     }
     
+    var tableIndexSection:Int?
+    var storiesArray:[[ImageObject]] = []{
+        didSet{
+            print("DIDSET!")
+            collectionView.reloadData()
+        }
+    }
+    
+    private var storiesSelected: [ImageObject]?{
+        didSet{
+            //performSegueWithIdentifier(Storyboard.ShowEnforced, sender: nil)
+        }
+    }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+//    {
+//        if segue.identifier == Storyboard.ShowEnforced{
+//            if let svc = segue.destinationViewController.contentViewController as? ShowEnforcedViewController {
+//                svc.backTo = selfSegueIdentifier
+//                svc.story = self.storiesSelected
+//            }
+//        }
+//    }
+    
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
-//        print ("index-section = " + String(indexPath.section))
-//        print ("index-row = " + String(indexPath.row))
-          print ("tableViewsection = " + String(tableIndexSection))
-//        print ("==========================")
-        
+        print("tableViewsection = " + String(tableIndexSection))
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("videoCell", forIndexPath: indexPath) as! VideoCell
-
-        if tableIndexSection == 0 {
-            if indexPath.row == 0 {
+        if tableIndexSection == 0{
+            if indexPath.row == 0{
                 cell.imageView.image = UIImage(named: "snow")
-            } else {
+            }else{
                 cell.imageView.image = UIImage(named: "mountain")
             }
-        }else {
+        }else if tableIndexSection == 3{
+            cell.imageView.image = self.storiesArray[indexPath.row].first!.innerImage
+        }else{
             cell.imageView.image = UIImage(named: "sunset")
         }
         
         return cell
+        
     }
     
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if tableIndexSection == 3{
+            return storiesArray.count
+        }else{
+            return 15
+        }
+        
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if(tableIndexSection == 3){
+            print("You selected cell #\(indexPath.item)!")
+            print("You selected cell Row #\(indexPath.row)!")
+            print("You selected cell Section #\(indexPath.section)!")
+            self.storiesSelected = storiesArray[indexPath.row]
+        }
+        
+    }
 }
 
 extension CategoryRow : UICollectionViewDelegateFlowLayout {
@@ -55,3 +96,4 @@ extension CategoryRow : UICollectionViewDelegateFlowLayout {
     }
     
 }
+

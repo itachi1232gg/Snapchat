@@ -16,6 +16,9 @@ class VideoCell : UICollectionViewCell {
     
     @IBOutlet weak var storyContent: UILabel!
     
+    func update(image: ImageObject){
+        self.imageView.image = image.innerImage
+    }
     
    
 }
