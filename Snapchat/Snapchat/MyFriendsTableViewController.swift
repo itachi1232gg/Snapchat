@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import Firebase
 
 class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
     
@@ -27,6 +28,52 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
             print("MyFriends message keke")
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        //self.saveToCamera()
+        if segue.identifier == "Show Chat View" {
+            pushImage((message?.innerImage)!)
+            let destination = segue.destinationViewController as! ChatViewController
+            //print("\(theOne)")
+            destination.navigationItem.title = sender as! String
+//            if let pvc = segue.destinationViewController.contentViewController as? ImageViewController {
+//                pvc.backTo = selfSegueIdentifier
+//                pvc.image = self.pictureTaken
+//            }
+        }
+    }
+
+    var targetRef: FIRDatabaseReference{
+        return FIRDatabase.database().reference().child("message").ref
+    }
+    
+    func pushImage(image: UIImage){
+        let data: NSData = UIImageJPEGRepresentation(image, 0.5)!
+        let today = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-mm-dd HH:mm:ss"
+        let date = dateFormatter.stringFromDate(today)
+        let storageRef = FIRStorage.storage().referenceForURL("gs://snapchat-35d64.appspot.com").child(date)
+        storageRef.putData(data, metadata: nil) { (metadata, error) in
+            if (error != nil) {
+            } else {
+                if let url = metadata!.downloadURL()?.absoluteString {
+                    let messageContent = ["type":"image","sender":UsableData.myUsername,"content":url]
+                    self.targetRef.childByAutoId().setValue(messageContent)
+                    //self.synchronizeRef.childByAutoId().setValue(messageContent)
+                }
+            }
+        }
+    }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        self.chatingList.deselectRowAtIndexPath(indexPath, animated: true)
+        //theOne = internalData.searchUsers[indexPath.row]
+        let user = userData[indexPath.section][indexPath.row]
+        performSegueWithIdentifier("Show Chat View", sender: user.username)
+    }
+    
     /***********************************************************/
     @IBAction func segueTo(sender: UIBarButtonItem) {
         print("BACKTO::\(backTo)")
