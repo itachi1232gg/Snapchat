@@ -1364,6 +1364,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cNX-UV-5Ua"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKS-Vz-r2w">
+                                <frame key="frameInset" minX="91" minY="108" width="163" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1373,6 +1380,10 @@
                             <constraint firstAttribute="trailing" secondItem="cNX-UV-5Ua" secondAttribute="trailing" id="r4W-Tf-8gx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayIV" destination="cNX-UV-5Ua" id="His-9u-fRH"/>
+                        <outlet property="displaytitle" destination="PKS-Vz-r2w" id="xSn-V6-2EF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMy-Sw-1c6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1571,7 +1582,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="bkImageView" destination="sOb-vR-nWI" id="EKy-cx-wf0"/>
+                                    <outlet property="bkImageView" destination="sOb-vR-nWI" id="87g-ok-qeW"/>
                                     <outlet property="discoverContent" destination="eCP-po-Jve" id="IXA-qR-KP4"/>
                                     <outlet property="discoverTitle" destination="NS1-os-pSm" id="6Je-5O-D0c"/>
                                 </connections>
@@ -1781,7 +1792,7 @@
         <segue reference="XZT-4T-mRI"/>
         <segue reference="LjA-Uk-yQ0"/>
         <segue reference="WbT-Yv-evh"/>
-        <segue reference="Lnj-TL-YHo"/>
+        <segue reference="2SO-GF-DK0"/>
         <segue reference="LSu-K6-1LH"/>
         <segue reference="J0Q-7D-IFQ"/>
     </inferredMetricsTieBreakers>

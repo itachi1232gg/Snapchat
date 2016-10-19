@@ -7,23 +7,25 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 
 class DiscoverData {
+    
+    
     class Entry {
         let filename : String
         let heading : String
-        init(fname : String, heading : String) {
+        let content :String
+        let discoverID : String
+        init(fname : String, heading : String, content: String, discoverID: String) {
             self.heading = heading
             self.filename = fname
+            self.content = content
+            self.discoverID = discoverID
         }
     }
     
-    let places = [
-        Entry(fname: "bridge", heading: "Heading 1"),
-        Entry(fname: "mountain", heading: "Heading 2"),
-        Entry(fname: "snow", heading: "Heading 3"),
-        Entry(fname: "sunset", heading: "Heading 4")
-    ]
+    
     
 }

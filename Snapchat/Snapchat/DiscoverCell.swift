@@ -10,7 +10,10 @@ import UIKit
 
 class DiscoverCell: UITableViewCell {
     
+    var cellID: String?
+    
     @IBOutlet weak var bkImageView: UIImageView!
+    
     
     @IBOutlet weak var discoverTitle: UILabel!
     
