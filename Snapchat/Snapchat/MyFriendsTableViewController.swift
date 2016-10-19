@@ -105,33 +105,41 @@ class MyFriendsTableViewController: UITableViewController, UITextFieldDelegate {
     
     private var lastRequest: String?
     
-    func getOneFriendWithMyUserName(name: String?) -> User?{
+    func getOneFriendWithMyUserName(name: String?){
         if(name != nil){
-            var user: User?
-            UsableData.usersRef.observeSingleEventOfType(.Value){ (snapShot: FIRDataSnapshot) in
-                let users = snapShot.value as! NSDictionary
-                for key in users.allKeys{
-                    let uid = key as! String
-                    let friendname = users[uid]!["username"] as! String
-                    if friendname == name{
-                        user = User(uid: uid, username: friendname)
-                        self.userData.append([user!])
-                        //self.tableView.reloadData()
+            UsableData.myFriendsRef.observeSingleEventOfType(.Value){ (snapShot: FIRDataSnapshot) in
+                if let myFriends = snapShot.value as? NSDictionary{
+                    for key in myFriends.allKeys {
+                        let friendname = key as! String
+                        let uid = myFriends[friendname]! as! String
+                        if friendname == name{
+                            let user = User(uid: uid, username: friendname)
+//                            user = User(uid: uid, username: friendname)
+                            self.userData.append([user])
+                            //self.tableView.reloadData()
+                        }
+                        
+                        print("FriendsUsername:\(friendname), uid:\(uid)")
                     }
-                    print("GetOneFriendUsername:\(friendname), uid:\(uid)")
+//                    if friendname == name{
+//                        user = User(uid: uid, username: friendname)
+//                        self.userData.append([user!])
+//                        //self.tableView.reloadData()
+//                    }
+//                    print("GetOneFriendUsername:\(friendname), uid:\(uid)")
                 }
             }
-            return user
         }
-        return nil
     }
     
     private func searchForUserData()
     {
-        if let request = getOneFriendWithMyUserName(searchText){
-            
-            userData.append([request])
-        }
+//        if let request = getOneFriendWithMyUserName(searchText){
+//            
+//            userData.append([request])
+//        }
+        
+        getOneFriendWithMyUserName(searchText)
         
         /*{
          lastRequest = request

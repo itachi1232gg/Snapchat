@@ -36,6 +36,9 @@ class LoginViewController: UIViewController {
                     }else{
                         print(userName, "log in successful!")
                         self.performSegueWithIdentifier("loginsuccess", sender: nil)
+                        let myUserID = FIRAuth.auth()?.currentUser?.uid
+                        print("my userId: \(myUserID)")
+                        self.getMyUsername()
                     }
                 })
                 
@@ -45,6 +48,19 @@ class LoginViewController: UIViewController {
         
         
     }
+    
+    func getMyUsername(){
+        var name: String = ""
+        UsableData.selfRef.observeSingleEventOfType(.Value){ (snapShot: FIRDataSnapshot) in
+            if let me = snapShot.value as? NSDictionary{
+                name = me["username"] as! String
+                //            myUsername = name
+                print("myName is: \(name)")
+                UsableData.myUsername = name
+            }
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

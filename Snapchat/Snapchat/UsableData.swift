@@ -167,9 +167,8 @@ class UsableData{
     
     static func addFriend(name: String?) -> Bool{
         //添加朋友到自己的朋友列表，要用自己的用户名！
-        var user: User?
-        
         usersRef.observeEventType(.Value){ (snapShot: FIRDataSnapshot) in
+            var user: User?
             let users = snapShot.value as! NSDictionary
             for key in users.allKeys{
                 let uid = key as! String
@@ -179,9 +178,6 @@ class UsableData{
                 }
                 print("addFriendUsername:\(friendname), uid:\(uid)")
             }
-            //            let msgData1 = [
-            //                user!.username: user!.uid
-            //            ]
             //加为自己的朋友
             myFriendsRef.child(user!.username).setValue(user!.uid)
             //别人加自己为朋友

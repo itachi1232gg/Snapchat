@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snapchat/MyFriendsTableViewController.swift"
-            timestampString = "498355474.513735"
+            timestampString = "498530507.607982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "searchForUserData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snapchat/MyFriendsTableViewController.swift"
-            timestampString = "498355474.513735"
+            timestampString = "498530507.607982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "searchForUserData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snapchat/MyFriendsTableViewController.swift"
-            timestampString = "498355474.513735"
+            timestampString = "498530507.607982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "MyFriendsTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snapchat/MyFriendsTableViewController.swift"
-            timestampString = "498355474.513735"
+            timestampString = "498530507.607982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "searchForUserData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snapchat/MyFriendsTableViewController.swift"
-            timestampString = "498355474.513735"
+            timestampString = "498530507.607982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "searchForUserData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -394,12 +394,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snapchat/MyFriendsTableViewController.swift"
-            timestampString = "498355474.513735"
+            timestampString = "498530507.607982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "getOneFriendWithMyUserName(name:)"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "getOneFriendWithMyUserName(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
