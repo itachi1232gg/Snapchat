@@ -871,7 +871,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pGB-jK-tyS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jdF-u4-7OG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jdF-u4-7OG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -889,7 +889,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RJA-UU-1t7" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="TlN-5s-NuB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TlN-5s-NuB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -907,7 +907,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RDC-E5-yBr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eKF-3R-Spg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eKF-3R-Spg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1014,13 +1014,13 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVB-46-jIB">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="76" id="y5B-Qd-Z7V"/>
+                                    <constraint firstAttribute="height" constant="76" id="RR5-Of-87E"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-Xi-RUM">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-Xi-RUM">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME  OR  EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgo-Zw-nu4">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1045,6 +1045,9 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijs-2L-qFR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="013-W4-uVa"/>
+                                </constraints>
                                 <state key="normal" title="forget your password?"/>
                                 <connections>
                                     <action selector="btn_fogetpswd:" destination="EhH-Dc-Kop" eventType="touchUpInside" id="d6j-qX-2OC"/>
@@ -1053,7 +1056,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZa-Jl-tN8">
                                 <color key="backgroundColor" red="0.78955821700507611" green="0.78955821700507611" blue="0.78955821700507611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="sjp-Ai-a5b"/>
+                                    <constraint firstAttribute="height" constant="50" id="bzq-KR-ljv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Log In">
@@ -1066,20 +1069,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UVB-46-jIB" firstAttribute="leading" secondItem="w4F-PG-G1p" secondAttribute="leadingMargin" constant="95" id="HqB-yc-z72"/>
-                            <constraint firstItem="ijs-2L-qFR" firstAttribute="centerX" secondItem="UVB-46-jIB" secondAttribute="centerX" id="Itb-ab-Ffk"/>
-                            <constraint firstItem="ijs-2L-qFR" firstAttribute="top" secondItem="PGR-Xi-RUM" secondAttribute="bottom" constant="8" symbolic="YES" id="J0v-OT-xGi"/>
-                            <constraint firstItem="UVB-46-jIB" firstAttribute="top" secondItem="cVd-LM-Fo0" secondAttribute="bottom" constant="44" id="Jfs-fz-LSR"/>
-                            <constraint firstItem="PGR-Xi-RUM" firstAttribute="centerX" secondItem="UVB-46-jIB" secondAttribute="centerX" id="WRt-SF-0pW"/>
-                            <constraint firstItem="42Q-nL-L69" firstAttribute="leading" secondItem="w4F-PG-G1p" secondAttribute="leadingMargin" id="YHG-Px-hSC"/>
-                            <constraint firstItem="q1f-J9-pvF" firstAttribute="top" secondItem="PGR-Xi-RUM" secondAttribute="bottom" constant="394" id="YeX-qg-cCt"/>
-                            <constraint firstItem="42Q-nL-L69" firstAttribute="top" secondItem="cVd-LM-Fo0" secondAttribute="bottom" id="cyn-nQ-uLW"/>
-                            <constraint firstItem="PGR-Xi-RUM" firstAttribute="top" secondItem="UVB-46-jIB" secondAttribute="bottom" constant="8" symbolic="YES" id="fqn-y6-2cO"/>
-                            <constraint firstItem="wZa-Jl-tN8" firstAttribute="top" secondItem="ijs-2L-qFR" secondAttribute="bottom" constant="36" id="nKh-xA-DCd"/>
-                            <constraint firstItem="UVB-46-jIB" firstAttribute="centerX" secondItem="w4F-PG-G1p" secondAttribute="centerX" id="o9p-DT-UoG"/>
-                            <constraint firstItem="wZa-Jl-tN8" firstAttribute="leading" secondItem="w4F-PG-G1p" secondAttribute="leadingMargin" constant="62" id="oSv-Tk-VjN"/>
-                            <constraint firstItem="wZa-Jl-tN8" firstAttribute="centerX" secondItem="ijs-2L-qFR" secondAttribute="centerX" id="pHt-OU-t6f"/>
-                            <constraint firstItem="ijs-2L-qFR" firstAttribute="leading" secondItem="w4F-PG-G1p" secondAttribute="leadingMargin" constant="67" id="sVI-wy-auV"/>
+                            <constraint firstItem="PGR-Xi-RUM" firstAttribute="leading" secondItem="w4F-PG-G1p" secondAttribute="leadingMargin" constant="82" id="0cw-qo-LOG"/>
+                            <constraint firstItem="ijs-2L-qFR" firstAttribute="top" secondItem="PGR-Xi-RUM" secondAttribute="bottom" constant="8" symbolic="YES" id="8CJ-f1-6z1"/>
+                            <constraint firstItem="UVB-46-jIB" firstAttribute="centerX" secondItem="w4F-PG-G1p" secondAttribute="centerX" id="Hte-iD-LBw"/>
+                            <constraint firstItem="UVB-46-jIB" firstAttribute="leading" secondItem="w4F-PG-G1p" secondAttribute="leadingMargin" constant="95" id="IKq-nv-jAQ"/>
+                            <constraint firstItem="UVB-46-jIB" firstAttribute="centerX" secondItem="ijs-2L-qFR" secondAttribute="centerX" id="Qvh-Ln-wb6"/>
+                            <constraint firstItem="UVB-46-jIB" firstAttribute="top" secondItem="cVd-LM-Fo0" secondAttribute="bottom" constant="44" id="Sha-AX-aTA"/>
+                            <constraint firstItem="PGR-Xi-RUM" firstAttribute="top" secondItem="UVB-46-jIB" secondAttribute="bottom" constant="8" symbolic="YES" id="TbJ-ru-E7Y"/>
+                            <constraint firstItem="wZa-Jl-tN8" firstAttribute="leading" secondItem="w4F-PG-G1p" secondAttribute="leadingMargin" constant="62" id="Wg7-7P-Wha"/>
+                            <constraint firstItem="42Q-nL-L69" firstAttribute="top" secondItem="cVd-LM-Fo0" secondAttribute="bottom" id="X3R-OI-xGx"/>
+                            <constraint firstItem="42Q-nL-L69" firstAttribute="leading" secondItem="w4F-PG-G1p" secondAttribute="leadingMargin" id="YMh-Fn-jBz"/>
+                            <constraint firstItem="ijs-2L-qFR" firstAttribute="centerX" secondItem="wZa-Jl-tN8" secondAttribute="centerX" id="g5d-KX-ixD"/>
+                            <constraint firstItem="ijs-2L-qFR" firstAttribute="leading" secondItem="w4F-PG-G1p" secondAttribute="leadingMargin" constant="67" id="rEF-M6-V8x"/>
+                            <constraint firstItem="wZa-Jl-tN8" firstAttribute="top" secondItem="ijs-2L-qFR" secondAttribute="bottom" constant="36" id="wut-ZC-1xU"/>
+                            <constraint firstItem="q1f-J9-pvF" firstAttribute="top" secondItem="wZa-Jl-tN8" secondAttribute="bottom" constant="270" id="yWx-Hh-5f8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Iz-ZF-9J5"/>
@@ -1347,7 +1350,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j3f-YH-tjr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7sO-GS-8YY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7sO-GS-8YY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1769,7 +1772,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KeG-zk-Fpk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CJm-iq-96x">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CJm-iq-96x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1787,7 +1790,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aJW-2T-NC8" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="enc-JB-0bU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="enc-JB-0bU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1805,13 +1808,13 @@
         <image name="image1" width="848" height="1072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b27-dg-h9d"/>
-        <segue reference="Cpp-gY-A4E"/>
-        <segue reference="0BD-r0-YeJ"/>
-        <segue reference="wYL-FM-4FR"/>
         <segue reference="uwR-Fp-bP0"/>
-        <segue reference="J0Q-7D-IFQ"/>
+        <segue reference="wYL-FM-4FR"/>
+        <segue reference="0BD-r0-YeJ"/>
         <segue reference="2SO-GF-DK0"/>
+        <segue reference="J0Q-7D-IFQ"/>
+        <segue reference="evN-Mt-o8w"/>
+        <segue reference="KiT-Ij-UhN"/>
         <segue reference="h1j-Uc-Zyp"/>
         <segue reference="LjA-Uk-yQ0"/>
         <segue reference="XZT-4T-mRI"/>
