@@ -1020,7 +1020,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-Xi-RUM">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-Xi-RUM">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME  OR  EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgo-Zw-nu4">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1807,16 +1807,16 @@
         <image name="image1" width="848" height="1072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XZT-4T-mRI"/>
-        <segue reference="h1j-Uc-Zyp"/>
-        <segue reference="Cpp-gY-A4E"/>
+        <segue reference="lad-sc-doV"/>
         <segue reference="rBu-gS-sOZ"/>
         <segue reference="9EZ-Hj-fHf"/>
-        <segue reference="lad-sc-doV"/>
         <segue reference="YzC-cN-FK6"/>
+        <segue reference="XZT-4T-mRI"/>
+        <segue reference="h1j-Uc-Zyp"/>
+        <segue reference="KiT-Ij-UhN"/>
+        <segue reference="evN-Mt-o8w"/>
         <segue reference="LjA-Uk-yQ0"/>
-        <segue reference="b27-dg-h9d"/>
-        <segue reference="LSu-K6-1LH"/>
         <segue reference="J0Q-7D-IFQ"/>
+        <segue reference="LSu-K6-1LH"/>
     </inferredMetricsTieBreakers>
 </document>
