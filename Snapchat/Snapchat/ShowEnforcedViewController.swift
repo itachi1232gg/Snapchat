@@ -12,6 +12,7 @@ class ShowEnforcedViewController: UIViewController {
     
     var story: [ImageObject]? //The only KEY value to set
     
+    @IBOutlet weak var segueToStories: UIButton!
     @IBOutlet weak var showEnforcedImageView: UIImageView!
     var currentImage: UIImage?
     var backTo: String?
@@ -71,6 +72,7 @@ class ShowEnforcedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        segueToStories.hidden = true
         segueToMemories.hidden = true
         showStory = story
         // Do any additional setup after loading the view.

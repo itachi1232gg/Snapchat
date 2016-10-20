@@ -9,17 +9,29 @@
 import UIKit
 import FirebaseDatabase
 
-class CategoryRow : UITableViewCell {
+class CategoryRow : UITableViewCell, UICollectionViewDataSource {
     
     var upperView:StoriesViewController?
 //    var selectedCellID: String?
 
+    var selfSegueIdentifier = "Show Stories"
     
-    
+    private struct Storyboard
+    {
+        static var ShowCamera = "Show Camera"
+        static var ShowDiscovery = "Show Discovery"
+        static var ShowEnforced = "Show Enforced"
+    }
     
     typealias  typeStory = DiscoverData.Entry
     var storyList = [typeStory]()
     
+    var storiesArray:[[ImageObject]] = []{
+        didSet{
+            print("DIDSET!")
+            collectionView.reloadData()
+        }
+    }
     
     @IBOutlet weak var collectionView: UICollectionView!
     var tableIndexSection:Int?
@@ -35,14 +47,20 @@ class CategoryRow : UITableViewCell {
         return nil
     }
     
-}
-
-extension CategoryRow : UICollectionViewDataSource {
+    private var storiesSelected: [ImageObject]?{
+        didSet{
+            //performSegueWithIdentifier(Storyboard.ShowEnforced, sender: nil)
+            //            StoriesViewController.getStoriesSelect(storiesSelected!)
+            upperView!.performSegueWithIdentifier(Storyboard.ShowEnforced, sender: storiesSelected)
+        }
+    }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if tableIndexSection == 0 {
             return storyList.count
+        }else if tableIndexSection == 3{
+            return storiesArray.count
         }
         
         return 15
@@ -50,14 +68,20 @@ extension CategoryRow : UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //upperView.performSegueWithIdentifier("idt2", sender: nil)
-//        selectedSection = indexPath.row
-//        print(selectedSection)
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("videoCell", forIndexPath: indexPath) as! VideoCell
-//        print("selectedCellID=   \(selectedCellID)")
-        upperView!.selectedCellID = cell.cellID
-        upperView!.view.setNeedsDisplay()
-        upperView!.performSegueWithIdentifier("idt2", sender: upperView)
-        
+        //        selectedSection = indexPath.row
+        //        print(selectedSection)
+        if(tableIndexSection == 3){
+            print("You selected cell #\(indexPath.item)!")
+            print("You selected cell Row #\(indexPath.row)!")
+            print("You selected cell Section #\(indexPath.section)!")
+            self.storiesSelected = storiesArray[indexPath.row]
+        }else{
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("videoCell", forIndexPath: indexPath) as! VideoCell
+            //        print("selectedCellID=   \(selectedCellID)")
+            upperView!.selectedCellID = cell.cellID
+            upperView!.view.setNeedsDisplay()
+            upperView!.performSegueWithIdentifier("idt2", sender: upperView)
+        }
     }
     
     
@@ -68,13 +92,13 @@ extension CategoryRow : UICollectionViewDataSource {
         print ("tableViewsection = " + String(tableIndexSection))
         //        print ("==========================")
         
-
+        
         print("count2 = \(self.storyList.count)")
-
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("videoCell", forIndexPath: indexPath) as! VideoCell
         
         if tableIndexSection == 0 {
-
+            
             let entry = storyList[indexPath.row]
             print("entrycount= \(storyList.count)")
             print(String(entry.filename))
@@ -89,14 +113,22 @@ extension CategoryRow : UICollectionViewDataSource {
             
         }else if tableIndexSection == 1{
             cell.imageView.image = UIImage(named: "sunset")
+        }else if tableIndexSection == 3{
+            cell.imageView.image = self.storiesArray[indexPath.row].first!.innerImage
         }else {
             cell.imageView.image = UIImage(named: "bridge")
-
+            
         }
         
         return cell
     }
+    
 }
+
+//extension CategoryRow : UICollectionViewDataSource {
+//    
+//    
+//}
 
 
 

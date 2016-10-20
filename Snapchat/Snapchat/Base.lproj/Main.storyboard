@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K3C-dq-4Kg">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K3C-dq-4Kg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -677,6 +677,14 @@
                                     <segue destination="EjK-eL-J3D" kind="presentation" identifier="Show Memories" id="uwR-Fp-bP0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckb-7q-8yu">
+                                <frame key="frameInset" minX="199" minY="418" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="j3f-YH-tjr" kind="presentation" identifier="Show Stories" modalTransitionStyle="crossDissolve" id="9EZ-Hj-fHf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -688,6 +696,7 @@
                     </view>
                     <connections>
                         <outlet property="segueToMemories" destination="aEX-17-yl1" id="Edn-ht-udZ"/>
+                        <outlet property="segueToStories" destination="Ckb-7q-8yu" id="QiZ-PO-4ki"/>
                         <outlet property="showEnforcedImageView" destination="AJh-gq-kk2" id="zJ8-QV-tNa"/>
                     </connections>
                 </viewController>
@@ -1411,6 +1420,14 @@
                                     <outlet property="delegate" destination="Cfv-6y-NfI" id="JoS-Yq-UUm"/>
                                 </connections>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAM-dW-JjK">
+                                <frame key="frameInset" minX="164" minY="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="0UV-oX-MEK" kind="presentation" identifier="Show Enforced" modalTransitionStyle="crossDissolve" id="lad-sc-doV"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="172" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aMB-67-cSi">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1535,6 +1552,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="jcW-Gx-hAc" id="U2L-Uc-Fpu"/>
+                        <outlet property="segueToEnforced" destination="XAM-dW-JjK" id="sJ5-Ro-Ebi"/>
+                        <outlet property="storiesTableView" destination="aMB-67-cSi" id="SmC-iB-DM4"/>
                         <segue destination="cdw-k5-sZ9" kind="show" identifier="idt2" id="YzC-cN-FK6"/>
                     </connections>
                 </viewController>
@@ -1788,12 +1807,14 @@
         <image name="image1" width="848" height="1072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LjA-Uk-yQ0"/>
+        <segue reference="XZT-4T-mRI"/>
         <segue reference="h1j-Uc-Zyp"/>
         <segue reference="Cpp-gY-A4E"/>
         <segue reference="rBu-gS-sOZ"/>
+        <segue reference="9EZ-Hj-fHf"/>
+        <segue reference="lad-sc-doV"/>
         <segue reference="YzC-cN-FK6"/>
-        <segue reference="XZT-4T-mRI"/>
+        <segue reference="LjA-Uk-yQ0"/>
         <segue reference="b27-dg-h9d"/>
         <segue reference="LSu-K6-1LH"/>
         <segue reference="J0Q-7D-IFQ"/>
